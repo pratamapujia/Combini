@@ -1,0 +1,10 @@
+* {
+  font-family: "Nunito", sans-serif;
+}
+nav {
+  background-color: #143d59;
+}
+header {
+  background: url("../../img/banner-01.jpg") no-repeat center;
+  background-size: cover;
+}
