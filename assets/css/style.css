@@ -1,13 +1,38 @@
 * {
   font-family: "Nunito", sans-serif;
 }
+
+/* Navbar */
 nav {
   background-color: #143d59;
 }
+
+/* Header */
 header {
-  background: url("../img/banner-01.jpg") no-repeat center;
+  background: url("../img/banner-01.jpg") center no-repeat;
   background-size: cover;
 }
+.container .row .form-control:focus {
+  box-shadow: none;
+}
+.container .row .form-control::placeholder {
+  font-size: 0.95rem;
+  color: #fffffa;
+}
+@media (max-width: 991px) {
+  header {
+    background: linear-gradient(to bottom, rgba(31, 31, 31, 0.1) 0%, rgba(31, 31, 31, 0.1) 100%), url("../img/banner-01.jpg");
+    background-size: cover;
+    transition: all 0.3s ease;
+  }
+}
+@media (max-width: 767px) {
+  header {
+    background-attachment: fixed;
+  }
+}
+
+/* Button Scroll */
 .scroll-up-btn {
   position: fixed;
   height: 45px;
@@ -34,15 +59,10 @@ header {
 .scroll-up-btn:hover {
   filter: brightness(90%);
 }
-.container .row .input-group input,
-.container .row .input-group button {
-  background: #0c324b;
-  border-radius: 25px;
-  border-color: #fff;
-  color: #fff;
-}
+
+/* Top Week */
 .profile-card {
-  max-width: 200px;
+  max-width: 300px;
   background-color: #fff;
   box-shadow: 0px 0px 25px rgba(0, 0, 0, 0.1);
   background-position: center;
@@ -54,52 +74,163 @@ header {
 }
 .profile-card img {
   transition: all linear 0.25s;
-  width: 200px;
+  width: 300px;
 }
-
 .profile-card .profile-name {
   position: absolute;
-  left: 30px;
-  bottom: 70px;
+  left: 20px;
+  bottom: 65px;
   font-size: 18px;
   color: #fff;
   text-shadow: 0px 0px 20px rgba(0, 0, 0, 0.5);
   font-weight: bold;
   transition: all linear 0.25s;
 }
-
 .profile-card .profile-icons {
   position: absolute;
   bottom: 20px;
   right: 30px;
   transition: all linear 0.25s;
 }
-
 .profile-card .profile-profesi {
   position: absolute;
   bottom: 50px;
-  left: 30px;
+  left: 20px;
   color: #fff;
   font-size: 10px;
   transition: all linear 0.25s;
 }
-
 .profile-card .profile-icons .fa {
   margin: 5px;
 }
-
 .profile-card:hover img {
   filter: grayscale(100%);
 }
-
 .profile-card:hover .profile-name {
-  bottom: 80px;
+  bottom: 75px;
 }
-
 .profile-card:hover .profile-profesi {
   bottom: 60px;
 }
-
 .profile-card:hover .profile-icons {
   right: 40px;
+}
+.owl-dots {
+  text-align: center;
+  margin-top: 20px;
+}
+.owl-dot {
+  height: 13px;
+  width: 13px;
+  margin: 0 5px;
+  outline: none !important;
+  border-radius: 50%;
+  border: 2px solid #143d59 !important;
+  transition: all 0.3s ease;
+}
+.owl-dot.active {
+  width: 35px;
+  border-radius: 14px;
+}
+.owl-dot.active,
+.owl-dot:hover {
+  background: #ffd700 !important;
+}
+
+/* Testimoni */
+.testimoni {
+  margin-top: 80px;
+}
+
+.testimoni-card {
+  width: 300px;
+  height: 300px;
+  transform-style: preserve-3d;
+  perspective: 500px;
+  border: none;
+  background-color: inherit;
+}
+.testimoni-card .face {
+  position: absolute;
+  color: #fff;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+  box-shadow: 0 15px 35px rgba(0, 0, 0, 0.1);
+  border-radius: 15px;
+  background-color: #143d59;
+  transform-style: preserve-3d;
+  transition: 0.5s;
+  backface-visibility: hidden;
+  border-top: 1px solid #ddd;
+  border-left: 1px solid #ddd;
+}
+.testimoni-card .face.front-face,
+.testimoni-card .face.back-face {
+  position: absolute;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+.testimoni-card .face.front-face .profile {
+  width: 150px;
+  height: 150px;
+  border-radius: 50%;
+  object-fit: cover;
+}
+.testimoni-card .face.front-face .name {
+  letter-spacing: 2px;
+}
+.testimoni-card .face.front-face .designation {
+  font-size: 0.8rem;
+  color: #ddd;
+  letter-spacing: 0.8px;
+}
+.testimoni-card:hover .face.front-face {
+  transform: rotateY(180deg);
+}
+.testimoni-card .face.back-face {
+  position: absolute;
+  background-color: #143d59;
+  transform: rotateY(180deg);
+  padding: 20px 30px;
+  text-align: center;
+  user-select: none;
+}
+.testimoni-card .face.back-face .fa-quote-left {
+  position: absolute;
+  top: 25px;
+  left: 25px;
+  font-size: 1.2rem;
+}
+.testimoni-card .face.back-face .fa-quote-right {
+  position: absolute;
+  bottom: 35px;
+  right: 25px;
+  font-size: 1.2rem;
+}
+.testimoni-card:hover .face.back-face {
+  transform: rotateY(360deg);
+}
+.owl-dots {
+  text-align: center;
+  margin-top: 20px;
+}
+.owl-dot {
+  height: 13px;
+  width: 13px;
+  margin: 0 5px;
+  outline: none !important;
+  border-radius: 50%;
+  border: 2px solid #143d59 !important;
+  transition: all 0.3s ease;
+}
+.owl-dot.active {
+  width: 35px;
+  border-radius: 14px;
+}
+.owl-dot.active,
+.owl-dot:hover {
+  background: #ffd700 !important;
 }
