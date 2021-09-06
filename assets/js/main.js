@@ -44,7 +44,6 @@ $(document).ready(function () {
   $(".carouselTestimoni").owlCarousel({
     margin: 20,
     center: true,
-    margin: 20,
     loop: true,
     autoplay: true,
     autoplayTimeOut: 2000,
@@ -55,7 +54,7 @@ $(document).ready(function () {
         nav: false,
       },
       600: {
-        items: 2,
+        items: 1,
         nav: false,
       },
       1000: {
@@ -64,4 +63,14 @@ $(document).ready(function () {
       },
     },
   });
+});
+
+var nav = document.querySelector("nav");
+
+window.addEventListener("scroll", function () {
+  if (window.pageYOffset > 50) {
+    nav.classList.add("sticky", "shadow");
+  } else {
+    nav.classList.remove("sticky", "shadow");
+  }
 });

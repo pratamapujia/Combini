@@ -3,8 +3,8 @@
 }
 
 /* Navbar */
-nav {
-  background-color: #143d59;
+.sticky {
+  background: #143d59;
 }
 
 /* Header */
@@ -61,65 +61,60 @@ header {
 }
 
 /* Top Week */
-.profile-card {
-  max-width: 300px;
-  background-color: #fff;
-  box-shadow: 0px 0px 25px rgba(0, 0, 0, 0.1);
+.topWeek .card {
   background-position: center;
-  overflow: hidden;
-  position: relative;
-  margin: 10px auto;
   cursor: pointer;
   border-radius: 10px;
 }
-.profile-card img {
+.topWeek .card img {
   transition: all linear 0.25s;
-  width: 300px;
+  border-radius: 10px;
 }
-.profile-card .profile-name {
+.topWeek .card-img-overlay .card-name {
   position: absolute;
   left: 20px;
-  bottom: 65px;
-  font-size: 18px;
+  bottom: 30px;
+  font-size: 20px;
   color: #fff;
   text-shadow: 0px 0px 20px rgba(0, 0, 0, 0.5);
   font-weight: bold;
   transition: all linear 0.25s;
 }
-.profile-card .profile-icons {
+.topWeek .card-img-overlay .card-job {
+  position: absolute;
+  bottom: 20px;
+  left: 20px;
+  color: #fff;
+  font-size: 14px;
+  transition: all linear 0.25s;
+}
+/* .topWeek .card-img-overlay .card-icon {
   position: absolute;
   bottom: 20px;
   right: 30px;
   transition: all linear 0.25s;
-}
-.profile-card .profile-profesi {
-  position: absolute;
-  bottom: 50px;
-  left: 20px;
   color: #fff;
-  font-size: 10px;
-  transition: all linear 0.25s;
-}
-.profile-card .profile-icons .fa {
+} */
+/* .topWeek .card-img-overlay .card-icon .fab {
   margin: 5px;
-}
-.profile-card:hover img {
+} */
+.topWeek .card:hover img {
   filter: grayscale(100%);
 }
-.profile-card:hover .profile-name {
-  bottom: 75px;
+.topWeek .card:hover .card-name {
+  bottom: 40px;
 }
-.profile-card:hover .profile-profesi {
-  bottom: 60px;
+.topWeek .card:hover .card-job {
+  bottom: 30px;
 }
-.profile-card:hover .profile-icons {
+/* .topWeek .card:hover .card-icon {
   right: 40px;
-}
-.owl-dots {
+} */
+.topWeek .owl-dots {
   text-align: center;
   margin-top: 20px;
 }
-.owl-dot {
+.topWeek .owl-dot {
   height: 13px;
   width: 13px;
   margin: 0 5px;
@@ -128,96 +123,57 @@ header {
   border: 2px solid #143d59 !important;
   transition: all 0.3s ease;
 }
-.owl-dot.active {
+.topWeek .owl-dot.active {
   width: 35px;
   border-radius: 14px;
 }
-.owl-dot.active,
-.owl-dot:hover {
+.topWeek .owl-dot.active,
+.topWeek .owl-dot:hover {
   background: #ffd700 !important;
 }
 
 /* Testimoni */
-.testimoni {
-  margin-top: 80px;
-}
-
-.testimoni-card {
-  width: 300px;
-  height: 300px;
-  transform-style: preserve-3d;
-  perspective: 500px;
-  border: none;
-  background-color: inherit;
-}
-.testimoni-card .face {
-  position: absolute;
-  color: #fff;
-  width: 100%;
-  height: 100%;
-  overflow: hidden;
-  box-shadow: 0 15px 35px rgba(0, 0, 0, 0.1);
-  border-radius: 15px;
+.testimoni .card {
+  border-radius: 20px;
   background-color: #143d59;
-  transform-style: preserve-3d;
-  transition: 0.5s;
-  backface-visibility: hidden;
-  border-top: 1px solid #ddd;
-  border-left: 1px solid #ddd;
 }
-.testimoni-card .face.front-face,
-.testimoni-card .face.back-face {
-  position: absolute;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-}
-.testimoni-card .face.front-face .profile {
-  width: 150px;
-  height: 150px;
+.testimoni .card .card-img-top {
+  max-width: 100px;
   border-radius: 50%;
-  object-fit: cover;
+  margin: 15px auto 0;
+  box-shadow: 0 8px 20px -4x #9fabbb;
+  width: 100px;
+  height: 100px;
 }
-.testimoni-card .face.front-face .name {
-  letter-spacing: 2px;
+.testimoni .card h5 {
+  color: #ffd700;
+  font-size: 22px;
+  line-height: 1.3;
+  font-weight: 600;
 }
-.testimoni-card .face.front-face .designation {
-  font-size: 0.8rem;
-  color: #ddd;
-  letter-spacing: 0.8px;
+.testimoni .card h5 span {
+  font-size: 17px;
+  color: #fff;
 }
-.testimoni-card:hover .face.front-face {
-  transform: rotateY(180deg);
+.testimoni .card p {
+  color: #fff;
+  padding-bottom: 15px;
+  font-weight: lighter;
 }
-.testimoni-card .face.back-face {
-  position: absolute;
-  background-color: #143d59;
-  transform: rotateY(180deg);
-  padding: 20px 30px;
-  text-align: center;
-  user-select: none;
+.testimoni .owl-item > div {
+  cursor: pointer;
+  margin: 5% 0%;
+  transition: margin 0.4s ease;
 }
-.testimoni-card .face.back-face .fa-quote-left {
-  position: absolute;
-  top: 25px;
-  left: 25px;
-  font-size: 1.2rem;
+.testimoni .owl-item.center > div {
+  cursor: pointer;
+  margin: 0;
 }
-.testimoni-card .face.back-face .fa-quote-right {
-  position: absolute;
-  bottom: 35px;
-  right: 25px;
-  font-size: 1.2rem;
-}
-.testimoni-card:hover .face.back-face {
-  transform: rotateY(360deg);
-}
-.owl-dots {
+.testimoni .owl-dots {
   text-align: center;
   margin-top: 20px;
 }
-.owl-dot {
+.testimoni .owl-dot {
   height: 13px;
   width: 13px;
   margin: 0 5px;
@@ -226,11 +182,32 @@ header {
   border: 2px solid #143d59 !important;
   transition: all 0.3s ease;
 }
-.owl-dot.active {
+.testimoni .owl-dot.active {
   width: 35px;
   border-radius: 14px;
 }
-.owl-dot.active,
-.owl-dot:hover {
+.testimoni .owl-dot.active,
+.testimoni .owl-dot:hover {
   background: #ffd700 !important;
+}
+
+/* Hero Bottom */
+.hero-bottom {
+  background-image: linear-gradient(to right, rgb(28, 86, 125) 20%, rgb(20, 61, 89));
+}
+.hero-bottom .btn {
+  display: inline-block;
+  background: #ffd700;
+  color: #143d59;
+  width: 150px;
+  height: 40px;
+  text-align: center;
+  font-weight: bolder;
+  font-size: 18px;
+  border-radius: 15px;
+  border: 2px solid #ffd700;
+}
+.hero-bottom .btn:hover {
+  background: none;
+  color: #fff;
 }
