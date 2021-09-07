@@ -15,32 +15,67 @@ $(document).ready(function () {
   });
 
   // Script Carousel
-  $(".carousel").owlCarousel({
-    margin: 20,
-    center: true,
-    loop: true,
+  $(".topWeek").slick({
+    dots: true,
+    infinite: true,
+    speed: 500,
+    slidesToShow: 4,
+    slidesToScroll: 1,
     autoplay: true,
-    autoplayTimeout: 2000,
-    autoplayHoverPause: true,
-    responsive: {
-      0: {
-        items: 1,
-        nav: false,
+    autoplaySpeed: 2000,
+    responsive: [
+      {
+        breakpoint: 1024,
+        settings: {
+          slidesToShow: 3,
+          slidesToScroll: 1,
+          infinite: true,
+          dots: true,
+        },
       },
-      400: {
-        items: 2,
-        nav: false,
+      {
+        breakpoint: 800,
+        settings: {
+          slidesToShow: 2,
+          slidesToScroll: 1,
+        },
       },
-      600: {
-        items: 3,
-        nav: false,
+      {
+        breakpoint: 480,
+        settings: {
+          slidesToShow: 1,
+          slidesToScroll: 1,
+        },
       },
-      1000: {
-        items: 5,
-        nav: false,
-      },
-    },
+    ],
   });
+
+  // $(".carousel").owlCarousel({
+  //   margin: 20,
+  //   center: true,
+  //   loop: true,
+  //   autoplay: true,
+  //   autoplayTimeout: 2000,
+  //   autoplayHoverPause: true,
+  //   responsive: {
+  //     0: {
+  //       items: 1,
+  //       nav: false,
+  //     },
+  //     400: {
+  //       items: 2,
+  //       nav: false,
+  //     },
+  //     600: {
+  //       items: 3,
+  //       nav: false,
+  //     },
+  //     1000: {
+  //       items: 5,
+  //       nav: false,
+  //     },
+  //   },
+  // });
 
   $(".carouselTestimoni").owlCarousel({
     margin: 20,
@@ -64,49 +99,14 @@ $(document).ready(function () {
       },
     },
   });
-
-  $(".topWeek").slick({
-    dots: true,
-    infinite: true,
-    speed: 500,
-    slidesToShow: 4,
-    slidesToScroll: 1,
-    autoplay: true,
-    autoplaySpeed: 2000,
-    responsive: [
-      {
-        breakpoint: 1024,
-        settings: {
-          slidesToShow: 3,
-          slidesToScroll: 3,
-          infinite: true,
-          dots: true,
-        },
-      },
-      {
-        breakpoint: 600,
-        settings: {
-          slidesToShow: 2,
-          slidesToScroll: 2,
-        },
-      },
-      {
-        breakpoint: 480,
-        settings: {
-          slidesToShow: 1,
-          slidesToScroll: 1,
-        },
-      },
-    ],
-  });
 });
 
 var nav = document.querySelector("nav");
 
 window.addEventListener("scroll", function () {
   if (window.pageYOffset > 50) {
-    nav.classList.add("sticky", "shadow");
+    nav.classList.add("shadow");
   } else {
-    nav.classList.remove("sticky", "shadow");
+    nav.classList.remove("shadow");
   }
 });

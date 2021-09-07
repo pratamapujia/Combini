@@ -1,19 +1,55 @@
-* {
+@font-face {
+  font-family: "Chennai";
+  font-style: normal;
+  src: url("../font/chennai.otf");
+}
+
+section {
   font-family: "Nunito", sans-serif;
 }
-.container {
-  margin-top: 20px;
+section h2 {
+  font-family: "Chennai", sans-serif;
+  letter-spacing: 3px;
 }
 
 /* Navbar */
-.sticky {
+nav {
+  font-family: "Chennai", sans-serif;
+  letter-spacing: 1px;
+  font-size: 18px;
   background: #143d59;
+}
+nav .nav-btn {
+  display: inline-block;
+  background: #ffd700;
+  color: #143d59;
+  margin: 0 10px;
+  height: 35px;
+  padding: 3px 15px;
+  font-weight: 700;
+  border-radius: 6px;
+  box-shadow: 0px 5px #766400;
+  border: 2px solid #ffd700;
+  transition: all 0.3s ease;
+}
+nav .nav-btn:hover {
+  opacity: 0.75;
+}
+nav .nav-btn:active {
+  position: relative;
+  top: 5px;
+  box-shadow: none;
 }
 
 /* Header */
 header {
+  font-family: "Nunito", sans-serif;
   background: url("../img/banner-01.jpg") center no-repeat;
   background-size: cover;
+}
+header h1 {
+  font-family: "Chennai", sans-serif;
+  letter-spacing: 3px;
 }
 .container .row .form-control:focus {
   box-shadow: none;
@@ -77,7 +113,7 @@ header {
 .topWeek .card-img-overlay .card-name {
   position: absolute;
   left: 20px;
-  bottom: 30px;
+  bottom: 40px;
   font-size: 20px;
   color: #fff;
   text-shadow: 0px 0px 20px rgba(0, 0, 0, 0.5);
@@ -200,18 +236,27 @@ header {
   background-image: linear-gradient(to right, rgb(28, 86, 125) 20%, rgb(20, 61, 89));
 }
 .hero-bottom .btn {
+  font-family: "Chennai", sans-serif;
   display: inline-block;
   background: #ffd700;
   color: #143d59;
-  width: 150px;
-  height: 40px;
+  padding: 5px 30px;
+  margin-top: 20px;
   text-align: center;
-  font-weight: bolder;
-  font-size: 18px;
+  font-weight: 600;
+  font-size: 20px;
   border-radius: 15px;
   border: 2px solid #ffd700;
 }
 .hero-bottom .btn:hover {
+  position: relative;
+  top: 5px;
   background: none;
   color: #fff;
+}
+
+/* Footer */
+footer {
+  font-family: "Nunito", sans-serif;
+  background: lightgrey;
 }
