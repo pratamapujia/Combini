@@ -77,7 +77,7 @@ $(document).ready(function () {
   //   },
   // });
 
-  $(".carouselTestimoni").owlCarousel({
+  $(".owl-carousel").owlCarousel({
     margin: 20,
     center: true,
     loop: true,
@@ -99,14 +99,36 @@ $(document).ready(function () {
       },
     },
   });
+  // $(".carouselTestimoni").owlCarousel({
+  //   margin: 20,
+  //   center: true,
+  //   loop: true,
+  //   autoplay: true,
+  //   autoplayTimeOut: 2000,
+  //   autoplayHoverPause: true,
+  //   responsive: {
+  //     0: {
+  //       items: 1,
+  //       nav: false,
+  //     },
+  //     600: {
+  //       items: 1,
+  //       nav: false,
+  //     },
+  //     1000: {
+  //       items: 3,
+  //       nav: false,
+  //     },
+  //   },
+  // });
 });
 
-var nav = document.querySelector("nav");
+var nav = document.querySelector("#navbar");
 
 window.addEventListener("scroll", function () {
   if (window.pageYOffset > 50) {
-    nav.classList.add("shadow");
+    nav.classList.add("sticky", "shadow");
   } else {
-    nav.classList.remove("shadow");
+    nav.classList.remove("sticky", "shadow");
   }
 });
