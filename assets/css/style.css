@@ -63,16 +63,9 @@ section h2 {
   font-size: 0.95rem;
   color: #fffffa;
 }
-@media (max-width: 991px) {
-  header {
-    background: linear-gradient(to bottom, rgba(31, 31, 31, 0.1) 0%, rgba(31, 31, 31, 0.1) 100%), url("../img/banner-01.jpg");
-    background-size: cover;
-    transition: all 0.3s ease;
-  }
-}
-@media (max-width: 767px) {
-  header {
-    background-attachment: fixed;
+@media (max-width: 1024px) {
+  #header img {
+    display: none;
   }
 }
 
@@ -362,4 +355,9 @@ section h2 {
   top: 5px;
   background: none;
   color: #fff;
+}
+@media (max-width: 900px) {
+  .hero-bottom .img {
+    display: none;
+  }
 }
