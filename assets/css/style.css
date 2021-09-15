@@ -361,3 +361,7 @@ section h2 {
     display: none;
   }
 }
+/* FOOTER */
+footer {
+  background: lightgrey;
+}
