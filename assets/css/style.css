@@ -372,3 +372,8 @@ section h2 {
   background: none;
   color: #fff;
 }
+
+/* FOOTER */
+footer {
+  background: lightgrey;
+}
