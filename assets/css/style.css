@@ -1,27 +1,69 @@
-* {
+@font-face {
+  font-family: "Chennai";
+  font-style: normal;
+  src: url("../font/chennai.otf");
+}
+
+section {
   font-family: "Nunito", sans-serif;
 }
-.container {
-  margin-top: 20px;
+section h2 {
+  font-family: "Chennai", sans-serif;
+  letter-spacing: 3px;
+  font-size: 45px;
 }
 
 /* Navbar */
 .sticky {
   background: #143d59;
 }
+.navbar {
+  font-family: "Chennai", sans-serif;
+  letter-spacing: 1px;
+  font-size: 18px;
+}
+.navbar .nav-btn {
+  display: inline-block;
+  background: #ffd700;
+  color: #143d59;
+  margin-right: 10px;
+  height: 35px;
+  padding: 3px 15px;
+  font-weight: 700;
+  border-radius: 10px;
+  border: 2px solid #ffd700;
+  transition: all 0.3s ease;
+}
+.navbar .nav-btn:hover {
+  opacity: 80%;
+}
+.navbar .nav-link:hover {
+  opacity: 80%;
+}
+.navbar .nav-item.active {
+  border-bottom: 2px solid #ffd700;
+}
 
 /* Header */
-header {
-  background: url("../img/banner-01.jpg") center no-repeat;
-  background-size: cover;
+#header {
+  font-family: "Nunito", sans-serif;
+  /* background: url("../img/banner-01.jpg") right;
+  width: 1300px; */
+  background: linear-gradient(to left, rgb(28, 86, 125) 20%, rgb(20, 61, 89));
+  padding-top: 30px;
 }
-.container .row .form-control:focus {
+#header h1 {
+  font-family: "Chennai", sans-serif;
+  letter-spacing: 3px;
+}
+#header .row .form-control:focus {
   box-shadow: none;
 }
-.container .row .form-control::placeholder {
+#header .row .form-control::placeholder {
   font-size: 0.95rem;
   color: #fffffa;
 }
+<<<<<<< HEAD
 @media (max-width: 991px) {
   header {
     background: linear-gradient(
@@ -37,6 +79,12 @@ header {
 @media (max-width: 767px) {
   header {
     background-attachment: fixed;
+=======
+
+@media (max-width: 1024px) {
+  #header .img {
+    display: none;
+>>>>>>> 47981c240fc4281a1ae50c9d7ecf203c14a2d6e8
   }
 }
 
@@ -69,6 +117,10 @@ header {
 }
 
 /* Top Week */
+#topWeek {
+  background: #eef4f7;
+  padding-bottom: 2rem;
+}
 .topWeek .card {
   background-position: center;
   cursor: pointer;
@@ -82,10 +134,10 @@ header {
 .topWeek .card-img-overlay .card-name {
   position: absolute;
   left: 20px;
-  bottom: 30px;
+  bottom: 40px;
   font-size: 20px;
   color: #fff;
-  text-shadow: 0px 0px 20px rgba(0, 0, 0, 0.5);
+  text-shadow: 10px 10px 30px #000000;
   font-weight: bold;
   transition: all linear 0.25s;
 }
@@ -94,6 +146,7 @@ header {
   bottom: 20px;
   left: 20px;
   color: #fff;
+  text-shadow: 10px 10px 30px #000000;
   font-size: 14px;
   transition: all linear 0.25s;
 }
@@ -108,10 +161,10 @@ header {
   margin: 5px;
 } */
 .topWeek .card:hover img {
-  filter: grayscale(100%);
+  filter: grayscale(50%);
 }
 .topWeek .card:hover .card-name {
-  bottom: 40px;
+  bottom: 50px;
 }
 .topWeek .card:hover .card-job {
   bottom: 30px;
@@ -119,7 +172,7 @@ header {
 /* .topWeek .card:hover .card-icon {
   right: 40px;
 } */
-.topWeek .owl-dots {
+/* .topWeek .owl-dots {
   text-align: center;
   margin-top: 20px;
 }
@@ -139,10 +192,106 @@ header {
 .topWeek .owl-dot.active,
 .topWeek .owl-dot:hover {
   background: #ffd700 !important;
+} */
+
+/* Pekerjaan */
+#pekerjaan .container img {
+  width: 100px;
+  height: 100px;
 }
 
 /* Testimoni */
-.testimoni .card {
+.testimonials-clean .people {
+  padding: 0 0 20px;
+}
+
+.testimonials-clean .item {
+  margin-bottom: 32px;
+}
+
+@media (min-width: 768px) {
+  .testimonials-clean .item {
+    height: 220px;
+  }
+}
+
+.testimonials-clean .item .box {
+  padding: 30px;
+  background-color: #eef4f7;
+  position: relative;
+}
+
+.testimonials-clean .item .box:after {
+  content: "";
+  position: absolute;
+  left: 30px;
+  bottom: -24px;
+  width: 0;
+  height: 0;
+  border: 15px solid transparent;
+  border-width: 12px 15px;
+  border-top-color: #eef4f7;
+}
+
+.testimonials-clean .item .author {
+  margin-top: 28px;
+  padding-left: 25px;
+}
+
+.testimonials-clean .item .name {
+  font-weight: bold;
+  margin-bottom: 2px;
+  color: inherit;
+}
+
+.testimonials-clean .item .title {
+  font-size: 13px;
+  color: #9da9ae;
+}
+
+.testimonials-clean .item .description {
+  font-size: 15px;
+  margin-bottom: 0;
+}
+
+.testimonials-clean .item img {
+  max-width: 40px;
+  float: left;
+  margin-right: 12px;
+  margin-top: -5px;
+}
+.testimonials-clean .owl-item > div {
+  cursor: pointer;
+  margin: 5% 0%;
+  transition: margin 0.4s ease;
+}
+/* .testimonials-clean .owl-item.center > div {
+  cursor: pointer;
+  margin: 0;
+} */
+.testimonials-clean .owl-dots {
+  text-align: center;
+  margin-top: 20px;
+}
+.testimonials-clean .owl-dot {
+  height: 13px;
+  width: 13px;
+  margin: 0 5px;
+  outline: none !important;
+  border-radius: 50%;
+  border: 2px solid #143d59 !important;
+  transition: all 0.3s ease;
+}
+.testimonials-clean .owl-dot.active {
+  width: 35px;
+  border-radius: 14px;
+}
+.testimonials-clean .owl-dot.active,
+.testimonials-clean .owl-dot:hover {
+  background: #ffd700 !important;
+}
+
+/* .testimoni .card {
   border-radius: 20px;
   background-color: #143d59;
 }
@@ -153,6 +302,9 @@ header {
   box-shadow: 0 8px 20px -4x #9fabbb;
   width: 100px;
   height: 100px;
+}
+.testimoni .card:hover {
+  filter: grayscale(50%);
 }
 .testimoni .card h5 {
   color: #ffd700;
@@ -198,7 +350,7 @@ header {
 .testimoni .owl-dot.active,
 .testimoni .owl-dot:hover {
   background: #ffd700 !important;
-}
+} */
 
 /* Hero Bottom */
 .hero-bottom {
@@ -209,21 +361,25 @@ header {
   );
 }
 .hero-bottom .btn {
+  font-family: "Chennai", sans-serif;
   display: inline-block;
   background: #ffd700;
   color: #143d59;
-  width: 150px;
-  height: 40px;
+  padding: 5px 30px;
+  margin-top: 20px;
   text-align: center;
-  font-weight: bolder;
-  font-size: 18px;
+  font-weight: 600;
+  font-size: 20px;
   border-radius: 15px;
   border: 2px solid #ffd700;
 }
 .hero-bottom .btn:hover {
+  position: relative;
+  top: 5px;
   background: none;
   color: #fff;
 }
+<<<<<<< HEAD
 
 /* --------PANDUAN PENGGUNA-------- */
 body {
@@ -390,4 +546,18 @@ a {
 
 .mr-15 {
   margin-right: 15px !important;
+=======
+@media (max-width: 900px) {
+  .hero-bottom .img {
+    display: none;
+  }
+}
+
+/* Breadcrumb */
+
+/* Footer */
+footer {
+  font-family: "Nunito", sans-serif;
+  background: lightgrey;
+>>>>>>> 47981c240fc4281a1ae50c9d7ecf203c14a2d6e8
 }
