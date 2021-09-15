@@ -10,7 +10,7 @@
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/css/bootstrap.min.css" rel="stylesheet"
     integrity="sha384-KyZXEAg3QhqLMpG8r+8fhAXLRk2vvoC2f3B09zVXn8CA5QIVfZOJ3BCsw2P0p/We" crossorigin="anonymous" />
 
-  <title>Combini</title>
+  <title>FAQs</title>
 
   <!-- Font -->
   <link
@@ -34,42 +34,43 @@
   </div>
   <main class="flex-shrink-0">
     <!-- Navbar -->
-    <nav class="navbar navbar-expand-lg sticky-top navbar-dark">
-      <div class="container py-3">
+    <nav class="navbar sticky shadow fixed-top navbar-expand-lg navbar-dark p-md-3">
+      <div class="container">
         <a href="index.html" class="navbar-brand">
           <img src="assets/img/logo2.png" alt="" />
         </a>
-        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#menu"
-          aria-controls="menu" aria-expanded="false" aria-label="Menu">
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#menu" aria-controls="menu" aria-expanded="false" aria-label="Menu">
           <i class="fas fa-bars"></i>
         </button>
         <div class="collapse navbar-collapse" id="menu">
           <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
-            <li class="nav-item"><a href="" class="nav-link text-white fw-bold fs-5">Beranda</a></li>
+            <li class="nav-item"><a href="" class="nav-link text-white">Beranda</a></li>
             <li class="nav-item dropdown">
-              <a href="" class="nav-link dropdown-toggle text-white fw-bold fs-5" id="pekerjaan" role="button"
-                data-bs-toggle="dropdown" aria-expanded="false">Pekerjaan</a>
+              <a href="" class="nav-link dropdown-toggle text-white" id="pekerjaan" role="button" data-bs-toggle="dropdown" aria-expanded="false">Pekerjaan</a>
               <ul class="dropdown-menu dropdown-menu-end" aria-labelledby="pekerjaan">
-                <li><a href="" class="dropdown-item text-black fw-normal fs-6">Copywriting</a></li>
-                <li><a href="" class="dropdown-item text-black fw-normal fs-6">Desain Grafis</a></li>
-                <li><a href="" class="dropdown-item text-black fw-normal fs-6">Fotografer</a></li>
-                <li><a href="" class="dropdown-item text-black fw-normal fs-6">Videografer</a></li>
-                <li><a href="" class="dropdown-item text-black fw-normal fs-6">Video & Photo Editing</a></li>
-                <li><a href="" class="dropdown-item text-black fw-normal fs-6">Master Ceremony</a></li>
-                <li><a href="" class="dropdown-item text-black fw-normal fs-6">Search Engine Optimization</a></li>
-                <li><a href="" class="dropdown-item text-black fw-normal fs-6">Voice Actor</a></li>
+                <li><a href="pekerjaan/1.html" class="dropdown-item text-black fw-normal fs-6">Copywriting</a></li>
+                <li><a href="pekerjaan/2.html" class="dropdown-item text-black fw-normal fs-6">Desain Grafis</a></li>
+                <li><a href="pekerjaan/3.html" class="dropdown-item text-black fw-normal fs-6">Fotografer</a></li>
+                <li><a href="pekerjaan/4.html" class="dropdown-item text-black fw-normal fs-6">Videografer</a></li>
+                <li><a href="pekerjaan/5.html" class="dropdown-item text-black fw-normal fs-6">Video & Photo Editing</a></li>
+                <li><a href="pekerjaan/6.html" class="dropdown-item text-black fw-normal fs-6">Master Ceremony</a></li>
+                <li><a href="pekerjaan/7.html" class="dropdown-item text-black fw-normal fs-6">Search Engine Optimization</a></li>
+                <li><a href="pekerjaan/8.html" class="dropdown-item text-black fw-normal fs-6">Voice Actor</a></li>
               </ul>
             </li>
             <li class="nav-item dropdown">
-              <a href="" class="nav-link dropdown-toggle text-white fw-bold fs-5" id="bantuan" role="button"
-                data-bs-toggle="dropdown" aria-expanded="false">Bantuan</a>
+              <a href="" class="nav-link dropdown-toggle text-white" id="bantuan" role="button" data-bs-toggle="dropdown" aria-expanded="false">Bantuan</a>
               <ul class="dropdown-menu dropdown-menu-end" aria-labelledby="bantuan">
-                <li><a href="" class="dropdown-item text-black fw-normal fs-6">FAQs</a></li>
+                <li><a href="faq.html" class="dropdown-item text-black fw-normal fs-6">FAQs</a></li>
                 <li><a href="" class="dropdown-item text-black fw-normal fs-6">Panduan Freelancer</a></li>
                 <li><a href="" class="dropdown-item text-black fw-normal fs-6">Panduan Pengguna Jasa</a></li>
               </ul>
             </li>
+            <!-- <li class="nav-item"><a href="" class="nav-link text-white">Masuk</a></li>
+            <li class="nav-item active"><a href="" class="nav-link text-white">Daftar</a></li> -->
           </ul>
+          <button class="nav-btn" type="button">Masuk</button>
+          <button class="nav-btn" type="button">Daftar</button>
         </div>
       </div>
     </nav>
@@ -78,13 +79,13 @@
     <section class="py-5">
       <div class="container px-5 my-5">
         <div class="text-center mb-5">
-          <h1 class="fw-bolder">Frequently Asked Questions</h1>
+          <h2 class="fw-bolder">Frequently Asked Questions</h2>
           <p class="lead fw-normal text-muted mb-0">How can we help you?</p>
         </div>
         <div class="row gx-5 justify-content-center">
           <div class="col-xl-8">
             <!-- FAQ Accordion 1-->
-            <h2 class=" fw-bolder mb-3">Tentang Combini</h2>
+            <h2 class=" fw-bolder mb-3 fs-2">Tentang Combini</h2>
             <div class="accordion mb-5" id="accordionExample">
               <div class="accordion-item">
                 <h3 class="accordion-header" id="headingOne"><button class="accordion-button collapsed" type="button"
@@ -103,7 +104,7 @@
               <div class="accordion-item">
                 <h3 class="accordion-header" id="headingTwo"><button class="accordion-button collapsed" type="button"
                     data-bs-toggle="collapse" data-bs-target="#collapseTwo" aria-expanded="false"
-                    aria-controls="collapseTwo">Apa bedanya Combini dengan website lain?</button></h3>
+                    aria-controls="collapseTwo">Apa kelebihan website Combini?</button></h3>
                 <div class="accordion-collapse collapse" id="collapseTwo" aria-labelledby="headingTwo"
                   data-bs-parent="#accordionExample">
                   <div class="accordion-body">
@@ -142,7 +143,7 @@
               </div>
             </div>
             <!-- FAQ Accordion 2-->
-            <h2 class="fw-bolder mb-3">Biaya & Review</h2>
+            <h2 class="fw-bolder mb-3 fs-2">Biaya & Review</h2>
             <div class="accordion mb-5" id="accordionExample2">
               <div class="accordion-item">
                 <h3 class="accordion-header" id="headingFour"><button class="accordion-button collapsed" type="button"
@@ -188,7 +189,7 @@
               </div>
             </div>
             <!-- FAQ Accordion 3-->
-            <h2 class="fw-bolder mb-3">Akun</h2>
+            <h2 class="fw-bolder mb-3 fs-2">Akun</h2>
             <div class="accordion mb-5 mb-xl-0" id="accordionExample2">
               <div class="accordion-item">
                 <h3 class="accordion-header" id="headingSeven"><button class="accordion-button collapsed" type="button"
@@ -263,18 +264,11 @@
         </div>
       </div>
     </section>
-    <!-- Optional JavaScript; choose one of the two! -->
 
     <!-- Option 1: Bootstrap Bundle with Popper -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/js/bootstrap.bundle.min.js"
       integrity="sha384-U1DAWAznBHeqEIlVSCgzq+c9gqGAJn5c/t99JyeKa9xxaYpSvHU5awsuZVVFIhvj"
       crossorigin="anonymous"></script>
-
-    <!-- Option 2: Separate Popper and Bootstrap JS -->
-    <!--
-    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.3/dist/umd/popper.min.js" integrity="sha384-eMNCOe7tC1doHpGoWe/6oMVemdAVTMs2xqW4mwXrXsW0L84Iytr2wi5v2QjrP/xp" crossorigin="anonymous"></script>
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/js/bootstrap.min.js" integrity="sha384-cn7l7gDp0eyniUwwAZgrzD06kc/tftFf19TOAs2zVinnD/C7E91j9yyk5//jjpt/" crossorigin="anonymous"></script>
-    -->
     <script src="assets/js/main.js"></script>
 </body>
 
