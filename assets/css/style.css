@@ -63,7 +63,6 @@ section h2 {
   font-size: 0.95rem;
   color: #fffffa;
 }
-<<<<<<< HEAD
 @media (max-width: 991px) {
   header {
     background: linear-gradient(
@@ -79,12 +78,6 @@ section h2 {
 @media (max-width: 767px) {
   header {
     background-attachment: fixed;
-=======
-
-@media (max-width: 1024px) {
-  #header .img {
-    display: none;
->>>>>>> 47981c240fc4281a1ae50c9d7ecf203c14a2d6e8
   }
 }
 
@@ -379,7 +372,6 @@ section h2 {
   background: none;
   color: #fff;
 }
-<<<<<<< HEAD
 
 /* --------PANDUAN PENGGUNA-------- */
 body {
@@ -546,18 +538,4 @@ a {
 
 .mr-15 {
   margin-right: 15px !important;
-=======
-@media (max-width: 900px) {
-  .hero-bottom .img {
-    display: none;
-  }
-}
-
-/* Breadcrumb */
-
-/* Footer */
-footer {
-  font-family: "Nunito", sans-serif;
-  background: lightgrey;
->>>>>>> 47981c240fc4281a1ae50c9d7ecf203c14a2d6e8
 }
