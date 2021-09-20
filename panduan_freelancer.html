@@ -34,7 +34,7 @@
   </div>
   <main class="flex-shrink-0">
     <!-- Navbar -->
-    <nav class="navbar sticky shadow fixed-top navbar-expand-lg navbar-dark p-md-3">
+    <nav class="navbar sticky shadow sticky-top navbar-expand-lg navbar-dark p-md-3">
       <div class="container">
         <a href="index.html" class="navbar-brand">
           <img src="assets/img/logo2.png" alt="" />
@@ -46,7 +46,7 @@
           <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
             <li class="nav-item"><a href="" class="nav-link text-white">Beranda</a></li>
             <li class="nav-item dropdown">
-              <a href="" class="nav-link dropdown-toggle text-white" id="pekerjaan" role="button" data-bs-toggle="dropdown" aria-expanded="false">Pekerjaan</a>
+              <a href="" class="nav-link text-white" id="pekerjaan" role="button" data-bs-toggle="dropdown" aria-expanded="false">Pekerjaan</a>
               <ul class="dropdown-menu dropdown-menu-end" aria-labelledby="pekerjaan">
                 <li><a href="pekerjaan/1.html" class="dropdown-item text-black fw-normal fs-6">Copywriting</a></li>
                 <li><a href="pekerjaan/2.html" class="dropdown-item text-black fw-normal fs-6">Desain Grafis</a></li>
@@ -59,7 +59,7 @@
               </ul>
             </li>
             <li class="nav-item dropdown">
-              <a href="" class="nav-link dropdown-toggle text-white" id="bantuan" role="button" data-bs-toggle="dropdown" aria-expanded="false">Bantuan</a>
+              <a href="" class="nav-link text-white" id="bantuan" role="button" data-bs-toggle="dropdown" aria-expanded="false">Bantuan</a>
               <ul class="dropdown-menu dropdown-menu-end" aria-labelledby="bantuan">
                 <li><a href="faqs.html" class="dropdown-item text-black fw-normal fs-6">FAQs</a></li>
                 <li><a href="panduan_freelancer.html" class="dropdown-item text-black fw-normal fs-6">Panduan Freelancer</a></li>
@@ -67,20 +67,20 @@
               </ul>
             </li>
             <li class="nav-item dropdown">
-              <a href="" class="nav-link dropdown-toggle text-white" id="daftar" role="button" data-bs-toggle="dropdown" aria-expanded="false">Daftar</a>
+              <a href="" class="nav-link text-white" id="daftar" role="button" data-bs-toggle="dropdown" aria-expanded="false">Daftar</a>
               <ul class="dropdown-menu dropdown-menu-end" aria-labelledby="daftar">
                 <li><a href="auth/register.html" class="dropdown-item text-black fw-normal fs-6">Daftar Pengguna</a></li>
                 <li><a href="auth/register_freelance.html" class="dropdown-item text-black fw-normal fs-6">Daftar Freelancer</a></li>
               </ul>
             </li>
           </ul>
-          <a class="nav-btn" href="auth/login.html" type="button">Masuk</a>
+          <a class="nav-btn ms-2" href="auth/login.html" type="button">Masuk</a>
         </div>
       </div>
     </nav>
 
     <!-- Page Content-->
-    <section class="py-5">
+    <section class="py-3">
       <div class="container px-5 my-5">
         <div class="text-center mb-5">
           <h2 class="fw-bolder">Panduan Freelancer</h2>
@@ -92,49 +92,53 @@
               <div class="accordion-item">
                 <h3 class="accordion-header" id="headingOne"><button class="accordion-button collapsed" type="button"
                     data-bs-toggle="collapse" data-bs-target="#collapseOne" aria-expanded="false"
-                    aria-controls="collapseOne">Mendaftar akun Combini sebagai freelancer</button></h3>
-                <div class="accordion-collapse collapse" id="collapseOne" aria-labelledby="headingOne"
+                    aria-controls="collapseOne"><b>Mendaftar akun Combini sebagai freelancer</b></button></h3>
+                <div class="accordion-collapse collapse show" id="collapseOne" aria-labelledby="headingOne"
                   data-bs-parent="#accordionExample">
                   <div class="accordion-body">
-                    <li>Langkah pertama pilih menu daftar yang terdapat di atas header website Combini.id</li>
-                    <li>Kemudian pilih opsi daftar sebagai freelancer</li>
-                    <li>Lalu isi form pendaftaran untuk freelancer, lengkapi juga beberapa file data diri seperti NIK, foto KTP, foto profil, no. rekening, dan beberapa data penunjang sebagai portofolio, kategori pekerjaan yang dimiliki, latar belakang yang dapat menunjang kredibilitas sebagai freelancer</li>
-                    <li>Langkah terakhir pilih “daftar”, untuk selanjutnya data calon freelancer akan diverifikasi dan divalidasi oleh tim internal Combini.id</li>
+                    <ul>
+                      <li>Langkah pertama pilih menu daftar yang terdapat di atas header website Combini.id</li>
+                      <li>Kemudian pilih opsi daftar sebagai freelancer</li>
+                      <li>Lalu isi form pendaftaran untuk freelancer, lengkapi juga beberapa file data diri seperti NIK, foto KTP, foto profil, no. rekening, dan beberapa data penunjang sebagai portofolio, kategori pekerjaan yang dimiliki, latar belakang yang dapat menunjang kredibilitas sebagai freelancer</li>
+                      <li>Langkah terakhir pilih “daftar”, untuk selanjutnya data calon freelancer akan diverifikasi dan divalidasi oleh tim internal Combini.id</li>
+                    </ul>
                   </div>
                 </div>
               </div>
               <div class="accordion-item">
                 <h3 class="accordion-header" id="headingTwo"><button class="accordion-button collapsed" type="button"
                     data-bs-toggle="collapse" data-bs-target="#collapseTwo" aria-expanded="false"
-                    aria-controls="collapseTwo">Menawarkan jasa pekerjaan</button></h3>
+                    aria-controls="collapseTwo"><b>Menawarkan jasa pekerjaan</b></button></h3>
                 <div class="accordion-collapse collapse" id="collapseTwo" aria-labelledby="headingTwo"
                   data-bs-parent="#accordionExample">
                   <div class="accordion-body">
-                    <li>Pertama, masuk dalam menu kategori pekerjaan yang tersedia di halaman beranda atau pada header atas website Combini</li>
-                    <li>Kemudian pilih kategori pekerjaan yang sesuai dengan skill Anda</li>
-                    <li>Lalu pilih menu buat penawaran jasa, setelah itu isi setiap keterangan deskripsi pada penawaran jasa anda (judul pekerjaan, detail pekerjaan, dsbnya), selain itu unggah juga foto hasil dari pekerjaan yang mungkin telah anda lakukan sebelumnya sebagai penunjang untuk menarik minat pengguna jasa</li>
-                    <li>Combini turut serta dalam proses validasi data pengguna yang baru saja mendaftar, baik pada
-                      pengguna jasa atau freelancers. Hal ini dilakukan agar freelancer yang terdaftar merupakan
-                      individu yang berkompeten dan demi keamanan semua pihak.</li>
-                    <li>Selanjutnya isi harga yang anda tawarkan, terakhir pilih publish untuk menyimpan dan memaparkan penawaran jasa anda.</li>
+                    <ul>
+                      <li>Pertama, masuk dalam menu kategori pekerjaan yang tersedia di halaman beranda atau pada header atas website Combini</li>
+                      <li>Kemudian pilih kategori pekerjaan yang sesuai dengan skill Anda</li>
+                      <li>Lalu pilih menu buat penawaran jasa, setelah itu isi setiap keterangan deskripsi pada penawaran jasa anda (judul pekerjaan, detail pekerjaan, dsbnya), selain itu unggah juga foto hasil dari pekerjaan yang mungkin telah anda lakukan sebelumnya sebagai penunjang untuk menarik minat pengguna jasa</li>
+                      <li>Combini turut serta dalam proses validasi data pengguna yang baru saja mendaftar, baik pada pengguna jasa atau freelancers. Hal ini dilakukan agar freelancer yang terdaftar merupakan individu yang berkompeten dan demi keamanan semua pihak.</li>
+                      <li>Selanjutnya isi harga yang anda tawarkan, terakhir pilih publish untuk menyimpan dan memaparkan penawaran jasa anda.</li>
+                    </ul>
                   </div>
                 </div>
               </div>
               <div class="accordion-item">
                 <h3 class="accordion-header" id="headingThree"><button class="accordion-button collapsed" type="button"
                     data-bs-toggle="collapse" data-bs-target="#collapseThree" aria-expanded="false"
-                    aria-controls="collapseThree">Mekanisme setelah mendapatkan customer/pengguna jasa</button></h3>
+                    aria-controls="collapseThree"><b>Mekanisme setelah mendapatkan customer/pengguna jasa</b></button></h3>
                 <div class="accordion-collapse collapse" id="collapseThree" aria-labelledby="headingThree"
                   data-bs-parent="#accordionExample">
                   <div class="accordion-body">
-                    <li>Setelah andamelakukan melakukandiskusi dengan pengguna jasa mengenai pekerjaan, tunggu pengguna jasa melaksanakan kewajibannya dalam membayar order pesanan. (jangan lakukan pekerjaan sebelum pengguna jasa menyelesaikan pembayaran)</li>
-                    <li>Status order menjadi accept apabila dana sudah berhasil dibayar oleh pengguna jasa dan telah dikonfirmasi tim Combini</li>
-                    <li>Selanjutnya freelancer dapat memulai pekerjaan</li>
-                    <li>Jika pekerjaan sudah selesai, freelancersegera mengirimkan hasil pekerjaannya pada menu order transaksi</li>
-                    <li>Pengguna jasa selanjutnya akan memeriksa hasil pekerjaan</li>
-                    <li>Jika pengguna jasa setuju dengan hasil pekerjaan, maka status order akan berubah menjadi berhasil dan dana akan dilepaskan kepada freelancer. Namun apabila pengguna jasa belum cocok dengan hasil pekerjaan, maka freelancersegera merevisi kembali pekerjaannya sesuai dengan kesepakatan bersama sebelumnya.</li>
-                    <li>Kemudian apabila status order berhasil, freelancerdapat mengirimkan ratingdan reviewpada pengguna jasa, begitupunjuga sebaliknya.</li>
-                    <li>Dana akan segera masuk ke dalam saldo akun freelancer</li>
+                    <ul>
+                      <li>Setelah andamelakukan melakukandiskusi dengan pengguna jasa mengenai pekerjaan, tunggu pengguna jasa melaksanakan kewajibannya dalam membayar order pesanan. (jangan lakukan pekerjaan sebelum pengguna jasa menyelesaikan pembayaran)</li>
+                      <li>Status order menjadi accept apabila dana sudah berhasil dibayar oleh pengguna jasa dan telah dikonfirmasi tim Combini</li>
+                      <li>Selanjutnya freelancer dapat memulai pekerjaan</li>
+                      <li>Jika pekerjaan sudah selesai, freelancersegera mengirimkan hasil pekerjaannya pada menu order transaksi</li>
+                      <li>Pengguna jasa selanjutnya akan memeriksa hasil pekerjaan</li>
+                      <li>Jika pengguna jasa setuju dengan hasil pekerjaan, maka status order akan berubah menjadi berhasil dan dana akan dilepaskan kepada freelancer. Namun apabila pengguna jasa belum cocok dengan hasil pekerjaan, maka freelancersegera merevisi kembali pekerjaannya sesuai dengan kesepakatan bersama sebelumnya.</li>
+                      <li>Kemudian apabila status order berhasil, freelancerdapat mengirimkan ratingdan reviewpada pengguna jasa, begitupunjuga sebaliknya.</li>
+                      <li>Dana akan segera masuk ke dalam saldo akun freelancer</li>
+                    </ul>
                   </div>
                 </div>
               </div>

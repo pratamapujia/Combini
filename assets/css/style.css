@@ -132,16 +132,6 @@ section h2 {
   font-size: 14px;
   transition: all linear 0.25s;
 }
-/* .topWeek .card-img-overlay .card-icon {
-  position: absolute;
-  bottom: 20px;
-  right: 30px;
-  transition: all linear 0.25s;
-  color: #fff;
-} */
-/* .topWeek .card-img-overlay .card-icon .fab {
-  margin: 5px;
-} */
 .topWeek .card:hover img {
   filter: grayscale(50%);
 }
@@ -151,30 +141,6 @@ section h2 {
 .topWeek .card:hover .card-job {
   bottom: 30px;
 }
-/* .topWeek .card:hover .card-icon {
-  right: 40px;
-} */
-/* .topWeek .owl-dots {
-  text-align: center;
-  margin-top: 20px;
-}
-.topWeek .owl-dot {
-  height: 13px;
-  width: 13px;
-  margin: 0 5px;
-  outline: none !important;
-  border-radius: 50%;
-  border: 2px solid #143d59 !important;
-  transition: all 0.3s ease;
-}
-.topWeek .owl-dot.active {
-  width: 35px;
-  border-radius: 14px;
-}
-.topWeek .owl-dot.active,
-.topWeek .owl-dot:hover {
-  background: #ffd700 !important;
-} */
 
 /* Pekerjaan */
 #pekerjaan .container img {
@@ -247,10 +213,6 @@ section h2 {
   margin: 5% 0%;
   transition: margin 0.4s ease;
 }
-/* .testimonials-clean .owl-item.center > div {
-  cursor: pointer;
-  margin: 0;
-} */
 .testimonials-clean .owl-dots {
   text-align: center;
   margin-top: 20px;
@@ -272,68 +234,6 @@ section h2 {
 .testimonials-clean .owl-dot:hover {
   background: #ffd700 !important;
 }
-
-/* .testimoni .card {
-  border-radius: 20px;
-  background-color: #143d59;
-}
-.testimoni .card .card-img-top {
-  max-width: 100px;
-  border-radius: 50%;
-  margin: 15px auto 0;
-  box-shadow: 0 8px 20px -4x #9fabbb;
-  width: 100px;
-  height: 100px;
-}
-.testimoni .card:hover {
-  filter: grayscale(50%);
-}
-.testimoni .card h5 {
-  color: #ffd700;
-  font-size: 22px;
-  line-height: 1.3;
-  font-weight: 600;
-}
-.testimoni .card h5 span {
-  font-size: 17px;
-  color: #fff;
-}
-.testimoni .card p {
-  color: #fff;
-  padding-bottom: 15px;
-  font-weight: lighter;
-}
-.testimoni .owl-item > div {
-  cursor: pointer;
-  margin: 5% 0%;
-  transition: margin 0.4s ease;
-}
-.testimoni .owl-item.center > div {
-  cursor: pointer;
-  margin: 0;
-}
-.testimoni .owl-dots {
-  text-align: center;
-  margin-top: 20px;
-}
-.testimoni .owl-dot {
-  height: 13px;
-  width: 13px;
-  margin: 0 5px;
-  outline: none !important;
-  border-radius: 50%;
-  border: 2px solid #143d59 !important;
-  transition: all 0.3s ease;
-}
-.testimoni .owl-dot.active {
-  width: 35px;
-  border-radius: 14px;
-}
-.testimoni .owl-dot.active,
-.testimoni .owl-dot:hover {
-  background: #ffd700 !important;
-} */
-
 /* Hero Bottom */
 .hero-bottom {
   background-image: linear-gradient(to right, rgb(28, 86, 125) 20%, rgb(20, 61, 89));
@@ -493,4 +393,50 @@ footer span {
 .register-form .img-google {
   height: 20px;
   width: 20px;
+}
+
+/* ============= Users ============= */
+/* Navbar */
+@media (max-width: 990px) {
+  #user .navbar-brand {
+    display: none;
+  }
+}
+
+#user .offcanvas form {
+  background: rgba(255, 255, 255, 0.5);
+}
+#user .offcanvas .form-control {
+  font-size: 1rem;
+  color: #143d59;
+  font-weight: bold;
+}
+#user .offcanvas .form-control:focus {
+  box-shadow: none;
+}
+#user .offcanvas .form-control::placeholder {
+  font-size: 1rem;
+  color: #143d59;
+  font-weight: bold;
+}
+
+/* Header */
+#user-header .card-penawaran {
+  background: #e3ebeb;
+  border: none;
+  border-radius: 10px;
+}
+#user-header .card-penawaran .btn-penawaran {
+  background: #fff;
+  border: 1px solid #143d59;
+  border-radius: 15px;
+  color: #143d59;
+}
+#user-header .card-penawaran .btn-penawaran:hover {
+  background: none;
+}
+#user-header .card-penawaran2 {
+  background-image: linear-gradient(to top left, rgb(28, 86, 125) 20%, rgb(20, 61, 89));
+  border: none;
+  border-radius: 10px;
 }
