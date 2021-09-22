@@ -440,3 +440,18 @@ footer span {
   border: none;
   border-radius: 10px;
 }
+
+/* TopWeek Customer */
+.card-list {
+  border-radius: 20px;
+}
+.btn-chart {
+  background: #ffd700;
+  border: 1px solid #143d59;
+  border-radius: 9px;
+  width: 100px;
+  color: #143d59;
+}
+.btn-chart:hover {
+  background: #ffd900aa;
+}
