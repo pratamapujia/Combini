@@ -83,3 +83,7 @@ window.addEventListener("scroll", function () {
     nav.classList.remove("sticky", "shadow");
   }
 });
+
+$(".btn-pay").click(function () {
+  $(".nav-tabs > .active").next("li").find("a").trigger("click");
+});

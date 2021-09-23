@@ -455,3 +455,56 @@ footer span {
 .btn-chart:hover {
   background: #ffd900aa;
 }
+
+/* Detail - Freelance */
+#detail .card-detail {
+  background-image: linear-gradient(to top left, rgb(28, 86, 125) 20%, rgb(20, 61, 89));
+  border-radius: 15px;
+}
+#detail .card-detail a {
+  background: #ffd700;
+  border: 1px solid #143d59;
+  border-radius: 9px;
+  color: #143d59;
+  font-weight: bold;
+}
+#detail .card-detail a:hover {
+  background: #ffd900aa;
+}
+
+/* Porto */
+#porto .card .card-title {
+  color: #143d59;
+  margin-bottom: 20px;
+}
+#porto h3 {
+  color: #143d59;
+}
+#porto .card {
+  border-color: #143d59;
+  border-radius: 10px;
+}
+#porto .card img {
+  border-top-left-radius: 10px;
+  border-top-right-radius: 10px;
+}
+
+/* Checkout */
+#checkout .card {
+  border-color: #143d59;
+  border-radius: 14px;
+}
+#checkout .card img {
+  border-top-left-radius: 14px;
+  border-top-right-radius: 14px;
+}
+#checkout .card .btn-pay {
+  background: #ffd700;
+  border: 1px solid #ffd700;
+  border-radius: 100px;
+  color: #143d59;
+  font-weight: bold;
+}
+#checkout .card .btn-pay:hover {
+  background: #ffd900aa;
+}

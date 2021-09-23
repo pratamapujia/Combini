@@ -33,7 +33,7 @@
     <!-- Jquery -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js" integrity="sha512-894YE6QWD5I59HgZOGReFYm4dnWc1Qt5NtvYSaNcOP+u1T9qYdvdihz0PPSiiqn/+/3e7Jo4EaG7TubfWGUrMQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
   </head>
-  <body class="d-flex flex-column h-100">
+  <body class="d-flex flex-column h-100" style="background: #f6f5f5">
     <div class="scroll-up-btn">
       <i class="fas fa-angle-up"></i>
     </div>
@@ -100,129 +100,91 @@
         </div>
       </nav>
 
-      <!-- Hedaer -->
-      <section id="detail">
-        <div class="container py-5">
-          <div class="row justify-content-center">
-            <div class="col-lg-12">
-              <div class="card card-detail">
-                <div class="card-body text-center">
-                  <div class="row d-flex align-items-center">
-                    <div class="col-lg-3">
-                      <img src="../assets/img/users/user-s2.jpg" alt="" class="rounded rounded-circle" width="200" />
-                    </div>
-                    <div class="col-lg-7">
-                      <h3 class="card-title fs-3 fw-bold text-sm-start text-white">Joe Taslim</h3>
-                      <p class="card-text text-start text-white fs-5">Saya berpengalaman selama 5 tahun di bidang fotografi, editing video dan foto, videografi. Saya menerima freelance fotografi event, produk, makanan. Anda bisa lihat portofolio saya</p>
-                    </div>
-                    <div class="col-lg-2">
-                      <a href="checkout.html" class="btn mt-2 btn-pilih shadow">Pilih Freelance</a>
-                    </div>
+      <!-- Checkout -->
+      <section>
+        <ul class="nav nav-tabs pt-3">
+          <li class="nav-item">
+            <a class="nav-link disabled">Detail Pesanan</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link active">Konfirmasi Pembayaran</a>
+          </li>
+        </ul>
+        <div class="container py-4">
+          <div class="row">
+            <div class="col-lg-6 mx-auto">
+              <div class="card">
+                <div class="card-header">
+                  <div class="bg-white shadow-sm pt-4 ps-2 pe-2 pb-2">
+                    <ul role="tablist" class="nav bg-light nav-pills rounded nav-fill mb-3">
+                      <li class="nav-item">
+                        <a data-bs-toggle="pill" id="credit-tab" href="#credit-card" class="nav-link active" role="tab" aria-controls="credit-card" aria-selected="true"><i class="fas fa-credit-card me-2"></i> Credit Card</a>
+                      </li>
+                      <li class="nav-item">
+                        <a data-bs-toggle="pill" id="wallet-tab" role="tab" aria-controls="ewallet" aria-selected="false" href="#ewallet" class="nav-link"><i class="fas fa-wallet me-2"></i> E-Wallet</a>
+                      </li>
+                      <li class="nav-item">
+                        <a data-bs-toggle="pill" id="other-tab" role="tab" aria-controls="other" aria-selected="false" href="#other" class="nav-link"><i class="fas fa-money-check-alt me-2"></i> Other</a>
+                      </li>
+                    </ul>
                   </div>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      <!-- Portofolio -->
-      <section id="porto">
-        <div class="container py-2 mb-2">
-          <div class="row justify-content-center">
-            <div class="col-lg-4">
-              <div class="row mb-3">
-                <div class="col-md-12">
-                  <div class="card mb-2">
-                    <div class="card-body">
-                      <h5 class="card-title fw-bold fs-4">Informasi Dasar</h5>
-                      <div class="d-flex justify-content-between mt-2">
-                        <p class="card-text">Anggota Sejak</p>
-                        <p class="card-text">31 Mei 2021</p>
-                      </div>
-                      <div class="d-flex justify-content-between">
-                        <p class="card-text">Pekerjaan</p>
-                        <p class="card-text">3 Kali</p>
-                      </div>
-                      <div class="d-flex justify-content-between">
-                        <p class="card-text">Wakru Respon</p>
-                        <p class="card-text">12 Jam</p>
-                      </div>
-                      <div class="d-flex justify-content-between">
-                        <p class="card-text">Tingkat Penyelesaian</p>
-                        <p class="card-text">100%</p>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-                <div class="col-md-12">
-                  <div class="card mb-2">
-                    <div class="card-body">
-                      <h5 class="card-title fw-bold fs-4">Sertifikat dan Penghargaan</h5>
-                      <div class="d-flex justify-content-between">
-                        <p class="card-text">Anggota Sejak</p>
-                        <p class="card-text">31 Mei 2021</p>
-                      </div>
-                      <div class="d-flex justify-content-between">
-                        <p class="card-text">Pekerjaan</p>
-                        <p class="card-text">3 Kali</p>
-                      </div>
-                      <div class="d-flex justify-content-between">
-                        <p class="card-text">Wakru Respon</p>
-                        <p class="card-text">12 Jam</p>
-                      </div>
-                      <div class="d-flex justify-content-between">
-                        <p class="card-text">Tingkat Penyelesaian</p>
-                        <p class="card-text">100%</p>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
-            <div class="col-lg-8">
-              <h3 class="text-start fw-bolder mb-3">Pekerjaan Saya</h3>
-              <div class="row">
-                <div class="col-md-6">
-                  <div class="card mb-3">
-                    <img src="../assets/img/450x300.jpg" alt="" class="card-img-top" />
-                    <div class="card-body">
-                      <h5 class="card-title fw-bold">Food Photography</h5>
-                      <p class="fst-italic card-subtitle">Lorem ipsum dolor sit amet consectetur adipisicing elit. Repellendus, pariatur.</p>
-                      <div class="d-flex justify-content-between small mt-2">
-                        <div class="text-warning">
-                          <i class="fas fa-star"></i>
-                          <i class="fas fa-star"></i>
-                          <i class="fas fa-star"></i>
-                          <i class="fas fa-star"></i>
-                          <i class="fas fa-star"></i>
+                  <!-- Credit Card -->
+                  <div class="tab-content">
+                    <div class="tab-pane fade show active pt-3" id="credit-card" role="tabpanel">
+                      <form role="form" onsubmit="event.preventDefault()">
+                        <div class="form-group">
+                          <label for="username" class="my-2">
+                            <h6>Card Owner</h6>
+                          </label>
+                          <input type="text" name="username" placeholder="Card Owner Name" required class="form-control" />
                         </div>
-                        <p class="text-muted card-text">(150)</p>
-                      </div>
-                      <hr />
-                      <p class="card-text align-items-center">Harga mulai <b style="color: #143d59">200rb</b></p>
+                        <div class="form-group">
+                          <label for="cardNumber" class="my-2">
+                            <h6>Card number</h6>
+                          </label>
+                          <div class="input-group">
+                            <input type="text" name="cardNumber" placeholder="Valid card number" class="form-control" required />
+                            <span class="input-group-text text-muted"> <i class="fab fa-cc-visa mx-1"></i> <i class="fab fa-cc-mastercard mx-1"></i> <i class="fab fa-cc-amex mx-1"></i> </span>
+                          </div>
+                        </div>
+                        <div class="row">
+                          <div class="col-sm-8">
+                            <div class="form-group">
+                              <label class="my-2">
+                                <h6>Expiration Date</h6>
+                              </label>
+                              <div class="input-group">
+                                <input type="number" placeholder="MM" name="" class="form-control" required />
+                                <input type="number" placeholder="YY" name="" class="form-control" required />
+                              </div>
+                            </div>
+                          </div>
+                          <div class="col-sm-4">
+                            <div class="form-group mb-4">
+                              <label data-toggle="tooltip" title="Three digit CV code on the back of your card" class="my-2">
+                                <h6>CVV <i class="fa fa-question-circle d-inline"></i></h6>
+                              </label>
+                              <input type="text" required class="form-control" />
+                            </div>
+                          </div>
+                        </div>
+                        <div class="card-footer d-grid">
+                          <button type="button" class="subscribe btn btn-primary shadow-sm">Confirm Payment</button>
+                        </div>
+                      </form>
                     </div>
                   </div>
-                </div>
-                <div class="col-md-6">
-                  <div class="card mb-3">
-                    <img src="../assets/img/450x300.jpg" alt="" class="card-img-top" />
-                    <div class="card-body">
-                      <h5 class="card-title fw-bold">Food Photography</h5>
-                      <p class="fst-italic card-subtitle">Lorem ipsum dolor sit amet consectetur adipisicing elit. Repellendus, pariatur.</p>
-                      <div class="d-flex justify-content-between small mt-2">
-                        <div class="text-warning">
-                          <i class="fas fa-star"></i>
-                          <i class="fas fa-star"></i>
-                          <i class="fas fa-star"></i>
-                          <i class="fas fa-star"></i>
-                          <i class="fas fa-star"></i>
-                        </div>
-                        <p class="text-muted card-text">(150)</p>
-                      </div>
-                      <hr />
-                      <p class="card-text align-items-center">Harga mulai <b style="color: #143d59">200rb</b></p>
+                  <!-- Paypal info -->
+                  <div id="ewallet" class="tab-pane fade pt-3" role="tabpanel">
+                    <h6 class="pb-2">Select your paypal account type</h6>
+                    <div class="form-group">
+                      <label class="radio-inline"> <input type="radio" name="optradio" checked /> Domestic</label>
+                      <label class="radio-inline"> <input type="radio" name="optradio" class="ml-5" />International </label>
                     </div>
+                    <p>
+                      <button type="button" class="btn btn-primary"><i class="fab fa-paypal mr-2"></i> Log into my Paypal</button>
+                    </p>
+                    <p class="text-muted">Note: After clicking on the button, you will be directed to a secure gateway for payment. After completing the payment process, you will be redirected back to the website to view details of your order.</p>
                   </div>
                 </div>
               </div>
