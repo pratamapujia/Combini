@@ -112,86 +112,123 @@
         </ul>
         <div class="container py-4">
           <div class="row">
-            <div class="col-lg-6 mx-auto">
-              <div class="card">
+						<div class="col-lg-6 mx-auto">
+							<div class="card" style="border: none;">
                 <div class="card-header">
                   <div class="bg-white shadow-sm pt-4 ps-2 pe-2 pb-2">
-                    <ul role="tablist" class="nav bg-light nav-pills rounded nav-fill mb-3">
-                      <li class="nav-item">
-                        <a data-bs-toggle="pill" id="credit-tab" href="#credit-card" class="nav-link active" role="tab" aria-controls="credit-card" aria-selected="true"><i class="fas fa-credit-card me-2"></i> Credit Card</a>
-                      </li>
-                      <li class="nav-item">
-                        <a data-bs-toggle="pill" id="wallet-tab" role="tab" aria-controls="ewallet" aria-selected="false" href="#ewallet" class="nav-link"><i class="fas fa-wallet me-2"></i> E-Wallet</a>
-                      </li>
-                      <li class="nav-item">
-                        <a data-bs-toggle="pill" id="other-tab" role="tab" aria-controls="other" aria-selected="false" href="#other" class="nav-link"><i class="fas fa-money-check-alt me-2"></i> Other</a>
-                      </li>
+                    <ul class="nav nav-pills nav-fill rounded mb-3 bg-light" role="tablist">
+                      <li class="nav-item"><a class="nav-link active" href="#tab-1" data-bs-toggle="tab" role="tab"><i class="fas fa-credit-card"></i> Creadit Card</a></li>
+                      <li class="nav-item"><a class="nav-link" href="#tab-2" data-bs-toggle="tab" role="tab"><i class="fas fa-wallet"></i> E-Wallet</a></li>
+                      <li class="nav-item"><a class="nav-link" href="#tab-3" data-bs-toggle="tab" role="tab"><i class="fas fa-receipt"></i> Other</a></li>
                     </ul>
                   </div>
-                  <!-- Credit Card -->
+                </div>
+                <div class="card-body">
                   <div class="tab-content">
-                    <div class="tab-pane fade show active pt-3" id="credit-card" role="tabpanel">
-                      <form role="form" onsubmit="event.preventDefault()">
-                        <div class="form-group">
-                          <label for="username" class="my-2">
-                            <h6>Card Owner</h6>
-                          </label>
-                          <input type="text" name="username" placeholder="Card Owner Name" required class="form-control" />
+                    <!-- Creadit Card -->
+                    <div class="tab-pane fade show active" id="tab-1" role="tabpanel">
+                      <form action="">
+                        <div class="mb-3">
+                          <label for="username">Card Owner</label>
+                          <input type="text" name="username" placeholder="Card Name" required class="form-control">
                         </div>
-                        <div class="form-group">
-                          <label for="cardNumber" class="my-2">
-                            <h6>Card number</h6>
-                          </label>
+                        <div class="mb-3">
+                          <label for="cardNumber">Card Number</label>
                           <div class="input-group">
-                            <input type="text" name="cardNumber" placeholder="Valid card number" class="form-control" required />
-                            <span class="input-group-text text-muted"> <i class="fab fa-cc-visa mx-1"></i> <i class="fab fa-cc-mastercard mx-1"></i> <i class="fab fa-cc-amex mx-1"></i> </span>
+                            <input type="text" name="cardNumber" placeholder="Valid Card Number" class="form-control" required>
+                            <span class="input-group-text text-muted">
+                              <i class="fab fa-cc-visa mx-1"></i>
+                              <i class="fab fa-cc-mastercard mx-1"></i>
+                              <i class="fab fa-cc-amex mx-1"></i>
+                            </span>
                           </div>
                         </div>
                         <div class="row">
-                          <div class="col-sm-8">
-                            <div class="form-group">
-                              <label class="my-2">
-                                <h6>Expiration Date</h6>
-                              </label>
+                          <div class="col-md-8">
+                            <div class="mb-3">
+                              <label for="">Expiration Date</label>
                               <div class="input-group">
-                                <input type="number" placeholder="MM" name="" class="form-control" required />
-                                <input type="number" placeholder="YY" name="" class="form-control" required />
+                                <input type="number" placeholder="MM" name="" class="form-control" required>
+                                <input type="number" placeholder="YY" name="" class="form-control" required>
                               </div>
                             </div>
                           </div>
-                          <div class="col-sm-4">
-                            <div class="form-group mb-4">
-                              <label data-toggle="tooltip" title="Three digit CV code on the back of your card" class="my-2">
-                                <h6>CVV <i class="fa fa-question-circle d-inline"></i></h6>
-                              </label>
-                              <input type="text" required class="form-control" />
+                          <div class="col-md-4">
+                            <div class="mb-3 mb-4">
+                              <label for="">CVV <i class="fas fa-question-circle d-inline"></i></label>
+                              <input type="text" class="form-control" required>
                             </div>
                           </div>
                         </div>
                         <div class="card-footer d-grid">
-                          <button type="button" class="subscribe btn btn-primary shadow-sm">Confirm Payment</button>
+                          <button type="button" data-bs-toggle="modal" data-bs-target="#exampleModal" class="btn btn-primary shadow-sm">Konfirmasi Pembayaran</button>
                         </div>
                       </form>
                     </div>
-                  </div>
-                  <!-- Paypal info -->
-                  <div id="ewallet" class="tab-pane fade pt-3" role="tabpanel">
-                    <h6 class="pb-2">Select your paypal account type</h6>
-                    <div class="form-group">
-                      <label class="radio-inline"> <input type="radio" name="optradio" checked /> Domestic</label>
-                      <label class="radio-inline"> <input type="radio" name="optradio" class="ml-5" />International </label>
+                    <div class="tab-pane fade" id="tab-2" role="tabpanel">
+                      <h6 class="pb-2 fs-5 fw-bold">Pilih pembayaran E-Wallet</h6>
+                      <div class="form-check form-check-inline">
+                        <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio1" value="option1">
+                        <label class="form-check-label" for="inlineRadio1">
+                          <img src="../assets/img/icons/OVO.png" style="width: 48px;" alt="">
+                        </label>
+                      </div>
+                      <div class="form-check form-check-inline">
+                        <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio2" value="option2">
+                        <label class="form-check-label" for="inlineRadio2">
+                          <img src="../assets/img/icons/dana.png" style="width: 64px;" alt="">
+                        </label>
+                      </div>
+                      <div class="my-4">
+                        <button type="button" data-bs-toggle="modal" data-bs-target="#exampleModal" class="btn btn-primary me-2"><i class="fas fa-wallet"></i> Masuk Akun E-Wallet</button>
+                      </div>
+                      <hr>
+                      <p class="text-muted">
+                        <b>Note :</b> After clicking on the button, you will be directed to a secure gateway for payment. After completing the payment process, you will be redirected back to the website to view details of your order. 
+                      </p>
                     </div>
-                    <p>
-                      <button type="button" class="btn btn-primary"><i class="fab fa-paypal mr-2"></i> Log into my Paypal</button>
-                    </p>
-                    <p class="text-muted">Note: After clicking on the button, you will be directed to a secure gateway for payment. After completing the payment process, you will be redirected back to the website to view details of your order.</p>
+                    <div class="tab-pane" id="tab-3" role="tabpanel">
+                      <h6 class="pb-2 fs-5 fw-bold">Pilih pembayaran E-Wallet</h6>
+                      <div class="form-check form-check-inline">
+                        <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio1" value="option1">
+                        <label class="form-check-label" for="inlineRadio1">
+                          <img src="../assets/img/icons/Indomaret.png" style="width: 64px;" alt="">
+                        </label>
+                      </div>
+                      <div class="form-check form-check-inline">
+                        <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio2" value="option2">
+                        <label class="form-check-label" for="inlineRadio2">
+                          <img src="../assets/img/icons/alfamartpng.png" style="width: 64px;" alt="">
+                        </label>
+                      </div>
+                      <div class="my-4">
+                        <button type="button" data-bs-toggle="modal" data-bs-target="#exampleModal" class="btn btn-primary me-2"><i class="fas fa-receipt"></i> Konfirmasi Pembayaran</button>
+                      </div>
+                      <hr>
+                      <p class="text-muted">
+                        <b>Note :</b> After clicking on the button, you will be directed to a secure gateway for payment. After completing the payment process, you will be redirected back to the website to view details of your order. 
+                      </p>
+                    </div>
                   </div>
                 </div>
-              </div>
+							</div>
+						</div>  
+        </div>
+      </section>
+
+      <!-- Modal -->
+      <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered">
+          <div class="modal-content">
+            <div class="modal-body">
+              <h2 class="text-center text-success">Pembayaran Berhasil</h2>
+            </div>
+            <div class="modal-footer">
+              <a type="button" href="../users/customer.html" class="btn btn-primary">Ok</a>
             </div>
           </div>
         </div>
-      </section>
+      </div>
 
       <!-- Footer -->
       <footer class="footer mt-auto py-3">
