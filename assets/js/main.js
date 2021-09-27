@@ -17,20 +17,16 @@ $(document).ready(function () {
   // Script Carousel
   $(".topWeek").slick({
     dots: true,
-    infinite: true,
-    speed: 500,
-    slidesToShow: 4,
-    slidesToScroll: 1,
-    autoplay: true,
-    autoplaySpeed: 2000,
+    infinite: false,
+    speed: 800,
+    slidesToShow: 5,
+    slidesToScroll: 3,
     responsive: [
       {
         breakpoint: 1024,
         settings: {
           slidesToShow: 3,
-          slidesToScroll: 1,
-          infinite: true,
-          dots: true,
+          slidesToScroll: 2,
         },
       },
       {
@@ -74,6 +70,22 @@ $(document).ready(function () {
   });
 });
 
+$(".alur-for").slick({
+  slidesToShow: 1,
+  slidesToScroll: 1,
+  arrows: false,
+  dots: false,
+  fade: true,
+  asNavFor: ".alur",
+});
+$(".alur").slick({
+  slidesToShow: 1,
+  slidesToScroll: 1,
+  asNavFor: ".alur-for",
+  dots: true,
+});
+
+// Sticky Scroll
 var nav = document.querySelector("#navbar");
 
 window.addEventListener("scroll", function () {
@@ -82,8 +94,4 @@ window.addEventListener("scroll", function () {
   } else {
     nav.classList.remove("sticky", "shadow");
   }
-});
-
-$(".btn-pay").click(function () {
-  $(".nav-tabs > .active").next("li").find("a").trigger("click");
 });
