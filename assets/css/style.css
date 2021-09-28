@@ -478,3 +478,26 @@ footer span {
 #checkout .card .btn-pay:hover {
   background: #ffd900aa;
 }
+
+/* Chat */
+::-webkit-scrollbar {
+  width: 5px;
+}
+::-webkit-scrollbar-track {
+  width: 5px;
+  background: #f5f5f5;
+}
+::-webkit-scrollbar-thumb {
+  width: 1em;
+  background-color: #ddd;
+  outline: 1px solid slategrey;
+  border-radius: 1rem;
+}
+input::placeholder {
+  font-size: 0.9rem;
+  color: #999;
+}
+#chat .message-box .active {
+  border: none;
+  background-color: rgb(155, 155, 155);
+}
