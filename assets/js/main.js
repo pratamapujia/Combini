@@ -83,6 +83,8 @@ $(".alur").slick({
   slidesToScroll: 1,
   asNavFor: ".alur-for",
   dots: true,
+  centerMode: true,
+  variableWidth: true,
 });
 
 // Sticky Scroll

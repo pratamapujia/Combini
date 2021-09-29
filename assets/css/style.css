@@ -63,14 +63,22 @@ section h2 {
   background: linear-gradient(to left, rgb(28, 86, 125) 20%, rgb(20, 61, 89));
   padding-top: 30px;
 }
-#header h1 {
+#header-user {
+  font-family: "Nunito", sans-serif;
+  background: #143d59;
+  padding-top: 30px;
+}
+#header,
+#header-user h1 {
   font-family: "Chennai", sans-serif;
   letter-spacing: 3px;
 }
-#header .row .form-control:focus {
+#header .row .form-control:focus,
+#header-user .row .form-control:focus {
   box-shadow: none;
 }
-#header .row .form-control::placeholder {
+#header .row .form-control::placeholder,
+#header-user .row .form-control::placeholder {
   font-size: 0.95rem;
   color: #fffffa;
 }
