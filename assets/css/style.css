@@ -12,6 +12,16 @@ section h2 {
   letter-spacing: 1px;
   font-size: 45px;
 }
+.btn-load {
+  background: #143d59aa;
+  border-radius: 9px;
+  width: 300px;
+  color: white;
+}
+.btn-load:hover {
+  background: #ffd700aa;
+  color: #143d59;
+}
 
 /* Navbar */
 .sticky {
