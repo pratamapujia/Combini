@@ -53,10 +53,13 @@
               <form action="" class="input-group border-0 rounded-pill" style="width: 300px">
                 <input type="search" class="form-control bg-transparent border-0 me-2" placeholder="Cari pekerjaan" aria-label="Search" />
                 <div class="input-group-append border-0 my-auto">
-                  <a href="../pekerjaan/1.html" class="btn btn-link text-white" type="button" id="search"><i class="fas fa-search" aria-hidden="true"></i></a>
+                  <a href="videografer_users.html" class="btn btn-link text-white" type="button" id="search"><i class="fas fa-search" aria-hidden="true"></i></a>
                 </div>
               </form>
               <ul class="navbar-nav justify-content-end flex-grow-1">
+                <li class="nav-item">
+                  <a href="../auth/register_freelance.html" class="nav-link text-white">Daftar Freelance</a>
+                </li>
                 <li class="nav-item dropdown">
                   <a class="nav-link text-white" href="#" id="offcanvasNavbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false"> Pekerjaan </a>
                   <ul class="dropdown-menu dropdown-menu-end" aria-labelledby="offcanvasNavbarDropdown">
@@ -72,7 +75,37 @@
                 </li>
                 <from class="d-flex align-items-center">
                   <a href="chat.html" class="text-white mx-2"><i class="fas fa-comments"></i></a>
-                  <a href="" class="text-white mx-1"><i class="fas fa-bell"></i></a>
+                  <div class="dropdown">
+                    <a href="" class="nav-link text-white mx-1" id="notif" role="button" data-bs-toggle="dropdown" aria-expanded="false"><i class="fas fa-bell"></i></a>
+                    <ul class="dropdown-menu dropdown-menu-end" aria-labelledby="notif" style="width: 500px">
+                      <li>
+                        <a href="" class="dropdown-item">
+                          <div class="row align-items-center">
+                            <div class="col-auto">
+                              <img src="../assets/img/logo3.png" width="40" class="rounded-circle" alt="" />
+                            </div>
+                            <div class="col" style="line-height: 1.1">
+                              <span class="fs-6 text-wrap">Pekerjaan [Fotografi] yang anda beli sudah diterima oleh freelance</span><br />
+                              <small class="text-muted"><i class="far fa-clock"></i> hari ini</small>
+                            </div>
+                          </div>
+                        </a>
+                      </li>
+                      <li>
+                        <a href="" class="dropdown-item">
+                          <div class="row align-items-center">
+                            <div class="col-auto">
+                              <img src="../assets/img/logo3.png" width="40" class="rounded-circle" alt="" />
+                            </div>
+                            <div class="col" style="line-height: 1.1">
+                              <span class="fs-6 text-wrap lh-sm">Pekerjaan [Videografi] yang anda beli sudah selesai, silahkan kasih review ke freelance</span><br />
+                              <small class="text-muted"><i class="far fa-clock"></i> kemarin</small>
+                            </div>
+                          </div>
+                        </a>
+                      </li>
+                    </ul>
+                  </div>
                 </from>
               </ul>
             </div>
@@ -83,13 +116,23 @@
             </a>
             <ul class="dropdown-menu dropdown-menu-end" aria-labelledby="user">
               <li>
-                <a class="dropdown-item" href="#"> Profil</a>
+                <p class="dropdown-item">
+                  Saldo: <br />
+                  <span class="text-success">Rp 1.000.000</span>
+                </p>
+              </li>
+              <li><hr class="dropdown-divider" /></li>
+              <li>
+                <a class="dropdown-item" href="../users/profil.html"> Profil</a>
               </li>
               <li>
-                <a class="dropdown-item" href="#"> Edukasi</a>
+                <a class="dropdown-item" href="../users/favorit.html"> Freelance Favorit</a>
               </li>
               <li>
-                <a class="dropdown-item" href="bantuan_freelancer.html"> Bantuan</a>
+                <a class="dropdown-item" href="../users/edukasi.html"> Edukasi</a>
+              </li>
+              <li>
+                <a class="dropdown-item" href="../users/bantuan.html"> Bantuan</a>
               </li>
               <li><hr class="dropdown-divider" /></li>
               <li>
@@ -100,8 +143,8 @@
         </div>
       </nav>
 
-    <!-- Video & Photo Editing -->
-    <section>
+      <!-- Video & Photo Editing -->
+      <section>
         <div class="container">
           <h2 class="text-center pt-4 pb-4 fw-bolder">Video & Photo Editing</h2>
           <div class="row row-cols-md-5 align-items-center justify-content-center">
@@ -123,7 +166,7 @@
                 </div>
                 <img src="../assets/img/resource/editing/1.jpg" class="p-2" alt="" />
                 <div class="card-body">
-                  <h6 class="mb-2" style="font-size: 14px;"><a href="" class="text-decoration-none text-dark">Editor Terbaik, bisa ditunggu 1 hari</a></h6>
+                  <h6 class="mb-2" style="font-size: 14px"><a href="" class="text-decoration-none text-dark">Editor Terbaik, bisa ditunggu 1 hari</a></h6>
                   <div class="d-flex justify-content-between small mt-2">
                     <div class="text-warning">
                       <i class="fas fa-star"></i>
@@ -142,7 +185,7 @@
                       <small class="fs-6 text-primary">Rp 30.000</small>
                     </div>
                     <div class="col-auto">
-                      <a href="" class="btn btn-primary rounded-pill" style="width: 70px">Pilih</a>
+                      <a href="detail_pekerjaan.html" class="btn btn-primary rounded-pill" style="width: 70px">Pilih</a>
                     </div>
                   </div>
                 </div>
@@ -166,7 +209,7 @@
                 </div>
                 <img src="../assets/img/resource/editing/2.jpg" class="card-img-top p-2" alt="" />
                 <div class="card-body">
-                  <h6 class="mb-2" style="font-size: 14px;"><a href="" class="text-decoration-none text-dark">Profesional Video Editor Terbaik</a></h6>
+                  <h6 class="mb-2" style="font-size: 14px"><a href="" class="text-decoration-none text-dark">Profesional Video Editor Terbaik</a></h6>
                   <div class="d-flex justify-content-between small mt-2">
                     <div class="text-warning">
                       <i class="fas fa-star"></i>
@@ -185,7 +228,7 @@
                       <small class="fs-6 text-primary">Rp 50.000</small>
                     </div>
                     <div class="col-auto">
-                      <a href="" class="btn btn-primary rounded-pill" style="width: 70px">Pilih</a>
+                      <a href="detail_pekerjaan.html" class="btn btn-primary rounded-pill" style="width: 70px">Pilih</a>
                     </div>
                   </div>
                 </div>
@@ -209,7 +252,7 @@
                 </div>
                 <img src="../assets/img/resource/editing/3.jpg" class="card-img-top p-2" alt="" />
                 <div class="card-body">
-                  <h6 class="mb-2" style="font-size: 14px;"><a href="" class="text-decoration-none text-dark">Jasa edit video profesional murah</a></h6>
+                  <h6 class="mb-2" style="font-size: 14px"><a href="" class="text-decoration-none text-dark">Jasa edit video profesional murah</a></h6>
                   <div class="d-flex justify-content-between small mt-2">
                     <div class="text-warning">
                       <i class="fas fa-star"></i>
@@ -228,7 +271,7 @@
                       <small class="fs-6 text-primary">Rp 100.000</small>
                     </div>
                     <div class="col-auto">
-                      <a href="" class="btn btn-primary rounded-pill" style="width: 70px">Pilih</a>
+                      <a href="detail_pekerjaan.html" class="btn btn-primary rounded-pill" style="width: 70px">Pilih</a>
                     </div>
                   </div>
                 </div>
@@ -252,7 +295,7 @@
                 </div>
                 <img src="../assets/img/resource/editing/4.jpg" class="card-img-top p-2" alt="" />
                 <div class="card-body">
-                  <h6 class="mb-2" style="font-size: 14px;"><a href="" class="text-decoration-none text-dark">Jasa edit video berkualitas, good quality</a></h6>
+                  <h6 class="mb-2" style="font-size: 14px"><a href="" class="text-decoration-none text-dark">Jasa edit video berkualitas, good quality</a></h6>
                   <div class="d-flex justify-content-between small mt-2">
                     <div class="text-warning">
                       <i class="fas fa-star"></i>
@@ -271,7 +314,7 @@
                       <small class="fs-6 text-primary">Rp 150.000</small>
                     </div>
                     <div class="col-auto">
-                      <a href="" class="btn btn-primary rounded-pill" style="width: 70px">Pilih</a>
+                      <a href="detail_pekerjaan.html" class="btn btn-primary rounded-pill" style="width: 70px">Pilih</a>
                     </div>
                   </div>
                 </div>
@@ -295,7 +338,7 @@
                 </div>
                 <img src="../assets/img/resource/editing/5.jpg" class="card-img-top p-2" alt="" />
                 <div class="card-body">
-                  <h6 class="mb-2" style="font-size: 14px;"><a href="" class="text-decoration-none text-dark">Edit video murah, berkualitas dan bebas revisi</a></h6>
+                  <h6 class="mb-2" style="font-size: 14px"><a href="" class="text-decoration-none text-dark">Edit video murah, berkualitas dan bebas revisi</a></h6>
                   <div class="d-flex justify-content-between small mt-2">
                     <div class="text-warning">
                       <i class="fas fa-star"></i>
@@ -314,7 +357,7 @@
                       <small class="fs-6 text-primary">Rp 80.000</small>
                     </div>
                     <div class="col-auto">
-                      <a href="" class="btn btn-primary rounded-pill" style="width: 70px">Pilih</a>
+                      <a href="detail_pekerjaan.html" class="btn btn-primary rounded-pill" style="width: 70px">Pilih</a>
                     </div>
                   </div>
                 </div>
@@ -338,7 +381,7 @@
                 </div>
                 <img src="../assets/img/resource/editing/6.jpg" class="card-img-top p-2" alt="" />
                 <div class="card-body">
-                  <h6 class="mb-2" style="font-size: 14px;"><a href="" class="text-decoration-none text-dark">Edit foto Photoshop - Bebas revisi </a></h6>
+                  <h6 class="mb-2" style="font-size: 14px"><a href="" class="text-decoration-none text-dark">Edit foto Photoshop - Bebas revisi </a></h6>
                   <div class="d-flex justify-content-between small mt-2">
                     <div class="text-warning">
                       <i class="fas fa-star"></i>
@@ -357,7 +400,7 @@
                       <small class="fs-6 text-primary">Rp 57.000</small>
                     </div>
                     <div class="col-auto">
-                      <a href="" class="btn btn-primary rounded-pill" style="width: 70px">Pilih</a>
+                      <a href="detail_pekerjaan.html" class="btn btn-primary rounded-pill" style="width: 70px">Pilih</a>
                     </div>
                   </div>
                 </div>
@@ -381,7 +424,7 @@
                 </div>
                 <img src="../assets/img/resource/editing/7.jpg" class="card-img-top p-2" alt="" />
                 <div class="card-body">
-                  <h6 class="mb-2" style="font-size: 14px;"><a href="" class="text-decoration-none text-dark">Jasa editing foto secara profesional</a></h6>
+                  <h6 class="mb-2" style="font-size: 14px"><a href="" class="text-decoration-none text-dark">Jasa editing foto secara profesional</a></h6>
                   <div class="d-flex justify-content-between small mt-2">
                     <div class="text-warning">
                       <i class="fas fa-star"></i>
@@ -400,7 +443,7 @@
                       <small class="fs-6 text-primary">Rp 100.000</small>
                     </div>
                     <div class="col-auto">
-                      <a href="" class="btn btn-primary rounded-pill" style="width: 70px">Pilih</a>
+                      <a href="detail_pekerjaan.html" class="btn btn-primary rounded-pill" style="width: 70px">Pilih</a>
                     </div>
                   </div>
                 </div>
@@ -424,7 +467,7 @@
                 </div>
                 <img src="../assets/img/resource/editing/8.jpg" class="card-img-top p-2" alt="" />
                 <div class="card-body">
-                  <h6 class="mb-2" style="font-size: 14px;"><a href="" class="text-decoration-none text-dark">Edit foto manipulating, hasil maximal</a></h6>
+                  <h6 class="mb-2" style="font-size: 14px"><a href="" class="text-decoration-none text-dark">Edit foto manipulating, hasil maximal</a></h6>
                   <div class="d-flex justify-content-between small mt-2">
                     <div class="text-warning">
                       <i class="fas fa-star"></i>
@@ -443,7 +486,7 @@
                       <small class="fs-6 text-primary">Rp 60.000</small>
                     </div>
                     <div class="col-auto">
-                      <a href="" class="btn btn-primary rounded-pill" style="width: 70px">Pilih</a>
+                      <a href="detail_pekerjaan.html" class="btn btn-primary rounded-pill" style="width: 70px">Pilih</a>
                     </div>
                   </div>
                 </div>
@@ -467,7 +510,7 @@
                 </div>
                 <img src="../assets/img/resource/editing/9.jpg" class="card-img-top p-2" alt="" />
                 <div class="card-body">
-                  <h6 class="mb-2" style="font-size: 14px;"><a href="" class="text-decoration-none text-dark">Edit foto dan hapus background cepat.</a></h6>
+                  <h6 class="mb-2" style="font-size: 14px"><a href="" class="text-decoration-none text-dark">Edit foto dan hapus background cepat.</a></h6>
                   <div class="d-flex justify-content-between small mt-2">
                     <div class="text-warning">
                       <i class="fas fa-star"></i>
@@ -486,7 +529,7 @@
                       <small class="fs-6 text-primary">Rp 30.000</small>
                     </div>
                     <div class="col-auto">
-                      <a href="" class="btn btn-primary rounded-pill" style="width: 70px">Pilih</a>
+                      <a href="detail_pekerjaan.html" class="btn btn-primary rounded-pill" style="width: 70px">Pilih</a>
                     </div>
                   </div>
                 </div>
@@ -510,7 +553,7 @@
                 </div>
                 <img src="../assets/img/resource/editing/10.jpg" class="card-img-top p-2" alt="" />
                 <div class="card-body">
-                  <h6 class="mb-2" style="font-size: 14px;"><a href="" class="text-decoration-none text-dark">Edit photo (remove BG, retouch, recolor) murah</a></h6>
+                  <h6 class="mb-2" style="font-size: 14px"><a href="" class="text-decoration-none text-dark">Edit photo (remove BG, retouch, recolor) murah</a></h6>
                   <div class="d-flex justify-content-between small mt-2">
                     <div class="text-warning">
                       <i class="fas fa-star"></i>
@@ -529,13 +572,12 @@
                       <small class="fs-6 text-primary">Rp 50.000</small>
                     </div>
                     <div class="col-auto">
-                      <a href="" class="btn btn-primary rounded-pill" style="width: 70px">Pilih</a>
+                      <a href="detail_pekerjaan.html" class="btn btn-primary rounded-pill" style="width: 70px">Pilih</a>
                     </div>
                   </div>
                 </div>
               </div>
             </div>
-            
           </div>
         </div>
       </section>

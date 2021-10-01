@@ -116,10 +116,28 @@ section h2 {
   filter: brightness(90%);
 }
 
+.container .btn-klik {
+  font-family: "Chennai", sans-serif;
+  letter-spacing: 1px;
+  display: inline-block;
+  background: #ffd700;
+  color: #143d59;
+  padding: 5px 30px;
+  margin-top: 20px;
+  text-align: center;
+  font-weight: 600;
+  font-size: 20px;
+  border-radius: 15px;
+}
+.container .btn-klik:hover {
+  background: #143d59;
+  color: #ffd700;
+}
+
 /* Top Week */
 #topWeek {
-  background: #e3f6ff;
   padding-bottom: 2rem;
+  padding-top: 2rem;
 }
 .topWeek .card {
   background-position: center;

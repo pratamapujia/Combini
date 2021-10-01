@@ -53,10 +53,13 @@
               <form action="" class="input-group border-0 rounded-pill" style="width: 300px">
                 <input type="search" class="form-control bg-transparent border-0 me-2" placeholder="Cari pekerjaan" aria-label="Search" />
                 <div class="input-group-append border-0 my-auto">
-                  <a href="../pekerjaan/1.html" class="btn btn-link text-white" type="button" id="search"><i class="fas fa-search" aria-hidden="true"></i></a>
+                  <a href="videografer_users.html" class="btn btn-link text-white" type="button" id="search"><i class="fas fa-search" aria-hidden="true"></i></a>
                 </div>
               </form>
               <ul class="navbar-nav justify-content-end flex-grow-1">
+                <li class="nav-item">
+                  <a href="../auth/register_freelance.html" class="nav-link text-white">Daftar Freelance</a>
+                </li>
                 <li class="nav-item dropdown">
                   <a class="nav-link text-white" href="#" id="offcanvasNavbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false"> Pekerjaan </a>
                   <ul class="dropdown-menu dropdown-menu-end" aria-labelledby="offcanvasNavbarDropdown">
@@ -72,7 +75,37 @@
                 </li>
                 <from class="d-flex align-items-center">
                   <a href="chat.html" class="text-white mx-2"><i class="fas fa-comments"></i></a>
-                  <a href="" class="text-white mx-1"><i class="fas fa-bell"></i></a>
+                  <div class="dropdown">
+                    <a href="" class="nav-link text-white mx-1" id="notif" role="button" data-bs-toggle="dropdown" aria-expanded="false"><i class="fas fa-bell"></i></a>
+                    <ul class="dropdown-menu dropdown-menu-end" aria-labelledby="notif" style="width: 500px">
+                      <li>
+                        <a href="" class="dropdown-item">
+                          <div class="row align-items-center">
+                            <div class="col-auto">
+                              <img src="../assets/img/logo3.png" width="40" class="rounded-circle" alt="" />
+                            </div>
+                            <div class="col" style="line-height: 1.1">
+                              <span class="fs-6 text-wrap">Pekerjaan [Fotografi] yang anda beli sudah diterima oleh freelance</span><br />
+                              <small class="text-muted"><i class="far fa-clock"></i> hari ini</small>
+                            </div>
+                          </div>
+                        </a>
+                      </li>
+                      <li>
+                        <a href="" class="dropdown-item">
+                          <div class="row align-items-center">
+                            <div class="col-auto">
+                              <img src="../assets/img/logo3.png" width="40" class="rounded-circle" alt="" />
+                            </div>
+                            <div class="col" style="line-height: 1.1">
+                              <span class="fs-6 text-wrap lh-sm">Pekerjaan [Videografi] yang anda beli sudah selesai, silahkan kasih review ke freelance</span><br />
+                              <small class="text-muted"><i class="far fa-clock"></i> kemarin</small>
+                            </div>
+                          </div>
+                        </a>
+                      </li>
+                    </ul>
+                  </div>
                 </from>
               </ul>
             </div>
@@ -83,13 +116,23 @@
             </a>
             <ul class="dropdown-menu dropdown-menu-end" aria-labelledby="user">
               <li>
-                <a class="dropdown-item" href="#"> Profil</a>
+                <p class="dropdown-item">
+                  Saldo: <br />
+                  <span class="text-success">Rp 1.000.000</span>
+                </p>
+              </li>
+              <li><hr class="dropdown-divider" /></li>
+              <li>
+                <a class="dropdown-item" href="../users/profil.html"> Profil</a>
               </li>
               <li>
-                <a class="dropdown-item" href="#"> Edukasi</a>
+                <a class="dropdown-item" href="../users/favorit.html"> Freelance Favorit</a>
               </li>
               <li>
-                <a class="dropdown-item" href="bantuan_freelancer.html"> Bantuan</a>
+                <a class="dropdown-item" href="../users/edukasi.html"> Edukasi</a>
+              </li>
+              <li>
+                <a class="dropdown-item" href="../users/bantuan.html"> Bantuan</a>
               </li>
               <li><hr class="dropdown-divider" /></li>
               <li>
@@ -100,92 +143,73 @@
         </div>
       </nav>
 
-      <!-- Header -->
-      <section id="user-header">
-        <div class="container py-5">
-          <div class="row justify-content-center">
-            <div class="col-lg-3">
-              <div class="card card-penawaran mb-3 h-auto shadow">
-                <div class="card-body text-center">
-                  <h3 class="card-title fs-4 fw-bold">Hi, Riyan</h3>
-                  <p class="card-text">Dapatkan penawaran terbaik untuk bisnismu</p>
-                  <a href="" class="btn btn-penawaran fw-bold shadow-sm mb-2">Lihat Penawaran</a>
-                </div>
-              </div>
-            </div>
-            <div class="col-lg-9">
-              <div class="card card-penawaran2 h-auto mb-3 shadow">
-                <div class="card-body">
-                  <div class="row py-3 align-items-center">
-                    <div class="col-md-6 mb-3">
-                      <h3 class="text-white card-title">Riyan,</h3>
-                      <p class="card-text text-white fs-5">Coba ini untuk membranding bisnis kamu</p>
-                    </div>
-                    <div class="col-md-6">
-                      <div class="row">
-                        <div class="col-md-6">
-                          <div class="card mb-2 text-center" style="border: none; border-radius: 20px">
-                            <img src="../assets/img/icons/icon1.svg" class="py-2 mx-auto" style="width: 65px" alt="" />
-                            <p class="card-text fw-bold">Desain Logo</p>
-                          </div>
-                        </div>
-                        <div class="col-md-6">
-                          <div class="card mb-2 text-center" style="border: none; border-radius: 20px">
-                            <img src="../assets/img/icons/icon2.svg" class="py-2 mx-auto" style="width: 65px" alt="" />
-                            <p class="card-text fw-bold">Fotografi</p>
-                          </div>
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      <!-- Top Week -->
+      <!-- Copywriting -->
       <section>
-        <div class="container pb-5">
-          <h2 class="fs-2">Teratas Minggu ini</h2>
-          <div class="row justify-content-center">
-            <div class="col-lg-4 mb-2">
-              <div class="card card-list mb-3 shadow">
-                <img src="../assets/img/450x300.jpg" class="card-img-top" style="border-top-left-radius: 20px; border-top-right-radius: 20px" height="200" alt="" />
-                <div class="card-body">
-                  <h5 class="card-title fw-bold">Hamish Daud</h5>
-                  <div class="d-flex justify-content-between">
-                    <p class="fst-italic card-subtitle">Fotografi</p>
-                    <span class="badge rounded-pill bg-info text-dark">Expert</span>
+        <div class="container">
+          <h2 class="text-center pt-4 pb-4 fw-bolder">Freelance Favorit</h2>
+          <div class="row row-cols-md-5 align-items-center justify-content-center">
+            <div class="col-md mb-3">
+              <div class="card card-hover">
+                <div class="card-header border-bottom-0 bg-white">
+                  <div class="row align-items-center g-0">
+                    <div class="col-auto">
+                      <img src="../assets/img/users/user1.jpg" width="34" class="rounded-circle" alt="" />
+                    </div>
+                    <div class="col ms-2" style="line-height: 0">
+                      <p class="fw-bold" style="font-size: 14px">Budi</p>
+                      <small class="text-muted">Copywriter</small>
+                    </div>
+                    <div class="col-auto">
+                      <span class="text-danger favorit"><i class="fas fa-heart"></i></span>
+                    </div>
                   </div>
+                </div>
+                <img src="../assets/img/resource/copywriting/1.jpg" class="p-2" alt="" />
+                <div class="card-body">
+                  <h6 class="mb-2" style="font-size: 14px"><a href="" class="text-decoration-none text-dark">Copywriting / Narasi untuk Video</a></h6>
                   <div class="d-flex justify-content-between small mt-2">
                     <div class="text-warning">
                       <i class="fas fa-star"></i>
                       <i class="fas fa-star"></i>
                       <i class="fas fa-star"></i>
                       <i class="fas fa-star"></i>
-                      <i class="far fa-star"></i>
+                      <i class="fas fa-star"></i>
                     </div>
-                    <p class="text-muted card-text">(200)</p>
+                    <p class="text-muted card-text">(15)</p>
                   </div>
-                  <hr />
-                  <div class="d-flex justify-content-between">
-                    <p class="card-text align-items-center">Harga mulai <b style="color: #143d59">150rb</b></p>
-                    <a href="detail_freelance.html" class="btn btn-chart"><b>Chart</b></a>
+                </div>
+                <div class="card-footer bg-white">
+                  <div class="row align-items-center g-0">
+                    <div class="col me-2" style="line-height: 0.3">
+                      <p class="fs-6"><small>Mulai</small></p>
+                      <small class="fs-6 text-primary">Rp 100.000</small>
+                    </div>
+                    <div class="col-auto">
+                      <a href="detail_pekerjaan.html" class="btn btn-primary rounded-pill" style="width: 70px">Pilih</a>
+                    </div>
                   </div>
                 </div>
               </div>
             </div>
-            <div class="col-lg-4 mb-2">
-              <div class="card card-list mb-3 shadow">
-                <img src="../assets/img/450x300.jpg" class="card-img-top" style="border-top-left-radius: 20px; border-top-right-radius: 20px" height="200" alt="" />
-                <div class="card-body">
-                  <h5 class="card-title fw-bold">Tiara Andini</h5>
-                  <div class="d-flex justify-content-between">
-                    <p class="fst-italic card-subtitle">Copywriting</p>
-                    <span class="badge rounded-pill bg-warning text-dark">Pro</span>
+            <div class="col-md mb-3">
+              <div class="card card-hover">
+                <div class="card-header border-bottom-0 bg-white">
+                  <div class="row align-items-center g-0">
+                    <div class="col-auto">
+                      <img src="../assets/img/users/user2.jpg" width="34" class="rounded-circle" alt="" />
+                    </div>
+                    <div class="col ms-2" style="line-height: 0">
+                      <p class="fw-bold" style="font-size: 14px">Erwin</p>
+                      <small class="text-muted">Copywriter</small>
+                    </div>
+                    <div class="col-auto">
+                      <span class="text-danger favorit"><i class="fas fa-heart"></i></span>
+                    </div>
                   </div>
+                </div>
+                <img src="../assets/img/resource/copywriting/2.jpg" class="card-img-top p-2" alt="" />
+                <div class="card-body">
+                  <h6 class="mb-2" style="font-size: 14px"><a href="" class="text-decoration-none text-dark">Copywriting dan Content Writing Dalam 1-2 Hari</a></h6>
                   <div class="d-flex justify-content-between small mt-2">
                     <div class="text-warning">
                       <i class="fas fa-star"></i>
@@ -194,52 +218,41 @@
                       <i class="fas fa-star"></i>
                       <i class="fas fa-star-half-alt"></i>
                     </div>
-                    <p class="text-muted card-text">(250)</p>
-                  </div>
-                  <hr />
-                  <div class="d-flex justify-content-between">
-                    <p class="card-text align-items-center">Harga mulai <b style="color: #143d59">500rb</b></p>
-                    <a href="detail_freelance.html" class="btn btn-chart"><b>Chart</b></a>
+                    <p class="text-muted card-text">(13)</p>
                   </div>
                 </div>
-              </div>
-            </div>
-            <div class="col-lg-4 mb-2">
-              <div class="card card-list mb-3 shadow">
-                <img src="../assets/img/450x300.jpg" class="card-img-top" style="border-top-left-radius: 20px; border-top-right-radius: 20px" height="200" alt="" />
-                <div class="card-body">
-                  <h5 class="card-title fw-bold">Abimana Aryasatya</h5>
-                  <div class="d-flex justify-content-between">
-                    <p class="fst-italic card-subtitle">Master Ceremony</p>
-                    <span class="badge rounded-pill bg-info text-dark">Expert</span>
-                  </div>
-                  <div class="d-flex justify-content-between small mt-2">
-                    <div class="text-warning">
-                      <i class="fas fa-star"></i>
-                      <i class="fas fa-star"></i>
-                      <i class="fas fa-star"></i>
-                      <i class="fas fa-star"></i>
-                      <i class="fas fa-star"></i>
+                <div class="card-footer bg-white">
+                  <div class="row align-items-center g-0">
+                    <div class="col me-2" style="line-height: 0.3">
+                      <p class="fs-6"><small>Mulai</small></p>
+                      <small class="fs-6 text-primary">Rp 50.000</small>
                     </div>
-                    <p class="text-muted card-text">(150)</p>
-                  </div>
-                  <hr />
-                  <div class="d-flex justify-content-between">
-                    <p class="card-text align-items-center">Harga mulai <b style="color: #143d59">200rb</b></p>
-                    <a href="detail_freelance.html" class="btn btn-chart"><b>Chart</b></a>
+                    <div class="col-auto">
+                      <a href="detail_pekerjaan.html" class="btn btn-primary rounded-pill" style="width: 70px">Pilih</a>
+                    </div>
                   </div>
                 </div>
               </div>
             </div>
-            <div class="col-lg-4 mb-2">
-              <div class="card card-list mb-3 shadow">
-                <img src="../assets/img/450x300.jpg" class="card-img-top" style="border-top-left-radius: 20px; border-top-right-radius: 20px" height="200" alt="" />
-                <div class="card-body">
-                  <h5 class="card-title fw-bold">Joe Taslim</h5>
-                  <div class="d-flex justify-content-between">
-                    <p class="fst-italic card-subtitle">Desain Grafis</p>
-                    <span class="badge rounded-pill bg-info text-dark">Expert</span>
+            <div class="col-md mb-3">
+              <div class="card card-hover">
+                <div class="card-header border-bottom-0 bg-white">
+                  <div class="row align-items-center g-0">
+                    <div class="col-auto">
+                      <img src="../assets/img/users/user3.jpg" width="34" class="rounded-circle" alt="" />
+                    </div>
+                    <div class="col ms-2" style="line-height: 0">
+                      <p class="fw-bold" style="font-size: 14px">Faisal</p>
+                      <small class="text-muted">Desainer</small>
+                    </div>
+                    <div class="col-auto">
+                      <span class="text-danger favorit"><i class="fas fa-heart"></i></span>
+                    </div>
                   </div>
+                </div>
+                <img src="../assets/img/resource/desaingrafis/3.jpg" class="card-img-top p-2" alt="" />
+                <div class="card-body">
+                  <h6 class="mb-2" style="font-size: 14px"><a href="" class="text-decoration-none text-dark">Kartu Ucapan Lebaran, Video & Gambar</a></h6>
                   <div class="d-flex justify-content-between small mt-2">
                     <div class="text-warning">
                       <i class="fas fa-star"></i>
@@ -248,25 +261,41 @@
                       <i class="fas fa-star"></i>
                       <i class="fas fa-star-half-alt"></i>
                     </div>
-                    <p class="text-muted card-text">(400)</p>
+                    <p class="text-muted card-text">(12)</p>
                   </div>
-                  <hr />
-                  <div class="d-flex justify-content-between">
-                    <p class="card-text align-items-center">Harga mulai <b style="color: #143d59">500rb</b></p>
-                    <a href="detail_freelance.html" class="btn btn-chart"><b>Chart</b></a>
+                </div>
+                <div class="card-footer bg-white">
+                  <div class="row align-items-center g-0">
+                    <div class="col me-2" style="line-height: 0.3">
+                      <p class="fs-6"><small>Mulai</small></p>
+                      <small class="fs-6 text-primary">Rp 50.000</small>
+                    </div>
+                    <div class="col-auto">
+                      <a href="detail_pekerjaan.html" class="btn btn-primary rounded-pill" style="width: 70px">Pilih</a>
+                    </div>
                   </div>
                 </div>
               </div>
             </div>
-            <div class="col-lg-4 mb-2">
-              <div class="card card-list mb-3 shadow">
-                <img src="../assets/img/450x300.jpg" class="card-img-top" style="border-top-left-radius: 20px; border-top-right-radius: 20px" height="200" alt="" />
-                <div class="card-body">
-                  <h5 class="card-title fw-bold">Dian Sastro</h5>
-                  <div class="d-flex justify-content-between">
-                    <p class="fst-italic card-subtitle">Search Engine Optimization</p>
-                    <span class="badge rounded-pill bg-warning text-dark">Pro</span>
+            <div class="col-md mb-3">
+              <div class="card card-hover">
+                <div class="card-header border-bottom-0 bg-white">
+                  <div class="row align-items-center g-0">
+                    <div class="col-auto">
+                      <img src="../assets/img/users/user4.jpg" width="34" class="rounded-circle" alt="" />
+                    </div>
+                    <div class="col ms-2" style="line-height: 0">
+                      <p class="fw-bold" style="font-size: 14px">Putri Ayu</p>
+                      <small class="text-muted">Videografer</small>
+                    </div>
+                    <div class="col-auto">
+                      <span class="text-danger favorit"><i class="fas fa-heart"></i></span>
+                    </div>
                   </div>
+                </div>
+                <img src="../assets/img/resource/videografi/4.jpg" class="card-img-top p-2" alt="" />
+                <div class="card-body">
+                  <h6 class="mb-2" style="font-size: 14px"><a href="" class="text-decoration-none text-dark">Bikin Video Iklan Product Murah - Jateng</a></h6>
                   <div class="d-flex justify-content-between small mt-2">
                     <div class="text-warning">
                       <i class="fas fa-star"></i>
@@ -275,45 +304,23 @@
                       <i class="fas fa-star"></i>
                       <i class="fas fa-star"></i>
                     </div>
-                    <p class="text-muted card-text">(200)</p>
-                  </div>
-                  <hr />
-                  <div class="d-flex justify-content-between">
-                    <p class="card-text align-items-center">Harga mulai <b style="color: #143d59">1jt</b></p>
-                    <a href="detail_freelance.html" class="btn btn-chart"><b>Chart</b></a>
+                    <p class="text-muted card-text">(10)</p>
                   </div>
                 </div>
-              </div>
-            </div>
-            <div class="col-lg-4 mb-2">
-              <div class="card card-list mb-3 shadow">
-                <img src="../assets/img/450x300.jpg" class="card-img-top" style="border-top-left-radius: 20px; border-top-right-radius: 20px" height="200" alt="" />
-                <div class="card-body">
-                  <h5 class="card-title fw-bold">Yuki Kato</h5>
-                  <div class="d-flex justify-content-between">
-                    <p class="fst-italic card-subtitle">Video & Photo Editing</p>
-                    <span class="badge rounded-pill bg-warning text-dark">Pro</span>
-                  </div>
-                  <div class="d-flex justify-content-between small mt-2">
-                    <div class="text-warning">
-                      <i class="fas fa-star"></i>
-                      <i class="fas fa-star"></i>
-                      <i class="fas fa-star"></i>
-                      <i class="fas fa-star"></i>
-                      <i class="far fa-star"></i>
+                <div class="card-footer bg-white">
+                  <div class="row align-items-center g-0">
+                    <div class="col me-2" style="line-height: 0.3">
+                      <p class="fs-6"><small>Mulai</small></p>
+                      <small class="fs-6 text-primary">Rp 40.000</small>
                     </div>
-                    <p class="text-muted card-text">(100)</p>
-                  </div>
-                  <hr />
-                  <div class="d-flex justify-content-between">
-                    <p class="card-text align-items-center">Harga mulai <b style="color: #143d59">300rb</b></p>
-                    <a href="detail_freelance.html" class="btn btn-chart"><b>Chart</b></a>
+                    <div class="col-auto">
+                      <a href="detail_pekerjaan.html" class="btn btn-primary rounded-pill" style="width: 70px">Pilih</a>
+                    </div>
                   </div>
                 </div>
               </div>
             </div>
           </div>
-          <a href="../pekerjaan/1.html" class="float-end fs-5 text-decoration-none fw-bold" style="color: #143d59">Show More...</a>
         </div>
       </section>
 

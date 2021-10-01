@@ -38,7 +38,7 @@
       <i class="fas fa-angle-up"></i>
     </div>
     <main class="flex-shrink-0">
-      <nav class="navbar navbar-dark navbar-expand-lg sticky-top sticky shadow">
+      <nav class="navbar navbar-dark navbar-expand-lg sticky sticky-top shadow p-md-3" id="user">
         <div class="container" id="user">
           <a class="navbar-brand" href="../customer.html"><img src="../assets/img/logo2.png" alt="" /></a>
           <button class="navbar-toggler" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasNavbar" aria-controls="offcanvasNavbar">
@@ -50,31 +50,22 @@
               <button type="button" class="btn text-reset" data-bs-dismiss="offcanvas" aria-label="Close"><i class="fas fa-times text-white fs-5"></i></button>
             </div>
             <div class="offcanvas-body" style="background: #143d59">
-              <form action="" class="input-group border-0 rounded-pill" style="width: 300px">
-                <input type="search" class="form-control bg-transparent border-0 me-2" placeholder="Cari pekerjaan" aria-label="Search" />
-                <div class="input-group-append border-0 my-auto">
-                  <a href="videografer_users.html" class="btn btn-link text-white" type="button" id="search"><i class="fas fa-search" aria-hidden="true"></i></a>
-                </div>
-              </form>
               <ul class="navbar-nav justify-content-end flex-grow-1">
-                <li class="nav-item">
-                  <a href="../auth/register_freelance.html" class="nav-link text-white">Daftar Freelance</a>
-                </li>
                 <li class="nav-item dropdown">
                   <a class="nav-link text-white" href="#" id="offcanvasNavbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false"> Pekerjaan </a>
                   <ul class="dropdown-menu dropdown-menu-end" aria-labelledby="offcanvasNavbarDropdown">
-                    <li><a href="pekerjaan/1.html" class="dropdown-item text-black fw-normal fs-6">Copywriting</a></li>
-                    <li><a href="pekerjaan/2.html" class="dropdown-item text-black fw-normal fs-6">Desain Grafis</a></li>
-                    <li><a href="pekerjaan/3.html" class="dropdown-item text-black fw-normal fs-6">Fotografer</a></li>
-                    <li><a href="pekerjaan/4.html" class="dropdown-item text-black fw-normal fs-6">Videografer</a></li>
-                    <li><a href="pekerjaan/5.html" class="dropdown-item text-black fw-normal fs-6">Video & Photo Editing</a></li>
-                    <li><a href="pekerjaan/6.html" class="dropdown-item text-black fw-normal fs-6">Master Ceremony</a></li>
-                    <li><a href="pekerjaan/7.html" class="dropdown-item text-black fw-normal fs-6">Search Engine Optimization</a></li>
-                    <li><a href="pekerjaan/8.html" class="dropdown-item text-black fw-normal fs-6">Voice Actor</a></li>
+                    <li><a href="copywriting_users.html" class="dropdown-item text-black fw-normal fs-6">Copywriting</a></li>
+                    <li><a href="desaingrafis_users.html" class="dropdown-item text-black fw-normal fs-6">Desain Grafis</a></li>
+                    <li><a href="fotografer_users.html" class="dropdown-item text-black fw-normal fs-6">Fotografer</a></li>
+                    <li><a href="videografer_users.html" class="dropdown-item text-black fw-normal fs-6">Videografer</a></li>
+                    <li><a href="editor_users.html" class="dropdown-item text-black fw-normal fs-6">Video & Photo Editing</a></li>
+                    <li><a href="mc_users.html" class="dropdown-item text-black fw-normal fs-6">Master Ceremony</a></li>
+                    <li><a href="seo_users.html" class="dropdown-item text-black fw-normal fs-6">Search Engine Optimization</a></li>
+                    <li><a href="voa_users.html" class="dropdown-item text-black fw-normal fs-6">Voice Actor</a></li>
                   </ul>
                 </li>
                 <from class="d-flex align-items-center">
-                  <a href="chat.html" class="text-white mx-2"><i class="fas fa-comments"></i></a>
+                  <a href="../users/chat.html" class="text-white mx-2"><i class="fas fa-comments"></i></a>
                   <div class="dropdown">
                     <a href="" class="nav-link text-white mx-1" id="notif" role="button" data-bs-toggle="dropdown" aria-expanded="false"><i class="fas fa-bell"></i></a>
                     <ul class="dropdown-menu dropdown-menu-end" aria-labelledby="notif" style="width: 500px">
@@ -116,17 +107,10 @@
             </a>
             <ul class="dropdown-menu dropdown-menu-end" aria-labelledby="user">
               <li>
-                <p class="dropdown-item">
-                  Saldo: <br />
-                  <span class="text-success">Rp 1.000.000</span>
-                </p>
-              </li>
-              <li><hr class="dropdown-divider" /></li>
-              <li>
-                <a class="dropdown-item" href="../users/profil.html"> Profil</a>
+                <a class="dropdown-item" href="detail_freelance.html"> Profil</a>
               </li>
               <li>
-                <a class="dropdown-item" href="../users/favorit.html"> Freelance Favorit</a>
+                <a class="dropdown-item" href="detail_freelance.html"> Pekerjaan Saya</a>
               </li>
               <li>
                 <a class="dropdown-item" href="../users/edukasi.html"> Edukasi</a>
@@ -154,9 +138,12 @@
                     <div class="col-lg-3">
                       <img src="../assets/img/users/user1.jpg" alt="" class="rounded rounded-circle" width="200" />
                     </div>
-                    <div class="col-lg-8">
+                    <div class="col-lg">
                       <h3 class="card-title fs-3 fw-bold text-sm-start text-white">Budi</h3>
                       <p class="card-text text-start text-white fs-5">Videography merupakan bidang yang saya tekuni, dari script writing, shooting, video editing saya kuasai. Percayakan segala jenis pekerjaan video yang anda butuhkan kepada saya! Cukup bayangkan, saya membuatnya nyata.</p>
+                    </div>
+                    <div class="col-auto d-flex">
+                      <button type="button" data-bs-toggle="modal" data-bs-target="#exampleModal" class="btn btn-warning me-2 float-end">Tambah Pekerjaan</button>
                     </div>
                   </div>
                 </div>
@@ -176,6 +163,10 @@
                   <div class="card mb-2">
                     <div class="card-body">
                       <h5 class="card-title fw-bold fs-4">Informasi Dasar</h5>
+                      <div class="d-flex justify-content-between mt-2">
+                        <p class="card-text">Saldo: <br /><span class="text-success">Rp 1.000.000</span></p>
+                        <a href="" class="card-text">Tarik Saldo</a>
+                      </div>
                       <div class="d-flex justify-content-between mt-2">
                         <p class="card-text">Anggota Sejak</p>
                         <p class="card-text">12 Agustus 2021</p>
@@ -258,6 +249,48 @@
           </div>
         </div>
       </section>
+
+      <!-- Modal -->
+      <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered">
+          <div class="modal-content">
+            <div class="modal-body">
+              <form class="">
+                <select class="form-select mb-3" aria-label=".form-select-sm example">
+                  <option selected>Pilih Kategori Pekerjaan</option>
+                  <option value="1">Copywriting</option>
+                  <option value="2">Desain Grafis</option>
+                  <option value="3">Foto dan Video Editing</option>
+                  <option value="4">Fotografer</option>
+                  <option value="5">Videografer</option>
+                  <option value="6">Master Ceremony</option>
+                  <option value="7">SEO</option>
+                  <option value="8">Voice Actor</option>
+                </select>
+                <div class="form-group mb-3">
+                  <label for="floatingInput">Nama Pekerjaan</label>
+                  <input type="text" class="form-control rounded-4" id="floatingInput" />
+                </div>
+                <div class="form-group mb-3">
+                  <label for="floatingInput">Deskripsi Pekerjaan</label>
+                  <input type="text" class="form-control rounded-4" id="floatingInput" />
+                </div>
+                <div class="form-group mb-3">
+                  <label>Foto Produk</label>
+                  <input type="file" class="form-control rounded-4" />
+                </div>
+                <div class="form-group mb-3">
+                  <label for="floatingInput">Harga Produk</label>
+                  <input type="text" class="form-control rounded-4" id="floatingInput" />
+                </div>
+              </form>
+            </div>
+            <div class="modal-footer">
+              <a type="button" href="detail_freelance.html" class="btn btn-primary">Simpan</a>
+            </div>
+          </div>
+        </div>
+      </div>
 
       <!-- Footer -->
       <footer class="footer mt-auto py-3">
