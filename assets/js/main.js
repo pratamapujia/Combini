@@ -82,8 +82,21 @@ $(".alur").slick({
   slidesToScroll: 1,
   asNavFor: ".alur-for",
   dots: true,
+  autoplay: true,
+  autoplaySpeed: 2000,
   centerMode: true,
   variableWidth: true,
+});
+
+$(".imgModal").slick({
+  dots: true,
+  infinite: true,
+  speed: 800,
+  slidesToShow: 1,
+  slidesToScroll: 1,
+  arrows: false,
+  autoplay: true,
+  autoplaySpeed: 2000,
 });
 
 // Sticky Scroll
