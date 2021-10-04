@@ -1,0 +1,255 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-KyZXEAg3QhqLMpG8r+8fhAXLRk2vvoC2f3B09zVXn8CA5QIVfZOJ3BCsw2P0p/We" crossorigin="anonymous" />
+
+    <title>Combini</title>
+
+    <!-- Font -->
+    <link href="https://fonts.googleapis.com/css2?family=Nunito:ital,wght@0,200;0,300;0,400;0,600;0,700;0,800;0,900;1,200;1,300;1,400;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet" />
+
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" integrity="sha512-1ycn6IcaQQ40/MKBW2W4Rhis/DbILU74C1vSrLJxCq57o941Ym01SwNsOMqvEBFlcgUa6xLiPY/NS5R+E6ztJQ==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+    <!-- Icon -->
+    <link rel="icon" type="image/x-icon" href="../assets/img/logo3.png" />
+
+    <!-- Main Css -->
+    <link rel="stylesheet" href="../assets/css/style.css" />
+
+    <!-- Owl Carousel -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/../assets/owl.carousel.min.css" integrity="sha512-tS3S5qG0BlhnQROyJXvNjeEM4UpMXHrQfTGmbQ1gKmelCxlSEBUaxhRBj/EFTzpbP4RVSrpEikbmdJobCvhE3g==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/../assets/owl.theme.default.min.css" integrity="sha512-sMXtMNL1zRzolHYKEujM2AqCLUR9F2C4/05cdbxjjLSRvMQIciEPCQZo++nk7go3BtSuK9kfa/s+a4f4i5pLkw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+    <!-- Slick Slider -->
+    <link rel="stylesheet" href="../assets/slick/slick.css" />
+    <link rel="stylesheet" href="../assets/slick/slick-theme.css" />
+
+    <!-- Jquery -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js" integrity="sha512-894YE6QWD5I59HgZOGReFYm4dnWc1Qt5NtvYSaNcOP+u1T9qYdvdihz0PPSiiqn/+/3e7Jo4EaG7TubfWGUrMQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+  </head>
+  <body class="d-flex flex-column h-100" style="background: #f6f5f5">
+    <div class="scroll-up-btn">
+      <i class="fas fa-angle-up"></i>
+    </div>
+    <main class="flex-shrink-0">
+      <nav class="navbar navbar-dark navbar-expand-lg sticky-top sticky shadow">
+        <div class="container" id="user">
+          <a class="navbar-brand" href="customer.html"><img src="../assets/img/logo2.png" alt="" /></a>
+          <button class="navbar-toggler" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasNavbar" aria-controls="offcanvasNavbar">
+            <i class="fas fa-bars"></i>
+          </button>
+          <div class="offcanvas offcanvas-start" id="offcanvasNavbar" aria-labelledby="offcanvasNavbarLabel">
+            <div class="offcanvas-header" style="background: #143d59">
+              <a class="offcanvas-title" href="customer.html" id="offcanvasNavbarLabel"><img src="../assets/img/logo2.png" alt="" /></a>
+              <button type="button" class="btn text-reset" data-bs-dismiss="offcanvas" aria-label="Close"><i class="fas fa-times text-white fs-5"></i></button>
+            </div>
+            <div class="offcanvas-body" style="background: #143d59">
+              <form action="" class="input-group border-0 rounded-pill" style="width: 300px">
+                <input type="search" class="form-control bg-transparent border-0 me-2" placeholder="Cari pekerjaan" aria-label="Search" />
+                <div class="input-group-append border-0 my-auto">
+                  <a href="videografer_users.html" class="btn btn-link text-white" type="button" id="search"><i class="fas fa-search" aria-hidden="true"></i></a>
+                </div>
+              </form>
+              <ul class="navbar-nav justify-content-end flex-grow-1">
+                <li class="nav-item">
+                  <a href="../auth/register_freelance.html" class="nav-link text-white">Daftar Freelance</a>
+                </li>
+                <li class="nav-item dropdown">
+                  <a class="nav-link text-white" href="#" id="offcanvasNavbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false"> Pekerjaan </a>
+                  <ul class="dropdown-menu dropdown-menu-end" aria-labelledby="offcanvasNavbarDropdown">
+                    <li><a href="copywriting_users.html" class="dropdown-item text-black fw-normal fs-6">Copywriting</a></li>
+                    <li><a href="desaingrafis_users.html" class="dropdown-item text-black fw-normal fs-6">Desain Grafis</a></li>
+                    <li><a href="fotografer_users.html" class="dropdown-item text-black fw-normal fs-6">Fotografer</a></li>
+                    <li><a href="videografer_users.html" class="dropdown-item text-black fw-normal fs-6">Videografer</a></li>
+                    <li><a href="editor_users.html" class="dropdown-item text-black fw-normal fs-6">Video & Photo Editing</a></li>
+                    <li><a href="mc_users.html" class="dropdown-item text-black fw-normal fs-6">Master of Ceremony</a></li>
+                    <li><a href="seo_users.html" class="dropdown-item text-black fw-normal fs-6">Search Engine Optimization</a></li>
+                    <li><a href="vo_users.html" class="dropdown-item text-black fw-normal fs-6">Voice Actor</a></li>
+                  </ul>
+                </li>
+                <from class="d-flex align-items-center">
+                  <a href="chat.html" class="text-white mx-2"><i class="fas fa-comments"></i></a>
+                  <div class="dropdown">
+                    <a href="" class="nav-link text-white mx-1" id="notif" role="button" data-bs-toggle="dropdown" aria-expanded="false"><i class="fas fa-bell"></i></a>
+                    <ul class="dropdown-menu dropdown-menu-end" aria-labelledby="notif" style="width: 500px">
+                      <li>
+                        <a href="" class="dropdown-item">
+                          <div class="row align-items-center">
+                            <div class="col-auto">
+                              <img src="../assets/img/logo3.png" width="40" class="rounded-circle" alt="" />
+                            </div>
+                            <div class="col" style="line-height: 1.1">
+                              <span class="fs-6 text-wrap">Pekerjaan [Fotografi] yang anda beli sudah diterima oleh freelance</span><br />
+                              <small class="text-muted"><i class="far fa-clock"></i> hari ini</small>
+                            </div>
+                          </div>
+                        </a>
+                      </li>
+                      <li>
+                        <a href="" class="dropdown-item">
+                          <div class="row align-items-center">
+                            <div class="col-auto">
+                              <img src="../assets/img/logo3.png" width="40" class="rounded-circle" alt="" />
+                            </div>
+                            <div class="col" style="line-height: 1.1">
+                              <span class="fs-6 text-wrap lh-sm">Pekerjaan [Videografi] yang anda beli sudah selesai, silahkan kasih review ke freelance</span><br />
+                              <small class="text-muted"><i class="far fa-clock"></i> kemarin</small>
+                            </div>
+                          </div>
+                        </a>
+                      </li>
+                    </ul>
+                  </div>
+                </from>
+              </ul>
+            </div>
+          </div>
+          <div class="dropdown">
+            <a href="" class="nav-link" id="user" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+              <img src="../assets/img/users/profile.svg" alt="mdo" width="32" height="32" class="rounded-circle" />
+            </a>
+            <ul class="dropdown-menu dropdown-menu-end" aria-labelledby="user">
+              <li>
+                <p class="dropdown-item">
+                  Saldo: <br />
+                  <span class="text-success">Rp 1.000.000</span>
+                </p>
+              </li>
+              <li><hr class="dropdown-divider" /></li>
+              <li>
+                <a class="dropdown-item" href="../users/profil.html"> Profil</a>
+              </li>
+              <li>
+                <a class="dropdown-item" href="../users/favorit.html"> Freelance Favorit</a>
+              </li>
+              <li>
+                <a class="dropdown-item" href="../users/edukasi.html"> Edukasi</a>
+              </li>
+              <li>
+                <a class="dropdown-item" href="../users/bantuan.html"> Bantuan</a>
+              </li>
+              <li><hr class="dropdown-divider" /></li>
+              <li>
+                <a class="dropdown-item" href="../index.html"> Keluar</a>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </nav>
+
+      <!-- Checkout -->
+      <section id="checkout">
+        <ul class="nav nav-tabs pt-3">
+          <li class="nav-item">
+            <a class="nav-link active">Detail Pesanan</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link disabled">Konfirmasi Pembayaran</a>
+          </li>
+        </ul>
+        <div class="container rounded py-4 tab-content">
+          <h2 class="fw-bolder fs-2 text-center" style="padding-bottom: 20px">Sesuaikan Pesananmu</h2>
+          <div class="row d-flex justify-content-center">
+            <div class="col-md-4 col-lg-4 ml-1">
+              <div class="card mb-3">
+                <img src="../assets/img/450x300.jpg" alt="" class="card-img-top" />
+                <div class="card-body">
+                  <h5 class="card-title fw-bold">Food Photography</h5>
+                  <p class="fst-italic card-subtitle">Lorem ipsum dolor sit amet consectetur adipisicing elit. Repellendus, pariatur.</p>
+                  <div class="d-flex justify-content-between small mt-2">
+                    <div class="text-warning">
+                      <i class="fas fa-star"></i>
+                      <i class="fas fa-star"></i>
+                      <i class="fas fa-star"></i>
+                      <i class="fas fa-star"></i>
+                      <i class="fas fa-star"></i>
+                    </div>
+                    <p class="text-muted card-text">(150)</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="col-md-5 col-lg-6">
+              <div class="card p-3 d-flex flex-column" style="border-radius: 14px; border-color: #143d59">
+                <div class="pt-2">
+                  <h5 class="fw-bolder fs-4">Ringkasan</h5>
+                </div>
+                <div class="d-flex">
+                  <div class="col-8">Waktu Pengerjaan</div>
+                  <div class="ml-auto"><b>5 Hari</b></div>
+                </div>
+                <div class="d-flex">
+                  <div class="col-8">Bonus</div>
+                  <div class="ml-auto"><b>Tersedia</b></div>
+                </div>
+                <div class="pt-2">
+                  <h5 class="fw-bolder fs-4">Detail Pembayaran</h5>
+                </div>
+                <div class="d-flex">
+                  <div class="col-8">Harga Normal</div>
+                  <div class="ml-auto green">Rp.335,000</div>
+                </div>
+                <div class="d-flex">
+                  <div class="col-8">Discount Premium Membership</div>
+                  <div class="ml-auto green">-Rp.100.000</div>
+                </div>
+                <hr />
+                <div class="d-flex">
+                  <div class="col-8">Total Pembayaran</div>
+                  <div class="ml-auto"><b>Rp.235.000</b></div>
+                </div>
+                <a href="confirmpay.html" class="btn btn-pay mt-3 shadow-sm">Konfirmasi Pembayaran</a>
+                <div class="text-center p-3"><a class="text-link" href="customer.html">Batalkan Pesanan</a></div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Footer -->
+      <footer class="footer mt-auto py-3">
+        <div class="container">
+          <div class="d-flex flex-wrap justify-content-between align-items-center py-4 my-4 border-2 border-top border-dark">
+            <div class="col-md-6 d-flex align-items-center">
+              <a href="index.html" class="mb-3 me-2 mb-md-0 text-decoration-none lh-1">
+                <img src="../assets/img/logo5.png" alt="" style="border-radius: 10px" />
+              </a>
+              <span class="fw-bold" style="font-size: 18px">&copy; Combini Indonesia 2021</span>
+            </div>
+            <ul class="nav col-md-6 justify-content-end list-unstyled d-flex">
+              <li class="ms-3">
+                <a href="https://www.instagram.com/combini.id/" target="_blank" class="text-dark fs-4"><i class="fab fa-instagram"></i></a>
+              </li>
+              <li class="ms-3">
+                <a href="https://www.tiktok.com/@combini.id" target="_blank" class="text-dark fs-4"><i class="fab fa-tiktok"></i></a>
+              </li>
+              <li class="ms-3">
+                <a href="mailto:combini.id@gmail.com" target="_blank" class="text-dark fs-4"><i class="fas fa-envelope"></i></a>
+              </li>
+              <li class="ms-3">
+                <a href="http://wa.me/+6285335889117" target="_blank" class="text-dark fs-4"><i class="fab fa-whatsapp"></i></a>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </footer>
+    </main>
+
+    <!-- Bootstrap Bundle with Popper -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-U1DAWAznBHeqEIlVSCgzq+c9gqGAJn5c/t99JyeKa9xxaYpSvHU5awsuZVVFIhvj" crossorigin="anonymous"></script>
+
+    <!-- Owl Carousel JS -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js" integrity="sha512-bPs7Ae6pVvhOSiIcyUClR7/q2OAsRiovw4vAkX+zJbw3ShAeeqezq50RIIcIURq7Oa20rW2n2q+fyXBNcU9lrw==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+
+    <!-- Slick Slider JS -->
+    <script src="../assets/slick/slick.min.js"></script>
+
+    <script src="../assets/js/main.js"></script>
+  </body>
+</html>

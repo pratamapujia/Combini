@@ -8,7 +8,7 @@
     <!-- Bootstrap CSS -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-KyZXEAg3QhqLMpG8r+8fhAXLRk2vvoC2f3B09zVXn8CA5QIVfZOJ3BCsw2P0p/We" crossorigin="anonymous" />
 
-    <title>Copywriting</title>
+    <title>Detail Produk</title>
 
     <!-- Font -->
     <link href="https://fonts.googleapis.com/css2?family=Nunito:ital,wght@0,200;0,300;0,400;0,600;0,700;0,800;0,900;1,200;1,300;1,400;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet" />
@@ -38,28 +38,19 @@
       <i class="fas fa-angle-up"></i>
     </div>
     <main class="flex-shrink-0">
-      <nav class="navbar navbar-dark navbar-expand-lg fixed-top sticky shadow">
+      <nav class="navbar navbar-dark navbar-expand-lg sticky sticky-top shadow p-md-3" id="user">
         <div class="container" id="user">
-          <a class="navbar-brand" href="freelance.html"><img src="../assets/img/logo2.png" alt="" /></a>
+          <a class="navbar-brand" href="../customer.html"><img src="../assets/img/logo2.png" alt="" /></a>
           <button class="navbar-toggler" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasNavbar" aria-controls="offcanvasNavbar">
             <i class="fas fa-bars"></i>
           </button>
           <div class="offcanvas offcanvas-start" id="offcanvasNavbar" aria-labelledby="offcanvasNavbarLabel">
             <div class="offcanvas-header" style="background: #143d59">
-              <a class="offcanvas-title" href="freelance.html" id="offcanvasNavbarLabel"><img src="../assets/img/logo2.png" alt="" /></a>
+              <a class="offcanvas-title" href="../customer.html" id="offcanvasNavbarLabel"><img src="../assets/img/logo2.png" alt="" /></a>
               <button type="button" class="btn text-reset" data-bs-dismiss="offcanvas" aria-label="Close"><i class="fas fa-times text-white fs-5"></i></button>
             </div>
             <div class="offcanvas-body" style="background: #143d59">
-              <form action="" class="input-group border-0 rounded-pill" style="width: 300px">
-                <input type="search" class="form-control bg-transparent border-0 me-2" placeholder="Cari pekerjaan" aria-label="Search" />
-                <div class="input-group-append border-0 my-auto">
-                  <a href="videografer_users.html" class="btn btn-link text-white" type="button" id="search"><i class="fas fa-search" aria-hidden="true"></i></a>
-                </div>
-              </form>
               <ul class="navbar-nav justify-content-end flex-grow-1">
-                <li class="nav-item">
-                  <a href="../auth/register_freelance.html" class="nav-link text-white">Daftar Freelance</a>
-                </li>
                 <li class="nav-item dropdown">
                   <a class="nav-link text-white" href="#" id="offcanvasNavbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false"> Pekerjaan </a>
                   <ul class="dropdown-menu dropdown-menu-end" aria-labelledby="offcanvasNavbarDropdown">
@@ -68,13 +59,13 @@
                     <li><a href="fotografer_users.html" class="dropdown-item text-black fw-normal fs-6">Fotografer</a></li>
                     <li><a href="videografer_users.html" class="dropdown-item text-black fw-normal fs-6">Videografer</a></li>
                     <li><a href="editor_users.html" class="dropdown-item text-black fw-normal fs-6">Video & Photo Editing</a></li>
-                    <li><a href="mc_users.html" class="dropdown-item text-black fw-normal fs-6">Master Ceremony</a></li>
+                    <li><a href="mc_users.html" class="dropdown-item text-black fw-normal fs-6">Master of Ceremony</a></li>
                     <li><a href="seo_users.html" class="dropdown-item text-black fw-normal fs-6">Search Engine Optimization</a></li>
-                    <li><a href="voa_users.html" class="dropdown-item text-black fw-normal fs-6">Voice Actor</a></li>
+                    <li><a href="vo_users.html" class="dropdown-item text-black fw-normal fs-6">Voice Actor</a></li>
                   </ul>
                 </li>
                 <from class="d-flex align-items-center">
-                  <a href="chat.html" class="text-white mx-2"><i class="fas fa-comments"></i></a>
+                  <a href="../users/chat.html" class="text-white mx-2"><i class="fas fa-comments"></i></a>
                   <div class="dropdown">
                     <a href="" class="nav-link text-white mx-1" id="notif" role="button" data-bs-toggle="dropdown" aria-expanded="false"><i class="fas fa-bell"></i></a>
                     <ul class="dropdown-menu dropdown-menu-end" aria-labelledby="notif" style="width: 500px">
@@ -116,17 +107,10 @@
             </a>
             <ul class="dropdown-menu dropdown-menu-end" aria-labelledby="user">
               <li>
-                <p class="dropdown-item">
-                  Saldo: <br />
-                  <span class="text-success">Rp 1.000.000</span>
-                </p>
-              </li>
-              <li><hr class="dropdown-divider" /></li>
-              <li>
-                <a class="dropdown-item" href="../users/profil.html"> Profil</a>
+                <a class="dropdown-item" href="detail_freelance.html"> Profil</a>
               </li>
               <li>
-                <a class="dropdown-item" href="../users/favorit.html"> Freelance Favorit</a>
+                <a class="dropdown-item" href="detail_freelance.html"> Pekerjaan Saya</a>
               </li>
               <li>
                 <a class="dropdown-item" href="../users/edukasi.html"> Edukasi</a>
@@ -155,17 +139,26 @@
                   <button type="button" data-bs-target="#carouselExampleDark" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
                   <button type="button" data-bs-target="#carouselExampleDark" data-bs-slide-to="1" aria-label="Slide 2"></button>
                   <button type="button" data-bs-target="#carouselExampleDark" data-bs-slide-to="2" aria-label="Slide 3"></button>
+                  <button type="button" data-bs-target="#carouselExampleDark" data-bs-slide-to="3" aria-label="Slide 4"></button>
+                  <button type="button" data-bs-target="#carouselExampleDark" data-bs-slide-to="4" aria-label="Slide 5"></button>
                 </div>
                 <div class="carousel-inner">
                   <div class="carousel-item active" data-bs-interval="10000">
-                    <img src="../assets/img/resource/videografi/1.1.jpg" class="d-block w-100 pb-5" style="height: 500px;" alt="...">
+                    <img src="../assets/img/resource/voa/1.jpg" class="d-block w-100 pb-5" style="height: 500px;" alt="...">
                   </div>
                   <div class="carousel-item" data-bs-interval="2000">
-                    <img src="../assets/img/resource/videografi/1.jpg" class="d-block w-100 pb-5" style="height: 500px;" alt="...">
+                    <img src="../assets/img/resource/voa/v1.jpg" class="d-block w-100 pb-5" style="height: 500px;" alt="...">
                   </div>
                   <div class="carousel-item">
-                    <img src="../assets/img/resource/videografi/1.2.jpg" class="d-block w-100 pb-5" style="height: 500px;" alt="...">
+                    <img src="../assets/img/resource/voa/v2.jpg" class="d-block w-100 pb-5" style="height: 500px;" alt="...">
                   </div>
+                  <div class="carousel-item">
+                    <img src="../assets/img/resource/voa/v3.jpg" class="d-block w-100 pb-5" style="height: 500px;" alt="...">
+                  </div>
+                  <div class="carousel-item">
+                    <img src="../assets/img/resource/voa/v4.jpg" class="d-block w-100 pb-5" style="height: 500px;" alt="...">
+                  </div>
+                  
                 </div>
                 <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleDark" data-bs-slide="prev">
                   <span class="carousel-control-prev-icon" aria-hidden="true"></span>
@@ -181,22 +174,27 @@
               <div class="row gx-5">
                   <div class="col-lg-8">
                       <!-- Deskripsi Produk -->
-                      <h2 class="fw-bolder fs-3 mb-3 mt-3">Commercial & Produk Video Production</h2>
+                      <h2 class="fw-bolder fs-3 mb-3 mt-3">Voiceover Kualitas Home Recording, Clean Mantap</h2>
                       <div class="col-mb-5 mb-xl-0">
-                        <p class="lead fw-normal fs-5 text-muted mb-5">Kemas produk dan brand secara menarik dalam media video ! <br> Percayakan segala keperluan video perusahaaanmu pada kami !<br>Kami menyediakan jasa memproduksi Product Video, Commercial Video, sampai Profile Video. Pastinya dikemas dengan menarik dan memuaskan anda.<br>Cukup order sesuai dengan jenis video yang anda butuhkan maka kami akan membuatnya nyata.
-                        <br>Jangan sungkan untuk menghubungi saya ya !</p>
+                        <p class="lead fw-normal fs-5 text-muted mb-5">Hallo!
+                        <br>
+                        <br>Kenalin saya Abduh, voice over artist. Saya ga sabar banget buat ngerjain project bareng kamu. Saya punya home studio recording sendiri, jadi kualitas yang kamu dapet bisa dijamin. Ga bakal ada noise atau room ambience yang bikin suara ga enak didenger dan terkesan “abal-abal”. Dalam 2-3 hari saya bisa recording + editing sampai 7.500 kata
+                        <br>Untuk hal-hal yang belum disebutkan diatas atau permintaan khusus, bisa dibicarakan via chat yang tersedia<br></p>
                       </div>
                       <!-- Paket -->
                       <h2 class="fw-bolder fs-4 mb-3">Pilihan Paket</h2>
                       <div class="card mb-4">
                         <div class="card-header border-bottom-0 bg-transparent" style="line-height: 0.2;">
-                          <h5 class="card-text">Product Video</h5>
-                          <small class="card-text text-muted">Waktu Pengerjaan: 7 Hari</small>
+                          <h5 class="card-text">PAKET PELAJAR MAHASISWA</h5>
+                          <small class="card-text text-muted">Waktu Pengerjaan: 1 Hari</small>
                         </div>
                         <div class="card-body">
-                          <small class="card-text">-Durasi video antara 30-60 detik.</small><br>
-                          <small class="card-text">-Video berisi beauty dan cinematic shot dari produk (tanpa talent)</small><br>
-                          <small class="card-text">-Konsep dari kami, klien bisa memberikan ide atau referensi</small><br>
+                          <small class="card-text">Buat kamu yang butuh VO buat tugas, tapi budget minim? Langsung aja gazken</small><br>
+                          <small class="card-text">50rb / menit, makin panjang makin murah dong</small><br>
+                          <small class="card-text">File :</small><br>
+                          <small class="card-text">- 48.000hz 24bit</small><br>
+                          <small class="card-text">- wav + mp3 format</small><br>
+                          <small class="card-text">- clean + processed audio</small><br>
                           <p class="card-text mt-3">Harga merupakan harga minimal, bisa berubah menyesuaikan konsep dan durasi</p>
                           <hr />
                           <a href="chat.html" target="_blank" class="btn btn-primary float-end">Chat and Nego</a>
@@ -204,15 +202,17 @@
                       </div>
                       <div class="card mb-4">
                         <div class="card-header border-bottom-0 bg-transparent" style="line-height: 0.2;">
-                          <h5 class="card-text">Commercial Video</h5>
-                          <small class="card-text text-muted">Waktu Pengerjaan: 10 Hari</small>
+                          <h5 class="card-text">PAKET START-UP *non-commercial*</h5>
+                          <small class="card-text text-muted">Waktu Pengerjaan: 1 Hari</small>
                         </div>
                         <div class="card-body">
-                          <small class="card-text">-Durasi video antara 30-60 detik.</small><br>
-                          <small class="card-text">-Video merupakan iklan bercerita yang menarik</small><br>
-                          <small class="card-text">-Video dapat gabungan antara product shot dan talent atau hanya talent saja</small><br>
-                          <small class="card-text">-Talent kami sediakan</small><br>
-                          <small class="card-text">-Konsep dari kami, klien bisa memberikan ide atau referensi jika ada</small><br>
+                            <small class="card-text">Start-up kamu butuh VO buat profile / presentasi? langsung aja pilih yang ini</small><br>
+                            <small class="card-text">100rb / menit, makin panjang makin murah dong</small><br>
+                            <small class="card-text">BUTUH BUAT ADS / PROMO? CHAT AJA DULU</small><br>
+                            <small class="card-text">File :</small><br>
+                            <small class="card-text">- 48.000hz 24bit</small><br>
+                            <small class="card-text">- wav + mp3 format</small><br>
+                            <small class="card-text">- clean + processed audio</small><br>
                           <p class="card-text mt-3">Harga merupakan harga minimal, bisa berubah menyesuaikan konsep dan durasi</p>
                           <hr />
                           <a href="chat.html" target="_blank" class="btn btn-primary float-end">Chat and Nego</a>
@@ -220,13 +220,17 @@
                       </div>
                       <div class="card mb-4">
                         <div class="card-header border-bottom-0 bg-transparent" style="line-height: 0.2;">
-                          <h5 class="card-text">Profile Video</h5>
-                          <small class="card-text text-muted">Waktu Pengerjaan: 7 Hari</small>
+                          <h5 class="card-text">PAKET COMPANY *non-commercial*</h5>
+                          <small class="card-text text-muted">Waktu Pengerjaan: 30 Hari</small>
                         </div>
                         <div class="card-body">
-                          <small class="card-text">-Durasi video antara 30-120 detik.</small><br>
-                          <small class="card-text">-Video berisi informasi mengenai lokasi atau brand klien</small><br>
-                          <small class="card-text">-Konsep dari kami, klien bisa memberikan ide atau referensi</small><br>
+                            <small class="card-text">Sama kaya diatas, tapi buat kamu yang udah established, langsung kemari aja</small><br>
+                            <small class="card-text">150rb / menit, makin panjang makin murah dong</small><br>
+                            <small class="card-text">BUTUH BUAT ADS / PROMO? CHAT AJA DULU</small><br>
+                            <small class="card-text">File :</small><br>
+                            <small class="card-text">- 48.000hz 24bit</small><br>
+                            <small class="card-text">- wav + mp3 format</small><br>
+                            <small class="card-text">- clean + processed audio</small><br>
                           <p class="card-text mt-3">Harga merupakan harga minimal, bisa berubah menyesuaikan konsep dan durasi</p>
                           <hr />
                           <a href="chat.html" target="_blank" class="btn btn-primary float-end">Chat and Nego</a>
@@ -286,7 +290,7 @@
                           </div>
                         </div>
                       </div>
-                      <h2 class="fs-4 fw-bolder mt-2">Ulasan</h2>
+                      <h2 class="fs-4 fw-bolder mt-3">Ulasan</h2>
                       <div class="card mb-2">
                         <div class="card-body">
                           <div class="row justify-content-start">
@@ -366,46 +370,38 @@
                     <div class="card">
                       <div class="card-header bg-transparent">
                         <ul class="nav nav-tabs" id="myTab" role="tablist">
-                          <li class="nav-item" role="presentation">
-                            <button class="nav-link active" id="home-tab" data-bs-toggle="tab" data-bs-target="#home" type="button" role="tab" aria-controls="home" aria-selected="true">300rb</button>
-                          </li>
-                          <li class="nav-item" role="presentation">
-                            <button class="nav-link" id="profile-tab" data-bs-toggle="tab" data-bs-target="#profile" type="button" role="tab" aria-controls="profile" aria-selected="false">500rb</button>
-                          </li>
-                          <li class="nav-item" role="presentation">
-                            <button class="nav-link" id="contact-tab" data-bs-toggle="tab" data-bs-target="#contact" type="button" role="tab" aria-controls="contact" aria-selected="false">100rb</button>
-                          </li>
+                            <li class="nav-item" role="presentation">
+                              <button class="nav-link active" id="home-tab" data-bs-toggle="tab" data-bs-target="#home" type="button" role="tab" aria-controls="home" aria-selected="true">50rb</button>
+                            </li>
+                            <li class="nav-item" role="presentation">
+                              <button class="nav-link" id="profile-tab" data-bs-toggle="tab" data-bs-target="#profile" type="button" role="tab" aria-controls="profile" aria-selected="false"><i class="fas fa-signal-1"></i>100rb</button>
+                            </li>
+                            <li class="nav-item" role="presentation">
+                              <button class="nav-link" id="contact-tab" data-bs-toggle="tab" data-bs-target="#contact" type="button" role="tab" aria-controls="contact" aria-selected="false">150rb</button>
+                            </li>
                         </ul>
                         <div class="tab-content" id="myTabContent">
                           <div class="tab-pane fade show active" id="home" role="tabpanel" aria-labelledby="home-tab">
-                            <h5 class="card-title fw-bold mt-3 fs-6">Paket: Product Video</h5>
-                            <small class="card-text">-Durasi video antara 30-60 detik.</small><br>
-                            <small class="card-text">-Video berisi beauty dan cinematic shot dari produk (tanpa talent)</small><br>
-                            <small class="card-text">-Konsep dari kami, klien bisa memberikan ide atau referensi</small><br>
+                            <h5 class="card-title fw-bold mt-3 fs-6">Paket : PAKET PELAJAR MAHASISWA</h5>
+                            <small class="card-text">Buat kamu yang butuh VO buat tugas, tapi budget minim? Langsung aja gazken 50rb / menit, makin panjang makin murah dong File : 48.000hz 24bit wav + mp3 format clean + processed audio</small><br>
                             <p class="card-text mt-3">Harga merupakan harga minimal, bisa berubah menyesuaikan konsep dan durasi</p>
-                            <p class="card-text text-muted">Waktu Pengerjaan: 7 Hari</p>
+                            <p class="card-text text-muted">Waktu Pengerjaan: 1 Hari</p>
                           </div>
                           <div class="tab-pane fade" id="profile" role="tabpanel" aria-labelledby="profile-tab">
-                            <h5 class="card-title fw-bold mt-3 fs-6">Paket: Commercial Video</h5>
-                            <small class="card-text">-Durasi video antara 30-60 detik.</small><br>
-                            <small class="card-text">-Video merupakan iklan bercerita yang menarik</small><br>
-                            <small class="card-text">-Video dapat gabungan antara product shot dan talent atau hanya talent saja</small><br>
-                            <small class="card-text">-Talent kami sediakan</small><br>
-                            <small class="card-text">-Konsep dari kami, klien bisa memberikan ide atau referensi jika ada</small><br>
+                            <h5 class="card-title fw-bold mt-3 fs-6">Paket : PAKET START-UP *non-commercial*</h5>
+                            <small class="card-text">Start-up kamu butuh VO buat profile / presentasi? langsung aja pilih yang ini 100rb / menit, makin panjang makin murah dong BUTUH BUAT ADS / PROMO? CHAT AJA DULU File : 48.000hz 24bit wav + mp3 format clean + processed audio</small><br>
                             <p class="card-text mt-3">Harga merupakan harga minimal, bisa berubah menyesuaikan konsep dan durasi</p>
-                            <p class="card-text text-muted">Waktu Pengerjaan: 10 Hari</p>
+                            <p class="card-text text-muted">Waktu Pengerjaan: 1 Hari</p>
                           </div>
                           <div class="tab-pane fade" id="contact" role="tabpanel" aria-labelledby="contact-tab">
-                            <h5 class="card-title fw-bold mt-3 fs-6">Paket: Profile Video</h5>
-                            <small class="card-text">-Durasi video antara 30-120 detik.</small><br>
-                            <small class="card-text">-Video berisi informasi mengenai lokasi atau brand klien</small><br>
-                            <small class="card-text">-Konsep dari kami, klien bisa memberikan ide atau referensi</small><br>
-                            <p class="card-text mt-3">Harga merupakan harga minimal, bisa berubah menyesuaikan konsep dan durasi</p>
-                            <p class="card-text text-muted">Waktu Pengerjaan: 7 Hari</p>
+                            <h5 class="card-title fw-bold mt-3 fs-6">Paket : PAKET COMPANY *non-commercial*</h5>
+                            <small class="card-text">Sama kaya diatas, tapi buat kamu yang udah established, langsung kemari aja 150rb / menit, makin panjang makin murah dong BUTUH BUAT ADS / PROMO? CHAT AJA DULU File : 48.000hz 24bit wav + mp3 format clean + processed audio</p>
+                            <p class="card-text text-muted">Waktu Pengerjaan: 1 Hari</p>
                           </div>
                         </div>
                         <hr />
                         <a href="../users/checkout.html" class="btn btn-primary mb-2">Pilih Paket</a>
+                        <a href="../users/checkout_premium.html" class="btn btn-primary mb-2">Pilih Paket (Premium)</a>
                       </div>
                     </div>
                   </div>
