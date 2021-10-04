@@ -82,6 +82,8 @@ $(".alur").slick({
   slidesToScroll: 1,
   asNavFor: ".alur-for",
   dots: true,
+  autoplay: true,
+  autoplaySpeed: 2000,
   centerMode: true,
   variableWidth: true,
 });
