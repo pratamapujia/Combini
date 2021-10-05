@@ -38,7 +38,7 @@
       <i class="fas fa-angle-up"></i>
     </div>
     <main class="flex-shrink-0">
-      <nav class="navbar navbar-dark navbar-expand-lg sticky-top sticky shadow">
+      <nav class="navbar navbar-dark navbar-expand-lg sticky sticky-top shadow p-md-3" id="user">
         <div class="container" id="user">
           <a class="navbar-brand" href="../customer.html"><img src="../assets/img/logo2.png" alt="" /></a>
           <button class="navbar-toggler" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasNavbar" aria-controls="offcanvasNavbar">
@@ -50,16 +50,7 @@
               <button type="button" class="btn text-reset" data-bs-dismiss="offcanvas" aria-label="Close"><i class="fas fa-times text-white fs-5"></i></button>
             </div>
             <div class="offcanvas-body" style="background: #143d59">
-              <form action="" class="input-group border-0 rounded-pill" style="width: 300px">
-                <input type="search" class="form-control bg-transparent border-0 me-2" placeholder="Cari pekerjaan" aria-label="Search" />
-                <div class="input-group-append border-0 my-auto">
-                  <a href="videografer_users.html" class="btn btn-link text-white" type="button" id="search"><i class="fas fa-search" aria-hidden="true"></i></a>
-                </div>
-              </form>
               <ul class="navbar-nav justify-content-end flex-grow-1">
-                <li class="nav-item">
-                  <a href="../auth/register_freelance.html" class="nav-link text-white">Daftar Freelance</a>
-                </li>
                 <li class="nav-item dropdown">
                   <a class="nav-link text-white" href="#" id="offcanvasNavbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false"> Pekerjaan </a>
                   <ul class="dropdown-menu dropdown-menu-end" aria-labelledby="offcanvasNavbarDropdown">
@@ -74,7 +65,7 @@
                   </ul>
                 </li>
                 <from class="d-flex align-items-center">
-                  <a href="chat.html" class="text-white mx-2"><i class="fas fa-comments"></i></a>
+                  <a href="../users/chat.html" class="text-white mx-2"><i class="fas fa-comments"></i></a>
                   <div class="dropdown">
                     <a href="" class="nav-link text-white mx-1" id="notif" role="button" data-bs-toggle="dropdown" aria-expanded="false"><i class="fas fa-bell"></i></a>
                     <ul class="dropdown-menu dropdown-menu-end" aria-labelledby="notif" style="width: 500px">
@@ -116,17 +107,10 @@
             </a>
             <ul class="dropdown-menu dropdown-menu-end" aria-labelledby="user">
               <li>
-                <p class="dropdown-item">
-                  Saldo: <br />
-                  <span class="text-success">Rp 1.000.000</span>
-                </p>
-              </li>
-              <li><hr class="dropdown-divider" /></li>
-              <li>
-                <a class="dropdown-item" href="../users/profil.html"> Profil</a>
+                <a class="dropdown-item" href="detail_freelance.html"> Profil</a>
               </li>
               <li>
-                <a class="dropdown-item" href="../users/favorit.html"> Freelance Favorit</a>
+                <a class="dropdown-item" href="detail_freelance.html"> Pekerjaan Saya</a>
               </li>
               <li>
                 <a class="dropdown-item" href="../users/edukasi.html"> Edukasi</a>
@@ -143,99 +127,145 @@
         </div>
       </nav>
 
-      <!-- Header -->
-      <section id="detail">
-        <div class="container py-5">
-          <div class="row justify-content-center">
-            <div class="col-lg-12">
-              <div class="card card-detail">
-                <div class="card-body text-center">
-                  <div class="row d-flex align-items-center">
-                    <div class="col-lg-3">
-                      <img src="../assets/img/users/user8.jpg" alt="" class="rounded rounded-circle" width="200" />
-                    </div>
-                    <div class="col-lg-7">
-                      <h3 class="card-title fs-3 fw-bold text-start text-white">Hilman Habibi</h3>
-                      <span class="card-text text-success float-start" style="text-shadow: 1px 1px 1px green">Online</span><br />
-                      <p class="card-text text-start text-white-50 fs-5">Surabaya</p>
-                      <button type="button" data-bs-toggle="modal" data-bs-target="#exampleModal" class="btn btn-warning me-2 float-start">Ubah Profil</button>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
-            <div class="col-lg-12 mt-4">
-              <div class="steps">
-                <div class="steps-header">
-                  <div class="progress">
-                    <div class="progress-bar progress-bar-striped progress-bar-animated" role="progressbar" style="width: 50%" aria-valuenow="50" aria-valuemin="0" aria-valuemax="100"></div>
-                  </div>
-                </div>
-                <div class="steps-body">
-                  <div class="step step-completed">
-                    <span class="step-indicator"
-                      ><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-check"><polyline points="20 6 9 17 4 12"></polyline></svg></span
-                    ><span class="step-icon"><img src="https://img.icons8.com/material-outlined/24/000000/delivered-box.png" /></span>Pesanan diterima
-                  </div>
-                  <div class="step step-completed">
-                    <span class="step-indicator"
-                      ><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-check"><polyline points="20 6 9 17 4 12"></polyline></svg></span
-                    ><span class="step-icon"><img src="https://img.icons8.com/material-outlined/24/000000/settings--v1.png" /></span>Pesanan dikerjakan
-                  </div>
-                  <div class="step step-active">
-                    <span class="step-icon"><img src="../assets/img/icons/box.gif" style="width: 24px" alt="" /></span>Pesanan dikirim
-                  </div>
-                  <div class="step">
-                    <span class="step-icon"><img src="https://img.icons8.com/material-outlined/24/000000/supply-chain.png" /></span>Pesanan direvisi
-                  </div>
-                  <div class="step">
-                    <span class="step-icon"><img src="https://img.icons8.com/material-outlined/24/000000/checked--v1.png" /></span>Pesanan selesai
-                  </div>
-                </div>
-              </div>
-              <!-- Footer-->
-              <div class="d-sm-flex flex-wrap justify-content-between align-items-center text-center pt-2">
-                <div class="custom-control custom-checkbox mt-2 mr-3">
-                  <input class="custom-control-input" type="checkbox" id="notify-me" checked="" />
-                  <label class="custom-control-label" for="notify-me">Beri notifikasi saat status berubah</label>
-                </div>
-                <button type="button" data-bs-toggle="modal" data-bs-target="#Modal" class="btn btn-primary btn-sm mt-2">Lihat Pesanan</button>
-              </div>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      <!-- Portofolio -->
-      <section id="porto">
-        <div class="container pb-2 mb-2">
-          <div class="row justify-content-center">
-            <div class="col-lg-4">
-              <div class="row mb-3">
-                <div class="col-md-12">
-                  <div class="card mb-2">
-                    <div class="card-body">
-                      <h5 class="card-title fw-bold fs-4">Informasi Dasar</h5>
-                      <div class="d-flex justify-content-between mt-2">
-                        <p class="card-text">Saldo: <br /><span class="text-success">Rp 1.000.000</span></p>
-                        <a href="tariksaldo.html" class="card-text">Tarik Saldo</a>
+      <!-- Checkout -->
+      <section>
+        <h2 class="text-center pt-4 fw-bolder">Tarik Saldo</h2>
+        <div class="container pb-4">
+            <div class="col-lg-6 mx-auto">
+                <div class="card">
+                <h4 class="text-center text-success pt-4 fw-bolder">Jumlah Saldo Saat Ini: Rp1.000.000</h4>
+                <div class="card-body">
+                    <div class="mb-3">
+                        <label for="username">Masukkan Jumlah Saldo Yang Ingin Ditarik</label>
+                        <input type="text" name="username" placeholder="Contoh: 100.000" required class="form-control">
                       </div>
-                      <div class="d-flex justify-content-between mt-2">
-                        <p class="card-text">Anggota Sejak</p>
-                        <p class="card-text">12 September 2021</p>
-                      </div>
-                    </div>
-                  </div>
                 </div>
               </div>
             </div>
-            <div class="col-lg-8">
-              <h3 class="text-start fw-bolder mb-3">Pekerjaan Saya (0)</h3>
-              <div class="row">
-                <div class="col-md-4 mb-3">Belum ada pekerjaan</div>
-              </div>
-            </div>
-          </div>
+          <div class="row">
+						<div class="col-lg-6 mx-auto">
+							<div class="card" style="border: none;">
+                <div class="card-header">
+                    <h4 class="text-center pt-2 fw-bolder">Metode Penarikan</h4>
+                  <div class="bg-white shadow-sm pt-4 ps-2 pe-2 pb-2">
+                    <ul class="nav nav-pills nav-fill rounded mb-3 bg-light" role="tablist">
+                      <li class="nav-item"><a class="nav-link active" href="#tab-1" data-bs-toggle="tab" role="tab"><i class="fas fa-credit-card"></i> Transfer ke Bank</a></li>
+                      <li class="nav-item"><a class="nav-link" href="#tab-2" data-bs-toggle="tab" role="tab"><i class="fas fa-wallet"></i> E-Wallet</a></li>
+                      <li class="nav-item"><a class="nav-link" href="#tab-3" data-bs-toggle="tab" role="tab"><i class="fas fa-receipt"></i> Other</a></li>
+                    </ul>
+                  </div>
+                </div>
+                <div class="card-body">
+                  <div class="tab-content">
+                    <!-- Credit Card -->
+                    <div class="tab-pane fade show active" id="tab-1" role="tabpanel">
+                      <form action="">
+                        <div class="mb-3">
+                          <label for="username">Pilih Bank:</label>
+                        </div>
+                        <div class="row">
+                          <div class="col-md-4 mb-2">
+                            <div class="form-check form-check-inline">
+                                <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio1" value="option1">
+                                <label class="form-check-label" for="inlineRadio1">
+                                  <img src="../assets/img/icons/bca.png" style="width: 64px;" alt="">
+                                </label>
+                            </div>
+                          </div>
+                          <div class="col-md-4 mb-2">
+                            <div class="form-check form-check-inline">
+                                <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio2" value="option2">
+                                <label class="form-check-label" for="inlineRadio2">
+                                  <img src="../assets/img/icons/bsi.png" style="width: 64px;" alt="">
+                                </label>
+                            </div>
+                          </div>
+                          <div class="col-md-4 mb-2">
+                            <div class="form-check form-check-inline">
+                                <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio3" value="option3">
+                                <label class="form-check-label" for="inlineRadio3">
+                                  <img src="../assets/img/icons/niaga.png" style="width: 64px;" alt="">
+                                </label>
+                            </div>
+                          </div>
+                          <div class="col-md-4 mb-2">
+                            <div class="form-check form-check-inline">
+                                <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio4" value="option4">
+                                <label class="form-check-label" for="inlineRadio4">
+                                  <img src="../assets/img/icons/bri.png" style="width: 64px;" alt="">
+                                </label>
+                            </div>                            
+                          </div>
+                          <div class="col-md-4 mb-2">
+                            <div class="form-check form-check-inline">
+                                <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio5" value="option5">
+                                <label class="form-check-label" for="inlineRadio5">
+                                  <img src="../assets/img/icons/bni.png" style="width: 48px;" alt="">
+                                </label>
+                            </div>
+                          </div>
+                          <div class="col-md-4 mb-2">
+                            <div class="form-check form-check-inline">
+                                <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio6" value="option6">
+                                <label class="form-check-label" for="inlineRadio6">
+                                  <img src="../assets/img/icons/mandiri.png" style="width: 72px;" alt="">
+                                </label>
+                            </div>
+                          </div>
+                        </div>
+                        <div class="card-footer d-grid">
+                          <button type="button" data-bs-toggle="modal" data-bs-target="#exampleModal" class="btn btn-primary shadow-sm">Konfirmasi Penarikan</button>
+                        </div>
+                      </form>
+                    </div>
+                    <div class="tab-pane fade" id="tab-2" role="tabpanel">
+                      <h6 class="pb-2 fs-5 fw-bold">Pilih Penarikan E-Wallet</h6>
+                      <div class="form-check form-check-inline">
+                        <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio1" value="option1">
+                        <label class="form-check-label" for="inlineRadio1">
+                          <img src="../assets/img/icons/OVO.png" style="width: 48px;" alt="">
+                        </label>
+                      </div>
+                      <div class="form-check form-check-inline">
+                        <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio2" value="option2">
+                        <label class="form-check-label" for="inlineRadio2">
+                          <img src="../assets/img/icons/dana.png" style="width: 64px;" alt="">
+                        </label>
+                      </div>
+                      <div class="my-4">
+                        <button type="button" data-bs-toggle="modal" data-bs-target="#exampleModal" class="btn btn-primary me-2"><i class="fas fa-wallet"></i> Masuk Akun E-Wallet</button>
+                      </div>
+                      <hr>
+                      <p class="text-muted">
+                        <b>Note :</b> After clicking on the button, you will be directed to a secure gateway for payment. After completing the payment process, you will be redirected back to the website to view details of your order. 
+                      </p>
+                    </div>
+                    <div class="tab-pane" id="tab-3" role="tabpanel">
+                      <h6 class="pb-2 fs-5 fw-bold">Pilih Penarikan</h6>
+                      <div class="form-check form-check-inline">
+                        <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio1" value="option1">
+                        <label class="form-check-label" for="inlineRadio1">
+                          <img src="../assets/img/icons/Indomaret.png" style="width: 64px;" alt="">
+                        </label>
+                      </div>
+                      <div class="form-check form-check-inline">
+                        <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio2" value="option2">
+                        <label class="form-check-label" for="inlineRadio2">
+                          <img src="../assets/img/icons/alfamartpng.png" style="width: 64px;" alt="">
+                        </label>
+                      </div>
+                      <div class="my-4">
+                        <button type="button" data-bs-toggle="modal" data-bs-target="#exampleModal" class="btn btn-primary me-2"><i class="fas fa-receipt"></i> Konfirmasi Penarikan</button>
+                      </div>
+                      <hr>
+                      <p class="text-muted">
+                        <b>Note :</b> After clicking on the button, you will be directed to a secure gateway for payment. After completing the payment process, you will be redirected back to the website to view details of your order. 
+                      </p>
+                    </div>
+                  </div>
+                </div>
+							</div>
+						</div>  
         </div>
       </section>
 
@@ -244,66 +274,10 @@
         <div class="modal-dialog modal-dialog-centered">
           <div class="modal-content">
             <div class="modal-body">
-              <form class="">
-                <div class="mb-3">
-                  <label for="" class="form-label">Foto Profil</label>
-                  <input type="file" class="form-control">
-                </div>
-                <div class="mb-3">
-                  <label for="floatingInput">Nama Lengkap</label>
-                  <input type="text" class="form-control rounded-4" id="floatingInput" />
-                </div>
-                <div class="mb-3">
-                  <label for="floatingInput">Domisili</label>
-                  <input type="text" class="form-control rounded-4" id="floatingInput" />
-                </div>
-                <div class="mb-3">
-                  <label for="floatingInput">Tanggal Lahir</label>
-                  <input type="date" class="form-control rounded-4" id="floatingInput" />
-                </div>
-                <div class="mb-3">
-                  <label for="floatingInput">No. Telepon</label>
-                  <input type="number" class="form-control rounded-4" id="floatingInput" />
-                </div>
-                <div class="mb-3">
-                  <label for="floatingInput">Username</label>
-                  <input type="text" class="form-control rounded-4" id="floatingInput" />
-                </div>
-                <div class="mb-3">
-                  <label for="floatingInput">Email</label>
-                  <input type="email" class="form-control rounded-4" id="floatingInput" />
-                </div>
-                <div class="mb-3">
-                  <label for="floatingPassword">Password</label>
-                  <input type="password" class="form-control rounded-4" id="floatingPassword" />
-                </div>
-              </form>
+              <h2 class="text-center text-success">Penarikan Berhasil</h2>
             </div>
             <div class="modal-footer">
-              <a type="button" href="profil.html" class="btn btn-primary">Simpan</a>
-            </div>
-          </div>
-        </div>
-      </div>
-
-      <div class="modal fade" id="Modal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
-        <div class="modal-dialog modal-dialog-centered">
-          <div class="modal-content">
-            <div class="modal-body">
-              <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></span>
-              </button>
-              <div class="text-center imgModal pb-2">
-                <img src="../assets/img/resource/videografi/1.1.jpg" class="rounded img-fluid" style="height: 250px" alt="" />
-                <img src="../assets/img/resource/videografi/1.jpg" class="rounded img-fluid" style="height: 250px" alt="" />
-              </div>
-              <div class="mb-3 mt-4">
-                <label for="" class="form-label">Keterangan jika revisi</label>
-                <textarea rows="3" class="form-control"></textarea>
-              </div>
-            </div>
-            <div class="modal-footer">
-              <a type="button" href="profil.html" class="btn btn-primary">Revisi</a>
-              <a type="button" href="profil.html" class="btn btn-primary">Diterima</a>
+              <a type="button" href="../customer.html" class="btn btn-primary">Ok</a>
             </div>
           </div>
         </div>
