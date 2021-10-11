@@ -242,7 +242,11 @@ section h2 {
 }
 /* Hero Bottom */
 .hero-bottom {
-  background-image: linear-gradient(to right, rgb(28, 86, 125) 20%, rgb(20, 61, 89));
+  background-image: linear-gradient(
+    to right,
+    rgb(28, 86, 125) 20%,
+    rgb(20, 61, 89)
+  );
 }
 .hero-bottom .btn {
   font-family: "Chennai", sans-serif;
@@ -442,7 +446,11 @@ footer span {
   background: none;
 }
 #user-header .card-penawaran2 {
-  background-image: linear-gradient(to top left, rgb(28, 86, 125) 20%, rgb(20, 61, 89));
+  background-image: linear-gradient(
+    to top left,
+    rgb(28, 86, 125) 20%,
+    rgb(20, 61, 89)
+  );
   border: none;
   border-radius: 10px;
 }
@@ -464,19 +472,23 @@ footer span {
 
 /* Detail - Freelance */
 #detail .card-detail {
-  background-image: linear-gradient(to top left, rgb(28, 86, 125) 20%, rgb(20, 61, 89));
+  background-image: linear-gradient(
+    to top left,
+    rgb(28, 86, 125) 20%,
+    rgb(20, 61, 89)
+  );
   border-radius: 15px;
 }
-#detail .card-detail a {
+/* #detail .card-detail a {
   background: #ffd700;
   border: 1px solid #143d59;
   border-radius: 9px;
-  color: #143d59;
+  color: #143d59;er
   font-weight: bold;
 }
 #detail .card-detail a:hover {
   background: #ffd900aa;
-}
+} */
 
 /* Porto */
 #porto .card .card-title {
