@@ -69,24 +69,24 @@ $(document).ready(function () {
   });
 });
 
-$(".alur-for").slick({
-  slidesToShow: 1,
-  slidesToScroll: 1,
-  arrows: false,
-  dots: false,
-  fade: true,
-  asNavFor: ".alur",
-});
-$(".alur").slick({
-  slidesToShow: 1,
-  slidesToScroll: 1,
-  asNavFor: ".alur-for",
-  dots: true,
-  autoplay: true,
-  autoplaySpeed: 2000,
-  centerMode: true,
-  variableWidth: true,
-});
+// $(".alur-for").slick({
+//   slidesToShow: 1,
+//   slidesToScroll: 1,
+//   arrows: false,
+//   dots: false,
+//   fade: true,
+//   asNavFor: ".alur",
+// });
+// $(".alur").slick({
+//   slidesToShow: 1,
+//   slidesToScroll: 1,
+//   asNavFor: ".alur-for",
+//   dots: true,
+//   autoplay: true,
+//   autoplaySpeed: 2000,
+//   centerMode: true,
+//   variableWidth: true,
+// });
 
 $(".imgModal").slick({
   dots: true,
