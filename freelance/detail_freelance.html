@@ -66,7 +66,7 @@
                   </ul>
                 </li>
                 <from class="d-flex align-items-center">
-                  <a href="../users/chat.html" class="text-white mx-2"><i class="fas fa-comments"></i></a>
+                  <a href="../chat/freelancer.html" target="_blank" class="text-white mx-2"><i class="fas fa-comments"></i></a>
                   <div class="dropdown">
                     <a href="" class="nav-link text-white mx-1" id="notif" role="button" data-bs-toggle="dropdown" aria-expanded="false"><i class="fas fa-bell"></i></a>
                     <ul class="dropdown-menu dropdown-menu-end" aria-labelledby="notif" style="width: 500px">
@@ -77,7 +77,7 @@
                               <img src="../assets/img/logo3.png" width="40" class="rounded-circle" alt="" />
                             </div>
                             <div class="col" style="line-height: 1.1">
-                              <span class="fs-6 text-wrap">Pekerjaan [Fotografi] yang anda beli sudah diterima oleh freelance</span><br />
+                              <span class="fs-6 text-wrap">Pekerjaan [Photo Product] dari customer [Reza] harus direvisi</span><br>
                               <small class="text-muted"><i class="far fa-clock"></i> hari ini</small>
                             </div>
                           </div>
@@ -90,7 +90,7 @@
                               <img src="../assets/img/logo3.png" width="40" class="rounded-circle" alt="" />
                             </div>
                             <div class="col" style="line-height: 1.1">
-                              <span class="fs-6 text-wrap lh-sm">Pekerjaan [Videografi] yang anda beli sudah selesai, silahkan kasih review ke freelance</span><br />
+                              <span class="fs-6 text-wrap lh-sm">Pekerjaan [Potrait Photoshoot] dari customer [Riyan] telah selesai</span><br />
                               <small class="text-muted"><i class="far fa-clock"></i> kemarin</small>
                             </div>
                           </div>
@@ -151,6 +151,7 @@
               </div>
             </div>
             <div class="col-lg-12 mt-4">
+              <h4>Status Pekerjaan <span class="fw-bolder" style="color: #143d59;">Photography Product | Reza </span></h4>
               <div class="steps">
                 <div class="steps-header">
                   <div class="progress">
@@ -325,7 +326,7 @@
                               <small class="fs-6 text-primary">Rp 300.000</small>
                             </div>
                             <div class="col-auto">
-                              <a href="detail_videografer.html" class="btn btn-primary rounded-pill" style="width: 70px">Pilih</a>
+                              <a href="#" type="button" data-bs-toggle="modal" data-bs-target="#editModal" class="btn btn-primary rounded-pill" style="width: 70px">Edit</a>
                             </div>
                           </div>
                         </div>
@@ -368,7 +369,7 @@
                               <small class="fs-6 text-primary">Rp 200.000</small>
                             </div>
                             <div class="col-auto">
-                              <a href="detail_fotografer.html" class="btn btn-primary rounded-pill" style="width: 70px">Pilih</a>
+                              <a href="#" class="btn btn-primary rounded-pill" type="button" data-bs-toggle="modal" data-bs-target="#editModal" style="width: 70px">Edit</a>
                             </div>
                           </div>
                         </div>
@@ -499,6 +500,48 @@
         </div>
       </div>
 
+      <!-- Modal Edit Pekerjaan -->
+      <div class="modal fade" id="editModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered">
+          <div class="modal-content">
+            <div class="modal-body">
+              <form class="">
+                <select class="form-select mb-3" aria-label=".form-select-sm example">
+                  <option>Pilih Kategori Pekerjaan</option>
+                  <option value="1">Copywriting</option>
+                  <option value="2">Desain Grafis</option>
+                  <option value="3">Foto dan Video Editing</option>
+                  <option value="4">Fotografer</option>
+                  <option selected value="5">Videografer</option>
+                  <option value="6">Master of Ceremony</option>
+                  <option value="7">SEO</option>
+                  <option value="8">Voice Actor</option>
+                </select>
+                <div class="form-group mb-3">
+                  <label for="floatingInput">Nama Pekerjaan</label>
+                  <input type="text" class="form-control rounded-4" id="floatingInput" value="Comercial dan Produk Video (Jawa Timur)" />
+                </div>
+                <div class="form-group mb-3">
+                  <label for="floatingInput">Deskripsi Pekerjaan</label>
+                  <textarea class="form-control rounded-4" rows="4" id="floatingInput" placeholder="Kemas produk dan brand secara menarik dalam media video ! Percayakan segala keperluan video perusahaaanmu pada kami ! Kami menyediakan jasa memproduksi Product Video, Commercial Video, sampai Profile Video. Pastinya dikemas dengan menarik dan memuaskan anda. Cukup order sesuai dengan jenis video yang anda butuhkan maka kami akan membuatnya nyata. Jangan sungkan untuk menghubungi saya ya !"></textarea>
+                </div>
+                <div class="form-group mb-3">
+                  <label>Foto Produk</label>
+                  <input type="file" class="form-control rounded-4" />
+                </div>
+                <div class="form-group mb-3">
+                  <label for="floatingInput">Harga Produk</label>
+                  <input type="text" class="form-control rounded-4" id="floatingInput" value="300.000" />
+                </div>
+              </form>
+            </div>
+            <div class="modal-footer">
+              <a type="button" href="detail_freelance.html" class="btn btn-primary">Simpan</a>
+            </div>
+          </div>
+        </div>
+      </div>
+
       <!-- Modal Ubah Profile -->
       <div class="modal fade" id="Modal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
         <div class="modal-dialog modal-dialog-centered">
@@ -550,7 +593,7 @@
               <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></span>
               </button>
               <div class="mb-3 mt-4">
-                <label for="" class="form-label">Input File</label>
+                <label for="" class="form-label">Hasil pekerjaan [Photography Product]</label>
                 <input type="file" class="form-control">
               </div>
               <div class="mb-3 mt-4">

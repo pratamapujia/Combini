@@ -1,0 +1,734 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" dir="ltr">
+  <head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <!-- Tell the browser to be responsive to screen width -->
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="author" content="http://bylancer.com" />
+    <meta name="keywords" content="php chat script, php ajax Chat,facebook similar chat, php mysql chat, chat script, facebook style chat script, gmail style chat script. fbchat, gmail chat, facebook style message inbox, facebook similar inbox, facebook like chat" />
+    <meta name="description" content="Wchat is a popular responsive php ajax inbox messaging (Chat) WebApp for websites, mobile apps and control panels." />
+
+    <!-- Favicon icon -->
+    <link rel="icon" type="image/png" sizes="16x16" href="../assets/img/logo3.png" />
+    <title>Chat</title>
+    <!-- Bootstrap Core CSS -->
+    <link href="assets/bootstrap/dist/css/bootstrap.min.css" rel="stylesheet" />
+    <!-- Animation CSS -->
+    <link href="assets/css/animate.css" rel="stylesheet" />
+    <link href="assets/css/custom.css" rel="stylesheet" id="style" />
+    <!-- Theme light dark version CSS -->
+    <link href="assets/css/style.css" rel="stylesheet" />
+    <link href="assets/css/style-light.css" id="maintheme" rel="stylesheet" />
+    <!-- color CSS you can use different color css from css/colors folder -->
+    <!-- We have chosen the skin-blue (blue.css) for this starter
+         page. However, you can choose any other skin from folder css / colors .
+    -->
+    <link href="assets/css/colors/green.css" id="theme" rel="stylesheet" />
+    <!-- Emoji One JS -->
+    <link rel="stylesheet" href="smiley/assets/sprites/emojione.sprites.css" />
+    <script src="smiley/js/emojione.min.js"></script>
+    <script type="text/javascript">
+      // #################################################
+      // # Optional
+
+      // default is PNG but you may also use SVG
+      emojione.imageType = "svg";
+      emojione.sprites = false;
+
+      // default is ignore ASCII smileys like :) but you can easily turn them on
+      emojione.ascii = true;
+
+      // if you want to host the images somewhere else
+      // you can easily change the default paths
+      emojione.imagePathPNG = "smiley/assets/png/";
+      emojione.imagePathSVG = "smiley/assets/svg/";
+
+      // #################################################
+    </script>
+  </head>
+  <body style="background-color: #143d59">
+    <div id="wchat">
+      <div class="wchat-wrapper wchat-wrapper-web wchat-wrapper-main">
+        <div tabindex="-1" class="wchat two">
+          <div class="drawer-manager">
+            <span class="pane wchat-one"></span>
+            <span class="pane wchat-two">
+              <div id="get-error"></div>
+              <div id="showErrorModal" data-toggle="modal" data-target=".bs-example-modal-sm"></div>
+              <div class="pane pane-intro" id="pane-intro" style="visibility: visible">
+                <div class="intro-body">
+                  <div class="intro-image" style="opacity: 1; transform: scale(1)"></div>
+                  <div class="intro-text-container" style="opacity: 1; transform: translateY(0px)">
+                    <h1 class="intro-title">Selamat Datang di Web Chat Combini</h1>
+                    <div class="intro-text">Klik kontak untuk memulai chat</div>
+                  </div>
+                </div>
+              </div>
+              <div id="uploader" style="display: none">
+                <p>Your browser doesn't have Flash, Silverlight or HTML5 support.</p>
+              </div>
+            </span>
+            <span class="pane wchat-three" style="transition: all 0.3s ease">
+              <span class="flow-drawer-container" style="transform: translateX(0px); border: 1px solid rgba(0, 0, 0, 0.08); display: block">
+                <div class="drawer drawer-info">
+                  <header class="wchat-header">
+                    <div class="header-close">
+                      <button><span class="icon icon-x ti-close"></span></button>
+                    </div>
+                    <div class="header-body">
+                      <div class="header-main">
+                        <div class="header-title">Profile info</div>
+                      </div>
+                    </div>
+                  </header>
+                  <div class="drawer-body" id="userProfile" data-list-scroll-container="true">
+                    <!--Here Profile comes dynamically-->
+                  </div>
+                </div>
+              </span>
+            </span>
+          </div>
+
+          <!-- .chat-left-panel -->
+          <div id="side" class="wchat-list wchat-one chat-left-aside left">
+            <div class="open-panel"><i class="ti-angle-right"></i></div>
+            <div class="chat-left-inner">
+              <div id="my-profile" style="display: none"></div>
+              <div id="contact-list">
+                <header class="wchat-header wchat-chat-header top">
+                  <div class="chat-avatar">
+                    <div class="avatar icon-user-default" style="height: 40px; width: 40px">
+                      <div class="avatar-body userimage"><img src="assets/images/logo3.png" class="avatar-image is-loaded" width="100%" /></div>
+                    </div>
+                  </div>
+                  <div class="chat-body">
+                    <div class="chat-main">
+                      <h2 class="chat-title" dir="auto"><span class="wchatellips personName">Combini</span></h2>
+                    </div>
+                  </div>
+                  <div class="wchat-chat-controls">
+                    <div class="menu menu-horizontal">
+                      <div class="menu-item right-side-toggle"><button class="icon ti-settings font-20" title="Attach"></button><span></span></div>
+                    </div>
+                  </div>
+                </header>
+                <div class="form-material">
+                  <input class="form-control p-lr-20 live-search-box search_bg" id="searchbox" type="text" placeholder="Search Kontak" />
+                </div>
+                <div class="contact-drawer">
+                  <ul class="chatonline drawer-body contact-list" id="display" data-list-scroll-container="true" style="display: block">
+                    <li class="person chatboxhead active" id="chatbox1_Deven" data-chat="person_1" href="javascript:void(0)" onclick="javascript:chatWith('Budi','1','user1.jpg','Online')">
+                      <a href="javascript:void(0)">
+                        <span class="userimage profile-picture min-profile-picture"><img src="assets/images/users/user1.jpg" alt="Deven" class="avatar-image is-loaded bg-theme" width="100%" /></span>
+                        <span>
+                          <span class="font-normal font-19">Budi</span>
+                          <span class="personStatus"
+                            ><span class="time Online"><i class="fa fa-circle" aria-hidden="true"></i></span></span
+                          ><br />
+                          <small class="preview"><span class="Online">Online</span></small>
+                        </span>
+                      </a>
+                    </li>
+                    <li class="person chatboxhead" id="chatbox1_John" data-chat="person_2" href="javascript:void(0)" onclick="javascript:chatWith('Erwin','2','user2.jpg','last seen 23 minutes ago')">
+                      <a href="javascript:void(0)">
+                        <span class="userimage profile-picture min-profile-picture"><img src="assets/images/users/user2.jpg" alt="John" class="avatar-image is-loaded bg-theme" width="100%" /></span>
+                        <span>
+                          <span class="font-normal font-19">Erwin</span>
+                          <span class="personStatus"
+                            ><span class="time Offline"><i class="fa fa-circle" aria-hidden="true"></i></span
+                          ></span>
+                          <span class="count"></span><br />
+                          <small class="preview"><span class="Offline">last seen 23 minutes ago</span></small>
+                        </span>
+                      </a>
+                    </li>
+                    <li class="person chatboxhead active" id="chatbox1_Kristina" data-chat="person_3" href="javascript:void(0)" onclick="javascript:chatWith('Mufidah','3','user6.jpg','Offline')">
+                      <a href="javascript:void(0)">
+                        <span class="userimage profile-picture min-profile-picture"><img src="assets/images/users/user6.jpg" alt="Deven" class="avatar-image is-loaded bg-theme" width="100%" /></span>
+                        <span>
+                          <span class="font-normal font-19">Mufidah</span>
+                          <span class="personStatus"
+                            ><span class="time Offline"><i class="fa fa-circle" aria-hidden="true"></i></span
+                          ></span>
+                          <span class="count"></span><br />
+                          <small class="preview"><span class="Offline">Offline</span></small>
+                        </span>
+                      </a>
+                    </li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+          </div>
+          <!-- .chat-left-panel -->
+          <!-- .chat-right-panel -->
+
+          <div tabindex="-1" id="main right" class="pane wchat-chat wchat-two chat-right-aside right" style="visibility: hidden">
+            <div class="wchat-chat-tile"></div>
+
+            <header class="wchat-header wchat-chat-header top" data-user="">
+              <button class="icon m-r-5 hidden-sm hidden-md hidden-lg open-panel" href="#">
+                <span class="font-19"><i class="icon ti-arrow-left"></i></span>
+              </button>
+              <div class="chat-avatar" id="launchProfile">
+                <div class="avatar icon-user-default" style="height: 40px; width: 40px">
+                  <div class="avatar-body userimage profile-picture">&nbsp;</div>
+                </div>
+              </div>
+              <div class="chat-body">
+                <div class="chat-main">
+                  <h2 class="chat-title" dir="auto"><span class="wchatellips personName">&nbsp;</span></h2>
+                </div>
+                <div class="chat-status wchatellips" id="typing_on">
+                  <!--last seen today at 8:52 PM-->
+                </div>
+              </div>
+              <div class="wchat-chat-controls">
+                <div class="menu menu-horizontal">
+                  <div class="menu-item active dropdown pull-right">
+                    <button id="MobileChromeplaysound" class="hidden"></button>
+                    <button class="icon dropdown-toggle font-19" data-toggle="dropdown" href="#" id="mute-sound"><i class="icon icon-volume-2"></i></button>
+                  </div>
+                  <div class="mega-dropdown pull-right">
+                    <button class="dropdown-toggle waves-effect waves-light" data-toggle="dropdown" href="#" aria-expanded="false">
+                      <span class="font-19"><i class="icon fa fa-paperclip"></i></span>
+                    </button>
+                    <ul class="dropdown-menu mega-dropdown-menu animated bounceInDown" style="width: 100px; right: -13px; box-shadow: 0 0 0 rgba(0, 0, 0, 0.05) !important; background: none">
+                      <li class="col-sm-12 demo-box">
+                        <div class="row">
+                          <div class="col-sm-12">
+                            <div class="white-box text-center bg-purple uploadFile" id="uploadFile">
+                              <a href="#" class="text-white" data-toggle="tooltip" title="" data-original-title="Photos"><i class="icon ti-gallery font-19"></i></a>
+                            </div>
+                          </div>
+                          <div class="col-sm-12">
+                            <div class="white-box text-center bg-success uploadFile">
+                              <a href="#" class="text-white" data-toggle="tooltip" title="" data-original-title="Videos"><i class="icon icon-camrecorder font-19"></i></a>
+                            </div>
+                          </div>
+                          <div class="col-sm-12">
+                            <div class="white-box text-center bg-info uploadFile">
+                              <a href="#" class="text-white" data-toggle="tooltip" title="" data-original-title="Document"><i class="icon icon-doc font-19"></i></a>
+                            </div>
+                          </div>
+                        </div>
+                      </li>
+                    </ul>
+                  </div>
+                  <div class="menu-item right-side-toggle hidden-xs hidden"><button class="icon ti-settings font-20" title="Attach"></button><span></span></div>
+                </div>
+              </div>
+            </header>
+
+            <div class="wchat-body wchat-chat-tile-container" style="background-size: cover">
+              <div>
+                <span>
+                  <div class="scroll-down" style="transform: scaleX(1) scaleY(1); opacity: 1; visibility: hidden">
+                    <span class="ti-angle-down"></span>
+                  </div>
+                </span>
+                <div class="wchat-chat-msgs wchat-chat-body lastTabIndex" tabindex="0">
+                  <div class="wchat-chat-empty"></div>
+                  <div class="message-list">
+                    <div class="chat-list" id="resultchat">
+                      <!--Here content comes dynamically-->
+
+                      <div id="chatbox_Deven" class="chat chatboxcontent active-chat" data-chat="person_1" client="Deven">
+                        <div class="col-xs-12 p-b-10 odd">
+                          <div class="chat-body">
+                            <div class="chat-text">
+                              <p class="font-19">Selamat siang mas budi, saya berminat untuk menggunakan jasa mas untuk photo shoot produk saya, apa bisa mas ?</p>
+                              <p>
+                                13.01 <span class="msg-status msg-mega"><i class="fa fa-check"></i></span>
+                              </p>
+                            </div>
+                          </div>
+                        </div>
+                        <div class="col-xs-12 p-b-10">
+                          <div class="chat-image profile-picture max-profile-picture">
+                            <img alt="Deven" src="assets/images/users/user1.jpg" class="bg-theme" />
+                          </div>
+                          <div class="chat-body">
+                            <div class="chat-text">
+                              <h4 class="font-19">Budi</h4>
+                              <p class="font-19">
+                                Iya pak selamat siang, bisa banget pak. <br />
+                                Silahkan di order pak ..
+                              </p>
+                              <p>
+                                13.05 <span class="msg-status msg-mega"><i class="fa fa-check"></i></span>
+                              </p>
+                            </div>
+                          </div>
+                        </div>
+                        <div class="col-xs-12 p-b-10 odd">
+                          <div class="chat-body">
+                            <div class="chat-text">
+                              <p class="font-19">Untuk harga bisa nego kan mas ?</p>
+                              <p>
+                                13.06 <span class="msg-status msg-mega"><i class="fa fa-check"></i></span>
+                              </p>
+                            </div>
+                          </div>
+                        </div>
+                        <div class="col-xs-12 p-b-10">
+                          <div class="chat-image profile-picture max-profile-picture">
+                            <img alt="Deven" src="assets/images/users/user1.jpg" class="bg-theme" />
+                          </div>
+                          <div class="chat-body">
+                            <div class="chat-text">
+                              <h4 class="font-19">Budi</h4>
+                              <p class="font-19">Bisa pak, mungkin saua kasih potongan 10% dari harga normal pak, bagaimana ?</p>
+                              <p>
+                                13.07 <span class="msg-status msg-mega"><i class="fa fa-check"></i></span>
+                              </p>
+                            </div>
+                          </div>
+                        </div>
+                        <div class="col-xs-12 p-b-10 odd">
+                          <div class="chat-body">
+                            <div class="chat-text">
+                              <p class="font-19">Wah boleh deh mas, saya ambil itu mas ..</p>
+                              <p>
+                                13.08 <span class="msg-status msg-mega"><i class="fa fa-check"></i></span>
+                              </p>
+                            </div>
+                          </div>
+                        </div>
+                        <div class="col-xs-12 p-b-10">
+                          <div class="chat-image profile-picture max-profile-picture">
+                            <img alt="Deven" src="assets/images/users/user1.jpg" class="bg-theme" />
+                          </div>
+                          <div class="chat-body">
+                            <div class="chat-text">
+                              <h4 class="font-19">Budi</h4>
+                              <p class="font-19">
+                                Baik pak, silahkan di order melalui webnya, lalu untuk info lebih lanjut bisa melalui kontak pribadi saya pak <br />
+                                <a href="">wa.me/6283*******89</a>
+                              </p>
+                              <p>
+                                13.10 <span class="msg-status msg-mega"><i class="fa fa-check"></i></span>
+                              </p>
+                            </div>
+                          </div>
+                        </div>
+                        <div class="col-xs-12 p-b-10 odd">
+                          <div class="chat-body">
+                            <div class="chat-text">
+                              <p class="font-19">Baik mas, Terimakasih</p>
+                              <p>
+                                13.11 <span class="msg-status msg-mega"><i class="fa fa-check"></i></span>
+                              </p>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                      <div id="chatbox_John" class="chat chatboxcontent active-chat" data-chat="person_2" client="John">
+                        <div class="col-xs-12 p-b-10 odd">
+                          <div class="chat-body">
+                            <div class="chat-text">
+                              <p class="font-19">Selamat siang mas Erwin, saya berminat untuk menggunakan jasa mas untuk photo shoot produk saya, apa bisa mas ?</p>
+                              <p>
+                                13.01 <span class="msg-status msg-mega"><i class="fa fa-check"></i></span>
+                              </p>
+                            </div>
+                          </div>
+                        </div>
+                        <div class="col-xs-12 p-b-10">
+                          <div class="chat-image profile-picture max-profile-picture">
+                            <img alt="Deven" src="assets/images/users/user2.jpg" class="bg-theme" />
+                          </div>
+                          <div class="chat-body">
+                            <div class="chat-text">
+                              <h4 class="font-19">Erwin</h4>
+                              <p class="font-19">
+                                Iya pak selamat siang, bisa banget pak. <br />
+                                Silahkan di order pak ..
+                              </p>
+                              <p>
+                                13.05 <span class="msg-status msg-mega"><i class="fa fa-check"></i></span>
+                              </p>
+                            </div>
+                          </div>
+                        </div>
+                        <div class="col-xs-12 p-b-10 odd">
+                          <div class="chat-body">
+                            <div class="chat-text">
+                              <p class="font-19">Untuk harga bisa nego kan mas ?</p>
+                              <p>
+                                13.06 <span class="msg-status msg-mega"><i class="fa fa-check"></i></span>
+                              </p>
+                            </div>
+                          </div>
+                        </div>
+                        <div class="col-xs-12 p-b-10">
+                          <div class="chat-image profile-picture max-profile-picture">
+                            <img alt="Deven" src="assets/images/users/user2.jpg" class="bg-theme" />
+                          </div>
+                          <div class="chat-body">
+                            <div class="chat-text">
+                              <h4 class="font-19">Erwin</h4>
+                              <p class="font-19">Bisa pak, mungkin saua kasih potongan 10% dari harga normal pak, bagaimana ?</p>
+                              <p>
+                                13.07 <span class="msg-status msg-mega"><i class="fa fa-check"></i></span>
+                              </p>
+                            </div>
+                          </div>
+                        </div>
+                        <div class="col-xs-12 p-b-10 odd">
+                          <div class="chat-body">
+                            <div class="chat-text">
+                              <p class="font-19">Wah boleh deh mas, saya ambil itu mas ..</p>
+                              <p>
+                                13.08 <span class="msg-status msg-mega"><i class="fa fa-check"></i></span>
+                              </p>
+                            </div>
+                          </div>
+                        </div>
+                        <div class="col-xs-12 p-b-10">
+                          <div class="chat-image profile-picture max-profile-picture">
+                            <img alt="Deven" src="assets/images/users/user2.jpg" class="bg-theme" />
+                          </div>
+                          <div class="chat-body">
+                            <div class="chat-text">
+                              <h4 class="font-19">Erwin</h4>
+                              <p class="font-19">
+                                Baik pak, silahkan di order melalui webnya, lalu untuk info lebih lanjut bisa melalui kontak pribadi saya pak <br />
+                                <a href="">wa.me/6283*******89</a>
+                              </p>
+                              <p>
+                                13.10 <span class="msg-status msg-mega"><i class="fa fa-check"></i></span>
+                              </p>
+                            </div>
+                          </div>
+                        </div>
+                        <div class="col-xs-12 p-b-10 odd">
+                          <div class="chat-body">
+                            <div class="chat-text">
+                              <p class="font-19">Baik mas, Terimakasih</p>
+                              <p>
+                                13.11 <span class="msg-status msg-mega"><i class="fa fa-check"></i></span>
+                              </p>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                      <div id="chatbox_Kristina" class="chat chatboxcontent active-chat" data-chat="person_3" client="Kristina">
+                        <div class="col-xs-12 p-b-10 odd">
+                          <div class="chat-body">
+                            <div class="chat-text">
+                              <p class="font-19">Selamat siang mbak Mufidah, saya berminat untuk menggunakan jasa mbak untuk photo shoot produk saya, apa bisa mbak ?</p>
+                              <p>
+                                13.01 <span class="msg-status msg-mega"><i class="fa fa-check"></i></span>
+                              </p>
+                            </div>
+                          </div>
+                        </div>
+                        <div class="col-xs-12 p-b-10">
+                          <div class="chat-image profile-picture max-profile-picture">
+                            <img alt="Deven" src="assets/images/users/user6.jpg" class="bg-theme" />
+                          </div>
+                          <div class="chat-body">
+                            <div class="chat-text">
+                              <h4 class="font-19">Mufidah</h4>
+                              <p class="font-19">
+                                Iya pak selamat siang, bisa banget pak. <br />
+                                Silahkan di order pak ..
+                              </p>
+                              <p>
+                                13.05 <span class="msg-status msg-mega"><i class="fa fa-check"></i></span>
+                              </p>
+                            </div>
+                          </div>
+                        </div>
+                        <div class="col-xs-12 p-b-10 odd">
+                          <div class="chat-body">
+                            <div class="chat-text">
+                              <p class="font-19">Untuk harga bisa nego kan mbak ?</p>
+                              <p>
+                                13.06 <span class="msg-status msg-mega"><i class="fa fa-check"></i></span>
+                              </p>
+                            </div>
+                          </div>
+                        </div>
+                        <div class="col-xs-12 p-b-10">
+                          <div class="chat-image profile-picture max-profile-picture">
+                            <img alt="Deven" src="assets/images/users/user6.jpg" class="bg-theme" />
+                          </div>
+                          <div class="chat-body">
+                            <div class="chat-text">
+                              <h4 class="font-19">Mufidah</h4>
+                              <p class="font-19">Bisa pak, mungkin saua kasih potongan 10% dari harga normal pak, bagaimana ?</p>
+                              <p>
+                                13.07 <span class="msg-status msg-mega"><i class="fa fa-check"></i></span>
+                              </p>
+                            </div>
+                          </div>
+                        </div>
+                        <div class="col-xs-12 p-b-10 odd">
+                          <div class="chat-body">
+                            <div class="chat-text">
+                              <p class="font-19">Wah boleh deh mbak, saya ambil itu mbak ..</p>
+                              <p>
+                                13.08 <span class="msg-status msg-mega"><i class="fa fa-check"></i></span>
+                              </p>
+                            </div>
+                          </div>
+                        </div>
+                        <div class="col-xs-12 p-b-10">
+                          <div class="chat-image profile-picture max-profile-picture">
+                            <img alt="Deven" src="assets/images/users/user6.jpg" class="bg-theme" />
+                          </div>
+                          <div class="chat-body">
+                            <div class="chat-text">
+                              <h4 class="font-19">Mufidah</h4>
+                              <p class="font-19">
+                                Baik pak, silahkan di order melalui webnya, lalu untuk info lebih lanjut bisa melalui kontak pribadi saya pak <br />
+                                <a href="">wa.me/6283*******89</a>
+                              </p>
+                              <p>
+                                13.10 <span class="msg-status msg-mega"><i class="fa fa-check"></i></span>
+                              </p>
+                            </div>
+                          </div>
+                        </div>
+                        <div class="col-xs-12 p-b-10 odd">
+                          <div class="chat-body">
+                            <div class="chat-text">
+                              <p class="font-19">Baik mbak, Terimakasih</p>
+                              <p>
+                                13.11 <span class="msg-status msg-mega"><i class="fa fa-check"></i></span>
+                              </p>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div class="wchat-filler" style="height: 0px"></div>
+            <footer tabindex="-1" class="wchat-footer wchat-chat-footer">
+              <div id="chatFrom">
+                <!--TextArea Dinamic -->
+              </div>
+              <div class="wchat-box-items-positioning-container">
+                <div class="wchat-box-items-overlay-container">
+                  <div style="display: none" class="target-emoji">
+                    <div class="smiley-panel">
+                      <!-- Nav tabs -->
+                      <ul class="nav customtab2 nav-tabs menu-tabs" role="tablist" style="padding: 0">
+                        <li role="presentation" class="menu-item active">
+                          <a href="#people" aria-controls="people" role="tab" data-toggle="tab" aria-expanded="true"><i class="ti-face-smile"></i></a>
+                        </li>
+                      </ul>
+                      <!-- Tab panes -->
+                      <div class="tab-content" style="margin: 0; text-align: center">
+                        <div role="tabpanel" class="tab-pane fade active in" id="people">
+                          <span>
+                            <div class="smiley-panel-body">
+                              <div class="emoji-people">
+                                <span class="e1" id="1f600" data-shortname=":grinning:" data-index="1" title="grinning face" data-eid="735"><span class="emojione emojione-1f600"></span></span>
+                                <span class="e1" id="1f601" data-shortname=":grin:" data-index="2" title="grinning face with smiling eyes" data-eid="621"><span class="emojione emojione-1f601"></span></span>
+                                <span class="e1" id="1f602" data-shortname=":joy:" data-index="3" title="face with tears of joy" data-eid="622"><span class="emojione emojione-1f602"></span></span>
+                                <span class="e1" id="1f923" data-shortname=":rofl:" data-index="4" title="rolling on the floor laughing" data-eid="2256"><span class="emojione emojione-1f923"></span></span>
+                                <span class="e1" id="1f603" data-shortname=":smiley:" data-index="5" title="smiling face with open mouth" data-eid="623"><span class="emojione emojione-1f603"></span></span>
+                                <span class="e1" id="1f604" data-shortname=":smile:" data-index="6" title="smiling face with open mouth and smiling eyes" data-eid="625"><span class="emojione emojione-1f604"></span></span>
+                                <span class="e1" id="1f605" data-shortname=":sweat_smile:" data-index="7" title="smiling face with open mouth and cold sweat" data-eid="626"><span class="emojione emojione-1f605"></span></span>
+                                <span class="e1" id="1f606" data-shortname=":laughing:" data-index="8" title="smiling face with open mouth and tightly-closed eyes" data-eid="628"><span class="emojione emojione-1f606"></span></span>
+                                <span class="e1" id="1f609" data-shortname=":wink:" data-index="9" title="winking face" data-eid="629"><span class="emojione emojione-1f609"></span></span>
+                                <span class="e1" id="1f60a" data-shortname=":blush:" data-index="10" title="smiling face with smiling eyes" data-eid="631"><span class="emojione emojione-1f60a"></span></span>
+                                <span class="e1" id="1f60b" data-shortname=":yum:" data-index="11" title="face savouring delicious food" data-eid="632"><span class="emojione emojione-1f60b"></span></span>
+                                <span class="e1" id="1f60e" data-shortname=":sunglasses:" data-index="12" title="smiling face with sunglasses" data-eid="738"><span class="emojione emojione-1f60e"></span></span>
+                                <span class="e1" id="1f60d" data-shortname=":heart_eyes:" data-index="13" title="smiling face with heart-shaped eyes" data-eid="635"><span class="emojione emojione-1f60d"></span></span>
+                                <span class="e1" id="1f618" data-shortname=":kissing_heart:" data-index="14" title="face throwing a kiss" data-eid="644"><span class="emojione emojione-1f618"></span></span>
+                                <span class="e1" id="1f617" data-shortname=":kissing:" data-index="15" title="kissing face" data-eid="742"><span class="emojione emojione-1f617"></span></span>
+                                <span class="e1" id="1f619" data-shortname=":kissing_smiling_eyes:" data-index="16" title="kissing face with smiling eyes" data-eid="743"><span class="emojione emojione-1f619"></span></span>
+                                <span class="e1" id="1f61a" data-shortname=":kissing_closed_eyes:" data-index="17" title="kissing face with closed eyes" data-eid="646"><span class="emojione emojione-1f61a"></span></span>
+                                <span class="e1" id="263a" data-shortname=":relaxed:" data-index="18" title="white smiling face" data-eid="53"><span class="emojione emojione-263a"></span></span>
+                                <span class="e1" id="1f642" data-shortname=":slight_smile:" data-index="19" title="slightly smiling face" data-eid="1233"><span class="emojione emojione-1f642"></span></span>
+                                <span class="e1" id="1f917" data-shortname=":hugging:" data-index="20" title="hugging face" data-eid="2079"><span class="emojione emojione-1f917"></span></span>
+                                <span class="e1" id="1f914" data-shortname=":thinking:" data-index="21" title="thinking face" data-eid="2081"><span class="emojione emojione-1f914"></span></span>
+                                <span class="e1" id="1f610" data-shortname=":neutral_face:" data-index="22" title="neutral face" data-eid="739"><span class="emojione emojione-1f610"></span></span>
+                                <span class="e1" id="1f611" data-shortname=":expressionless:" data-index="23" title="expressionless face" data-eid="740"><span class="emojione emojione-1f611"></span></span>
+                                <span class="e1" id="1f636" data-shortname=":no_mouth:" data-index="24" title="face without mouth" data-eid="752"><span class="emojione emojione-1f636"></span></span>
+                                <span class="e1" id="1f644" data-shortname=":rolling_eyes:" data-index="25" title="face with rolling eyes" data-eid="2080"><span class="emojione emojione-1f644"></span></span>
+                                <span class="e1" id="1f60f" data-shortname=":smirk:" data-index="26" title="smirking face" data-eid="637"><span class="emojione emojione-1f60f"></span></span>
+                                <span class="e1" id="1f623" data-shortname=":persevere:" data-index="27" title="persevering face" data-eid="655"><span class="emojione emojione-1f623"></span></span>
+                                <span class="e1" id="1f625" data-shortname=":disappointed_relieved:" data-index="28" title="disappointed but relieved face" data-eid="657"><span class="emojione emojione-1f625"></span></span>
+                                <span class="e1" id="1f62e" data-shortname=":open_mouth:" data-index="29" title="face with open mouth" data-eid="749"><span class="emojione emojione-1f62e"></span></span>
+                                <span class="e1" id="1f910" data-shortname=":zipper_mouth:" data-index="30" title="zipper-mouth face" data-eid="2082"><span class="emojione emojione-1f910"></span></span>
+                                <span class="e1" id="1f62f" data-shortname=":hushed:" data-index="31" title="hushed face" data-eid="750"><span class="emojione emojione-1f62f"></span></span>
+                                <span class="e1" id="1f62a" data-shortname=":sleepy:" data-index="32" title="sleepy face" data-eid="660"><span class="emojione emojione-1f62a"></span></span>
+                                <span class="e1" id="1f62b" data-shortname=":tired_face:" data-index="33" title="tired face" data-eid="661"><span class="emojione emojione-1f62b"></span></span>
+                                <span class="e1" id="1f634" data-shortname=":sleeping:" data-index="34" title="sleeping face" data-eid="751"><span class="emojione emojione-1f634"></span></span>
+                                <span class="e1" id="1f60c" data-shortname=":relieved:" data-index="35" title="relieved face" data-eid="634"><span class="emojione emojione-1f60c"></span></span>
+                                <span class="e1" id="1f913" data-shortname=":nerd:" data-index="36" title="nerd face" data-eid="2078"><span class="emojione emojione-1f913"></span></span>
+                                <span class="e1" id="1f61b" data-shortname=":stuck_out_tongue:" data-index="37" title="face with stuck-out tongue" data-eid="744"><span class="emojione emojione-1f61b"></span></span>
+                                <span class="e1" id="1f61c" data-shortname=":stuck_out_tongue_winking_eye:" data-index="38" title="face with stuck-out tongue and winking eye" data-eid="647"><span class="emojione emojione-1f61c"></span></span>
+                                <span class="e1" id="1f61d" data-shortname=":stuck_out_tongue_closed_eyes:" data-index="39" title="face with stuck-out tongue and tightly-closed eyes" data-eid="649"><span class="emojione emojione-1f61d"></span></span>
+                                <span class="e1" id="1f924" data-shortname=":drooling_face:" data-index="40" title="drooling face" data-eid="2257"><span class="emojione emojione-1f924"></span></span>
+                                <span class="e1" id="1f612" data-shortname=":unamused:" data-index="41" title="unamused face" data-eid="638"><span class="emojione emojione-1f612"></span></span>
+                                <span class="e1" id="1f613" data-shortname=":sweat:" data-index="42" title="face with cold sweat" data-eid="640"><span class="emojione emojione-1f613"></span></span>
+                                <span class="e1" id="1f614" data-shortname=":pensive:" data-index="43" title="pensive face" data-eid="641"><span class="emojione emojione-1f614"></span></span>
+                                <span class="e1" id="1f615" data-shortname=":confused:" data-index="44" title="confused face" data-eid="741"><span class="emojione emojione-1f615"></span></span>
+                                <span class="e1" id="1f643" data-shortname=":upside_down:" data-index="45" title="upside-down face" data-eid="2075"><span class="emojione emojione-1f643"></span></span>
+                                <span class="e1" id="1f911" data-shortname=":money_mouth:" data-index="46" title="money-mouth face" data-eid="2077"><span class="emojione emojione-1f911"></span></span>
+                                <span class="e1" id="1f632" data-shortname=":astonished:" data-index="47" title="astonished face" data-eid="665"><span class="emojione emojione-1f632"></span></span>
+                                <span class="e1" id="2639" data-shortname=":frowning2:" data-index="48" title="white frowning face" data-eid="1670"><span class="emojione emojione-2639"></span></span>
+                                <span class="e1" id="1f641" data-shortname=":slight_frown:" data-index="49" title="slightly frowning face" data-eid="1232"><span class="emojione emojione-1f641"></span></span>
+                                <span class="e1" id="1f616" data-shortname=":confounded:" data-index="50" title="confounded face" data-eid="643"><span class="emojione emojione-1f616"></span></span>
+                                <span class="e1" id="1f61e" data-shortname=":disappointed:" data-index="51" title="disappointed face" data-eid="650"><span class="emojione emojione-1f61e"></span></span>
+                                <span class="e1" id="1f61f" data-shortname=":worried:" data-index="52" title="worried face" data-eid="745"><span class="emojione emojione-1f61f"></span></span>
+                                <span class="e1" id="1f624" data-shortname=":triumph:" data-index="53" title="face with look of triumph" data-eid="656"><span class="emojione emojione-1f624"></span></span>
+                                <span class="e1" id="1f622" data-shortname=":cry:" data-index="54" title="crying face" data-eid="654"><span class="emojione emojione-1f622"></span></span>
+                                <span class="e1" id="1f62d" data-shortname=":sob:" data-index="55" title="loudly crying face" data-eid="662"><span class="emojione emojione-1f62d"></span></span>
+                                <span class="e1" id="1f626" data-shortname=":frowning:" data-index="56" title="frowning face with open mouth" data-eid="746"><span class="emojione emojione-1f626"></span></span>
+                                <span class="e1" id="1f627" data-shortname=":anguished:" data-index="57" title="anguished face" data-eid="747"><span class="emojione emojione-1f627"></span></span>
+                                <span class="e1" id="1f628" data-shortname=":fearful:" data-index="58" title="fearful face" data-eid="658"><span class="emojione emojione-1f628"></span></span>
+                                <span class="e1" id="1f629" data-shortname=":weary:" data-index="59" title="weary face" data-eid="659"><span class="emojione emojione-1f629"></span></span>
+                                <span class="e1" id="1f62c" data-shortname=":grimacing:" data-index="60" title="grimacing face" data-eid="748"><span class="emojione emojione-1f62c"></span></span>
+                                <span class="e1" id="1f630" data-shortname=":cold_sweat:" data-index="61" title="face with open mouth and cold sweat" data-eid="663"><span class="emojione emojione-1f630"></span></span>
+                                <span class="e1" id="1f631" data-shortname=":scream:" data-index="62" title="face screaming in fear" data-eid="664"><span class="emojione emojione-1f631"></span></span>
+                                <span class="e1" id="1f633" data-shortname=":flushed:" data-index="63" title="flushed face" data-eid="666"><span class="emojione emojione-1f633"></span></span>
+                                <span class="e1" id="1f635" data-shortname=":dizzy_face:" data-index="64" title="dizzy face" data-eid="667"><span class="emojione emojione-1f635"></span></span>
+                                <span class="e1" id="1f621" data-shortname=":rage:" data-index="65" title="pouting face" data-eid="653"><span class="emojione emojione-1f621"></span></span>
+                                <span class="e1" id="1f620" data-shortname=":angry:" data-index="66" title="angry face" data-eid="652"><span class="emojione emojione-1f620"></span></span>
+                                <span class="e1" id="1f607" data-shortname=":innocent:" data-index="67" title="smiling face with halo" data-eid="736"><span class="emojione emojione-1f607"></span></span>
+                                <span class="e1" id="1f920" data-shortname=":cowboy:" data-index="68" title="face with cowboy hat" data-eid="2253"><span class="emojione emojione-1f920"></span></span>
+                                <span class="e1" id="1f921" data-shortname=":clown:" data-index="69" title="clown face" data-eid="2254"><span class="emojione emojione-1f921"></span></span>
+                                <span class="e1" id="1f925" data-shortname=":lying_face:" data-index="70" title="lying face" data-eid="2258"><span class="emojione emojione-1f925"></span></span>
+                                <span class="e1" id="1f637" data-shortname=":mask:" data-index="71" title="face with medical mask" data-eid="668"><span class="emojione emojione-1f637"></span></span>
+                                <span class="e1" id="1f912" data-shortname=":thermometer_face:" data-index="72" title="face with thermometer" data-eid="2083"><span class="emojione emojione-1f912"></span></span>
+                                <span class="e1" id="1f915" data-shortname=":head_bandage:" data-index="73" title="face with head-bandage" data-eid="2084"><span class="emojione emojione-1f915"></span></span>
+                                <span class="e1" id="1f922" data-shortname=":nauseated_face:" data-index="74" title="nauseated face" data-eid="2255"><span class="emojione emojione-1f922"></span></span>
+                                <span class="e1" id="1f927" data-shortname=":sneezing_face:" data-index="75" title="sneezing face" data-eid="2259"><span class="emojione emojione-1f927"></span></span>
+                                <span class="e1" id="1f608" data-shortname=":smiling_imp:" data-index="76" title="smiling face with horns" data-eid="737"><span class="emojione emojione-1f608"></span></span>
+                                <span class="e1" id="1f47f" data-shortname=":imp:" data-index="77" title="imp" data-eid="446"><span class="emojione emojione-1f47f"></span></span>
+                                <span class="e1" id="1f479" data-shortname=":japanese_ogre:" data-index="78" title="japanese ogre" data-eid="440"><span class="emojione emojione-1f479"></span></span>
+                                <span class="e1" id="1f47a" data-shortname=":japanese_goblin:" data-index="79" title="japanese goblin" data-eid="441"><span class="emojione emojione-1f47a"></span></span>
+                                <span class="e1" id="1f480" data-shortname=":skull:" data-index="80" title="skull" data-eid="447"><span class="emojione emojione-1f480"></span></span>
+                                <span class="e1" id="1f47b" data-shortname=":ghost:" data-index="81" title="ghost" data-eid="442"><span class="emojione emojione-1f47b"></span></span>
+                                <span class="e1" id="1f47d" data-shortname=":alien:" data-index="82" title="extraterrestrial alien" data-eid="444"><span class="emojione emojione-1f47d"></span></span>
+                                <span class="e1" id="1f916" data-shortname=":robot:" data-index="83" title="robot face" data-eid="2085"><span class="emojione emojione-1f916"></span></span>
+                                <span class="e1" id="1f4a9" data-shortname=":poop:" data-index="84" title="pile of poo" data-eid="548"><span class="emojione emojione-1f4a9"></span></span>
+                                <span class="e1" id="1f63a" data-shortname=":smiley_cat:" data-index="85" title="smiling cat face with open mouth" data-eid="671"><span class="emojione emojione-1f63a"></span></span>
+                                <span class="e1" id="1f638" data-shortname=":smile_cat:" data-index="86" title="grinning cat face with smiling eyes" data-eid="669"><span class="emojione emojione-1f638"></span></span>
+                                <span class="e1" id="1f639" data-shortname=":joy_cat:" data-index="87" title="cat face with tears of joy" data-eid="670"><span class="emojione emojione-1f639"></span></span>
+                                <span class="e1" id="1f63b" data-shortname=":heart_eyes_cat:" data-index="88" title="smiling cat face with heart-shaped eyes" data-eid="672"><span class="emojione emojione-1f63b"></span></span>
+                                <span class="e1" id="1f63c" data-shortname=":smirk_cat:" data-index="89" title="cat face with wry smile" data-eid="673"><span class="emojione emojione-1f63c"></span></span>
+                                <span class="e1" id="1f63d" data-shortname=":kissing_cat:" data-index="90" title="kissing cat face with closed eyes" data-eid="674"><span class="emojione emojione-1f63d"></span></span>
+                                <span class="e1" id="1f640" data-shortname=":scream_cat:" data-index="91" title="weary cat face" data-eid="677"><span class="emojione emojione-1f640"></span></span>
+                                <span class="e1" id="1f63f" data-shortname=":crying_cat_face:" data-index="92" title="crying cat face" data-eid="676"><span class="emojione emojione-1f63f"></span></span>
+                                <span class="e1" id="1f63e" data-shortname=":pouting_cat:" data-index="93" title="pouting cat face" data-eid="675"><span class="emojione emojione-1f63e"></span></span>
+                                <span class="e1" id="1f466" data-tone="0" data-shortname=":boy:" data-index="94" title="boy" data-eid="423"><span class="emojione emojione-1f466"></span></span>
+                                <span class="e1" id="1f467" data-tone="0" data-shortname=":girl:" data-index="95" title="girl" data-eid="424"><span class="emojione emojione-1f467"></span></span>
+                                <span class="e1" id="1f468" data-tone="0" data-shortname=":man:" data-index="96" title="man" data-eid="425"><span class="emojione emojione-1f468"></span></span>
+                                <span class="e1" id="1f469" data-tone="0" data-shortname=":woman:" data-index="97" title="woman" data-eid="426"><span class="emojione emojione-1f469"></span></span>
+                                <span class="e1" id="1f474" data-tone="0" data-shortname=":older_man:" data-index="98" title="older man" data-eid="435"><span class="emojione emojione-1f474"></span></span>
+                                <span class="e1" id="1f475" data-tone="0" data-shortname=":older_woman:" data-index="99" title="older woman" data-eid="436"><span class="emojione emojione-1f475"></span></span>
+                                <span class="e1" id="1f476" data-tone="0" data-shortname=":baby:" data-index="100" title="baby" data-eid="437"><span class="emojione emojione-1f476"></span></span>
+                                <span class="e1" id="1f47c" data-tone="0" data-shortname=":angel:" data-index="101" title="baby angel" data-eid="443"><span class="emojione emojione-1f47c"></span></span>
+                                <span class="e1" id="1f46e" data-tone="0" data-shortname=":cop:" data-index="102" title="police officer" data-eid="429"><span class="emojione emojione-1f46e"></span></span>
+                                <span class="e1" id="1f575" data-tone="0" data-shortname=":spy:" data-index="103" title="sleuth or spy" data-eid="1217"><span class="emojione emojione-1f575"></span></span>
+                                <span class="e1" id="1f482" data-tone="0" data-shortname=":guardsman:" data-index="104" title="guardsman" data-eid="450"><span class="emojione emojione-1f482"></span></span>
+                                <span class="e1" id="1f477" data-tone="0" data-shortname=":construction_worker:" data-index="105" title="construction worker" data-eid="438"><span class="emojione emojione-1f477"></span></span>
+                                <span class="e1" id="1f473" data-tone="0" data-shortname=":man_with_turban:" data-index="106" title="man with turban" data-eid="434"><span class="emojione emojione-1f473"></span></span>
+                                <span class="e1" id="1f471" data-tone="0" data-shortname=":person_with_blond_hair:" data-index="107" title="person with blond hair" data-eid="432"><span class="emojione emojione-1f471"></span></span>
+                                <span class="e1" id="1f385" data-tone="0" data-shortname=":santa:" data-index="108" title="father christmas" data-eid="271"><span class="emojione emojione-1f385"></span></span>
+                                <span class="e1" id="1f936" data-shortname=":mrs_claus:" data-index="109" title="mother christmas" data-eid="2262"><span class="emojione emojione-1f936"></span></span>
+                                <span class="e1" id="1f478" data-tone="0" data-shortname=":princess:" data-index="110" title="princess" data-eid="439"><span class="emojione emojione-1f478"></span></span>
+                                <span class="e1" id="1f934" data-shortname=":prince:" data-index="111" title="prince" data-eid="2260"><span class="emojione emojione-1f934"></span></span>
+                                <span class="e1" id="1f470" data-tone="0" data-shortname=":bride_with_veil:" data-index="112" title="bride with veil" data-eid="431"><span class="emojione emojione-1f470"></span></span>
+                                <span class="e1" id="1f935" data-shortname=":man_in_tuxedo:" data-index="113" title="man in tuxedo" data-eid="2261"><span class="emojione emojione-1f935"></span></span>
+                                <span class="e1" id="1f930" data-shortname=":pregnant_woman:" data-index="114" title="pregnant woman" data-eid="2265"><span class="emojione emojione-1f930"></span></span>
+                                <span class="e1" id="1f472" data-tone="0" data-shortname=":man_with_gua_pi_mao:" data-index="115" title="man with gua pi mao" data-eid="433"><span class="emojione emojione-1f472"></span></span>
+                                <span class="e1" id="1f64d" data-tone="0" data-shortname=":person_frowning:" data-index="116" title="person frowning" data-eid="686"><span class="emojione emojione-1f64d"></span></span>
+                                <span class="e1" id="1f64e" data-tone="0" data-shortname=":person_with_pouting_face:" data-index="117" title="person with pouting face" data-eid="687"><span class="emojione emojione-1f64e"></span></span>
+                                <span class="e1" id="1f645" data-tone="0" data-shortname=":no_good:" data-index="118" title="face with no good gesture" data-eid="678"><span class="emojione emojione-1f645"></span></span>
+                                <span class="e1" id="1f646" data-tone="0" data-shortname=":ok_woman:" data-index="119" title="face with ok gesture" data-eid="679"><span class="emojione emojione-1f646"></span></span>
+                                <span class="e1" id="1f481" data-tone="0" data-shortname=":information_desk_person:" data-index="120" title="information desk person" data-eid="449"><span class="emojione emojione-1f481"></span></span>
+                                <span class="e1" id="1f64b" data-tone="0" data-shortname=":raising_hand:" data-index="121" title="happy person raising one hand" data-eid="684"><span class="emojione emojione-1f64b"></span></span>
+                                <span class="e1" id="1f647" data-tone="0" data-shortname=":bow:" data-index="122" title="person bowing deeply" data-eid="680"><span class="emojione emojione-1f647"></span></span>
+                                <span class="e1" id="1f926" data-shortname=":face_palm:" data-index="123" title="face palm" data-eid="2263"><span class="emojione emojione-1f926"></span></span>
+                                <span class="e1" id="1f937" data-shortname=":shrug:" data-index="124" title="shrug" data-eid="2264"><span class="emojione emojione-1f937"></span></span>
+                                <span class="e1" id="1f486" data-tone="0" data-shortname=":massage:" data-index="125" title="face massage" data-eid="455"><span class="emojione emojione-1f486"></span></span>
+                                <span class="e1" id="1f487" data-tone="0" data-shortname=":haircut:" data-index="126" title="haircut" data-eid="457"><span class="emojione emojione-1f487"></span></span>
+                              </div>
+                            </div>
+                          </span>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <span class="mentions-positioning-container"></span>
+            </footer>
+            <span></span>
+          </div>
+          <!-- .chat-right-panel -->
+        </div>
+      </div>
+    </div>
+
+    <!-- .right-sidebar -->
+    <div class="right-sidebar">
+      <div class="slimscrollright">
+        <div class="rpanel-title">
+          Theme Modify<span><i class="ti-close right-side-toggle"></i></span>
+        </div>
+        <div class="r-panel-body">
+          <ul>
+            <li><b>Layout Options</b></li>
+          </ul>
+          <ul id="mainthemecolors" class="m-t-20">
+            <li><b>Theme (Light/Dark)</b></li>
+            <li><a href="javascript:void(0)" maintheme="style-light" class="light-theme working">1</a></li>
+            <li><a href="javascript:void(0)" maintheme="style-dark" class="dark-theme">2</a></li>
+          </ul>
+          <ul id="themecolors" class="m-t-20">
+            <li><b>With Color Effect</b></li>
+            <li><a href="javascript:void(0)" theme="default" class="default-theme">1</a></li>
+            <li><a href="javascript:void(0)" theme="green" class="green-theme">2</a></li>
+            <li><a href="javascript:void(0)" theme="gray" class="yellow-theme">3</a></li>
+            <li><a href="javascript:void(0)" theme="blue" class="blue-theme">4</a></li>
+            <li><a href="javascript:void(0)" theme="purple" class="purple-theme working">5</a></li>
+            <li><a href="javascript:void(0)" theme="megna" class="megna-theme">6</a></li>
+          </ul>
+        </div>
+      </div>
+    </div>
+    <!-- /.right-sidebar -->
+
+    <!-- Media Uploader -->
+    <!--This div for modal light box chat box image-->
+    <div id="lightbox" style="display: none">
+      <p>
+        <img src="plugins/images/close-icon-white.png" width="30px" style="cursor: pointer" />
+      </p>
+      <div id="content">
+        <img src="#" />
+      </div>
+    </div>
+    <!--This div for modal light box chat box image-->
+
+    <!-- jQuery -->
+    <script src="plugins/bower_components/jquery/dist/jquery.min.js"></script>
+    <!-- Bootstrap Core JavaScript -->
+    <script src="assets/bootstrap/dist/js/bootstrap.min.js"></script>
+    <!-- Custom Theme JavaScript -->
+    <script src="assets/js/custom.js"></script>
+    <!--Style Switcher -->
+    <script src="plugins/bower_components/styleswitcher/jQuery.style.switcher.js"></script>
+    <!--Style Switcher -->
+    <!--ChatJs -->
+    <script type="text/javascript" src="chatjs/lightbox.js"></script>
+    <script type="text/javascript" src="chatjs/inbox.js"></script>
+    <script type="text/javascript" src="chatjs/custom.js"></script>
+    <!--ChatJs-->
+  </body>
+</html>
