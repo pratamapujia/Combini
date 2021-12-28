@@ -60,7 +60,7 @@ section h2 {
   font-family: "Nunito", sans-serif;
   /* background: url("../img/banner-01.jpg") right;
   width: 1300px; */
-  background: linear-gradient(to left, rgb(28, 86, 125) 20%, rgb(20, 61, 89));
+  background: #143d59;
   padding-top: 30px;
 }
 #header-user {
